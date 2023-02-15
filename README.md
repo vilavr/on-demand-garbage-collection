@@ -1,92 +1,183 @@
-# On-demand garbage collection
+# SPECIFICATION FOR A WEBSITE
+
+## Overview
+
+General Summary:
+
+* This project solves the problem of garbage collection in private and multi-apartment buildings, in cases where it is required to carry out the removal outside the standard work schedule of the garbage collection team.
+* The main audience of our application will be residents of apartment buildings, private residents or those who need garbage removal outside the main work schedule of the cleaning team.
+
+## Team Members
+
+- Ilja Grigorjev - 230646IVSB
+- Vira Lavrova 
+- Ksenija Okuneva
+
+## Goals, Objectives and Phases
+
+### Objective
+- Design and develop a web application that allows users to schedule garbage removal outside the standard work schedule.
+- Implement a notification system that reminds users of scheduled garbage removal.
+- Provide a reliable and efficient garbage collection service that is convenient for the users.
+- Mock partnerships agreements with private and multi-apartment buildings to expand the reach of the service.
+### Goals
+
+- Develop a mobile application to enable efficient and convenient garbage collection for private and multi-apartment buildings.
+    - Create a mobile application that enables users to schedule and request garbage collection services for private and multi-apartment buildings.
+    - Track the number of garbage collection requests made through the application and the satisfaction rate of users. 
+    - The development team will create the web application and coordinate with existing garbage collection services.
+    - The application will focus on creating a user-friendly and intuitive scheduling and request system, and leverage existing garbage collection services for efficient and timely garbage removal.
+    - Develop, test and deploy the web application within 4 months.
 
 
+- Enable garbage collection services outside the standard work schedule for cleaning teams through the web application, with available dates for booking.
+    - Allow users to schedule and request garbage collection services outside the standard work schedule, with available dates for booking.
+    - Track the number of garbage collection services scheduled outside the standard work schedule and the rate of successful bookings through the application.
+    - The development team will create a scheduling and notification system that coordinates with the existing cleaning teams.
+    - The scheduling and notification system will leverage the existing garbage collection services to provide a reliable and efficient garbage removal service.
+    - Develop, test and integrate the scheduling and notification system within the web application within 4 months.
 
-## Getting started
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+- Offer a user-friendly web application for residents of apartment buildings, private residents, and businesses that require garbage removal in available time.
+    - Design and develop a web application that provides a user-friendly interface for scheduling and requesting garbage removal services for private and multi-apartment buildings.
+    - Track the number of active users and user feedback to identify areas for improvement.
+    - The development team will design and develop the web application, and conduct user testing and feedback gathering.
+    - The web application will prioritize the user experience and create an intuitive and user-friendly interface for garbage collection scheduling and request.
+    - Develop, test, and deploy the web application with a focus on user experience within 9 months.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### Phases
 
-## Add your files
+- ICS0008 Web technologies milestones for "On demand garbage collection" project.
+  - HTML/CSS - project skeleton and set-up delivery.
+  - PHP - project business logic delivery.
+  - SQL/JS - project database and user mock delivery.
+  
+## Content Structure
+- Home Page:
+  - An introduction to the application
+  - A brief description of the features and benefits
+  - A call to action for users to sign up or log in
+  
+- User Authentication:
+  - A registration page for new users
+  - A login page for existing users
+  - A forgot password page with the option to reset password via email
+  
+- User Dashboard:
+  - A personalized dashboard for each user with their account information
+  - A notification center for any updates or alerts
+  - A sidebar navigation menu to access other sections of the application
+  
+- Garbage Collection Scheduling:
+  - A form to schedule a garbage collection service for a user's private or multi-apartment building
+  - A calendar view to select available dates and times for the service
+  - A confirmation page with the details of the scheduled service
+  
+- Garbage Collection Request:
+  - A form for users to request a garbage collection service outside the standard work schedule
+  - A calendar view to select available dates and times for the service
+  - A confirmation page with the details of the requested service
+  
+- User Profile:
+  - A profile page for each user to view and edit their personal information
+  - An option to change password or update account information
+  
+- Contact Us:
+  - A page with contact information for the application's support team
+  - A contact form for users to send support requests or feedback
+  
+- Terms and Conditions:
+  - A page with the application's terms and conditions, privacy policy, and any other legal information
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+### Site map
 
+Hierarchical tree :
+
+```text
+HOME
+  +--ABOUT US
+  |    +--INTRODUCTION
+  |    +--FEATURES AND BENEFITS
+  |    +--CALL TO ACTION
+  +--USER AUTHENTICATION
+  |    +--REGISTRATION PAGE
+  |    +--LOGIN PAGE
+  |    +--FORGOT PASSWORD PAGE
+  +--USER DASHBOARD
+  |    +--PERSONALIZED DASHBOARD
+  |    +--NOTIFICATION CENTER
+  |    +--NAVIGATION MENU
+  +--GARBAGE COLLECTION SCHEDULING
+  |    +--SCHEDULING FORM
+  |    +--CALENDAR VIEW
+  |    +--CONFIRMATION PAGE
+  +--GARBAGE COLLECTION REQUEST
+  |    +--REQUEST FORM
+  |    +--CALENDAR VIEW
+  |    +--CONFIRMATION PAGE
+  +--USER PROFILE
+  |    +--PROFILE PAGE
+  |    +--PASSWORD UPDATE
+  |    +--ACCOUNT INFORMATION UPDATE
+  +--CONTACT US
+  |    +--CONTACT INFORMATION
+  |    +--SUPPORT REQUEST FORM
+  +--TERMS AND CONDITIONS
+  |    +--TERMS AND CONDITIONS PAGE
+  |    +--PRIVACY POLICY PAGE
+  |    +--LEGAL INFORMATION PAGE
 ```
-cd existing_repo
-git remote add origin https://gitlab.cs.ttu.ee/ilgrig/on-demand-garbage-collection.git
-git branch -M main
-git push -uf origin main
-```
 
-## Integrate with your tools
+### Content Types
 
-- [ ] [Set up project integrations](https://gitlab.cs.ttu.ee/ilgrig/on-demand-garbage-collection/-/settings/integrations)
+- Home: This page contain data types such as text, images, and links to other pages in the application.
 
-## Collaborate with your team
+- About Us: This page contain data types such as text and images.
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+- User Authentication: This page contain data types such as input fields for email, password, and username, and buttons for submitting the form.
 
-## Test and Deploy
+- User Dashboard: This page contain data types such as user account information, notification messages, and links to other sections of the application.
 
-Use the built-in continuous integration in GitLab.
+- Garbage Collection Scheduling: This page contain data types such as input fields for address, dates, and times, as well as confirmation messages and pricing information.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+- Garbage Collection Request: This page contain data types such as input fields for address, dates, and times, as well as confirmation messages and pricing information.
 
-***
+- User Profile: This page contain data types such as user account information, input fields for updating password and other personal information.
 
-# Editing this README
+- Contact Us: This page contain data types such as contact information for the support team, as well as a contact form for users to submit support requests or feedback.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+- Terms and Conditions: This page contain data types such as legal information and disclaimers, as well as links to privacy policy and other related pages.
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+These data types are not necessarily hierarchical, but some of them may be related to each other in the application's data model.
 
-## Name
-Choose a self-explaining name for your project.
+#TODO
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+### Page Templates
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+Before the first milestone you should have "page templates", i.e., HTML pages that illustrate what info and data each page will contain. You can use mock content.
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+Make sure you include navigation menus, etc.
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+## Design
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+The page templates should come with CSS to give a good idea what the pages will look like when all components (`PHP`, `SQL` and `JavaScript`) are added.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+## Functionality
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+How does your website work? What are the specific parts that each of your page require?
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+* What fields are required for sign-up?
+* What happens if user leaves a comment?
+* What are the user roles?
+* What are performance requirements?
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+## Browser Support
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+- This web application supports:
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+  * Chrome/Chromium
+  * Firefox
+  * mobile browsers (Chrome, Firefox, Safari, etc)
 
-## License
-For open source projects, say how it is licensed.
+## Hosting
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
