@@ -1,0 +1,7 @@
+# file for configuring Apache to route requests to applications' index.php file.
+# This configuration tells Apache to route all requests to your public/index.php file, preserving any query string parameters.
+
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^(.*)$ public/index.php/$1 [L,QSA]
