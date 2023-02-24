@@ -1,0 +1,71 @@
+@charset "UTF-8";
+@import url("main.css");
+
+
+footer {
+    background-color: #000;
+    height: 13vw;
+    margin: 0;
+}
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+.footer-container {
+    display: flex;
+}
+.logo-footer {
+    width: auto;
+    height: 8vw;
+    margin-top: 0.5vw;
+    margin-left: 0vw;
+}
+.logo-footer-caption {
+    text-align: left;
+    padding-left: 6.4vw;
+    font-style: italic;
+    font-size: 1vw;
+    color: #888;
+    margin-top: 1.7vw;
+}
+
+.menu-footer ul {
+    list-style: none;
+}
+
+.menu-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    margin-left: 6vw;
+    margin-right: 12vw;
+    margin-bottom: 2vw;
+    text-align: center;
+}
+.menu-footer-item {
+    text-align: left;
+    margin-top: 0.3vw;
+    margin-bottom: 1.5vw;
+
+    color: #fff;
+    text-decoration: none;
+    font-family: "Nanum Myeongjo";
+    font-size: 1.25vw;
+}
+.menu-footer-subitem {
+    text-align: left;
+    margin-bottom: 0.5vw;
+
+    color: #fff;
+    text-decoration: none;
+    font-family: "Nanum Myeongjo";
+    font-size: 1.2vw;
+}
+
+.exception-subitem {
+    margin-bottom: 2.35vw;
+}

@@ -1,0 +1,63 @@
+@charset "UTF-8";
+@import url("main.css");
+
+html,
+body {
+  height: 100%;
+}
+
+header {
+    background-color: #000;
+    height: 7vw;
+    margin: 0;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    width: auto;
+    height: 7vw;
+    margin-left: 1vw;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    margin-right: 4vw;
+    text-align: center;
+}
+.menu-item {
+    margin-left: 5vw;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Nanum Myeongjo";
+    font-size: 1.2vw;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    margin-left: 6vw;
+    margin-right: 5vw;
+}
+
+.register-button:hover {
+    background-color: #000;
+    color: #f3e2e2;
+}
+.register-button {
+    display:inline-block;
+    background-color: #fff;
+    color: #000;
+    margin-left: 2vw;
+    padding: 0.85vw 2vw;
+    border-radius: 1vw;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-family: "Nanum Myeongjo";
+
+    transition: all 0.3s ease-in-out;
+}
