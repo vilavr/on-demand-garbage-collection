@@ -10,15 +10,19 @@
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/main.css">
 
   </head>
 
     <body>
         <!-- Header section of the document -->
         <header class="header-container">
-          <img src="img/logo.png" alt="Logo" class="logo">
+          <a href="index.html">
+            <img src="img/logo.png" alt="Logo" class="logo">
+          </a>
           <nav class="menu">
-            <a href="#" class="menu-item">Home</a>
+            <a href="/index.html" class="menu-item">Home</a>
             <a href="#" class="menu-item">About Us</a>
             <a href="#" class="menu-item">Services</a>
             <a href="#" class="menu-item">Terms and Conditions</a>
@@ -30,39 +34,69 @@
         </header>
 
         <!-- Content section of the document -->
+        <aside>
+          <nav id="side-panel" role="navigation" class="navigation">
+            <ul>
+              <li><a href="#book_a_collection">Book a collection</a></li>
+              <li><a href="#how_it_works">How it works?</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+            </ul>
+          </nav>
+        </aside>
+
+
+        <div class="content">
+          <section id="section1">
+            <h2>Section 1</h2>
+            <p>This is the content of section 1.</p>
+          </section>
+      
+          <section id="section2">
+            <h2>Section 2</h2>
+            <p>This is the content of section 2.</p>
+          </section>
+      
+          <section id="section3">
+            <h2>Section 3</h2>
+            <p>This is the content of section 3.</p>
+          </section>
+        </div>   
 
         <!-- Footer section of the document-->
         <footer class="footer-container">
           <div>
-            <img src="img/logo.png" alt="Logo" class="logo-footer">
-            <div class="logo-footer-caption">&#169; Throw It 2023. All rights reserved</div> 
+            <a href="index.html">
+              <img src="img/logo.png" alt="Logo" class="logo-footer">
+            </a>
+            <div class="logo-footer-caption">&#169; Throw It 2023. All rights reserved</div>
           </div>
 
           <div class="menu-footer">
             <ul>
-              <li href="#" class="menu-footer-item">Home</li>
-              <li href="#" class="menu-footer-subitem">How it works?</li>
-              <li href="#" class="menu-footer-subitem">Our pricing</li>
-              <li href="#" class="menu-footer-subitem">Testimonials</li>
+              <li class="menu-footer-item"><a href="/index.html">Home</a></li>
+              <li href="#" class="menu-footer-subitem"><a href="/index.html">How it works?</a></li>
+              <li href="#" class="menu-footer-subitem"><a href="/index.html">Our pricing</a></li>
+              <li href="#" class="menu-footer-subitem"><a href="/index.html">Testimonials</a></li>
             </ul>
 
             <ul>
-              <li href="#" class="menu-footer-item">Abous us</li>
-              <li href="#" class="menu-footer-subitem">Why Throw it?</li>
-              <li href="#" class="menu-footer-subitem exception-subitem">Our team</li>
+              <li href="#" class="menu-footer-item"><a href="/index.html">Abous us</a></li>
+              <li href="#" class="menu-footer-subitem"><a href="/index.html">Why Throw it?</a></li>
+              <li href="#" class="menu-footer-subitem exception-subitem"><a href="/index.html">Our team</a></li>
             </ul>
 
             <ul>
-              <li href="#" class="menu-footer-item">Services</li>
-              <li href="#" class="menu-footer-subitem">Regular pickup</li>
-              <li href="#" class="menu-footer-subitem">Bulk waste</li>
-              <li href="#" class="menu-footer-subitem">Recycling</li>
+              <li href="#" class="menu-footer-item"><a href="/index.html">Services</a></li>
+              <li href="#" class="menu-footer-subitem"><a href="/index.html">Regular pickup</a></li>
+              <li href="#" class="menu-footer-subitem"><a href="/index.html">Bulk waste</a></li>
+              <li href="#" class="menu-footer-subitem"><a href="/index.html">Recycling</a></li>
             </ul>
 
             <ul>
-              <li href="#" class="menu-footer-item">Terms and Conditions</li>
-              <li href="#" class="menu-footer-subitem">User agreement</li>
-              <li href="#" class="menu-footer-subitem exception-subitem">Privacy Policy</li>
+              <li href="#" class="menu-footer-item"><a href="/index.html">Terms and Conditions</a></li>
+              <li href="#" class="menu-footer-subitem"><a href="/index.html">User agreement</a></li>
+              <li href="#" class="menu-footer-subitem exception-subitem"><a href="/index.html">Privacy Policy</a></li>
             </ul>
           </div>
         </footer>

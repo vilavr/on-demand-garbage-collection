@@ -1,9 +1,7 @@
 @charset "UTF-8";
-@import url("main.css");
-
 
 footer {
-    background-color: #000;
+    background-color: var(--black);
     height: 13vw;
     margin: 0;
 }
@@ -27,7 +25,7 @@ footer {
     padding-left: 6.4vw;
     font-style: italic;
     font-size: 1vw;
-    color: #888;
+    color: var(--white-yellow);
     margin-top: 1.7vw;
 }
 
@@ -55,15 +53,24 @@ footer {
     text-decoration: none;
     font-family: "Nanum Myeongjo";
     font-size: 1.25vw;
+    list-style-type: none;
+}
+.menu-footer-item a {
+    text-decoration: none;
+    color: var(--white);
 }
 .menu-footer-subitem {
     text-align: left;
     margin-bottom: 0.5vw;
 
-    color: #fff;
     text-decoration: none;
     font-family: "Nanum Myeongjo";
     font-size: 1.2vw;
+    list-style-type: none;
+}
+.menu-footer-subitem a {
+    text-decoration: none;
+    color: var(--white);
 }
 
 .exception-subitem {

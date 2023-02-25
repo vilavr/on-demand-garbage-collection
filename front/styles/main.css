@@ -6,3 +6,9 @@
         margin: 0;
     }
 }
+
+:root {
+    --white: #d5d5d5;
+    --black: #000000;
+    --white-yellow: #888;
+}
