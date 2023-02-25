@@ -1,0 +1,132 @@
+.join-header h1{
+	color: white;
+	font-family: "Nanum Myeongjo";
+    font-size: 3vw;
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	font-style: normal;
+	font-weight: 400;
+	line-height: 69px;
+}
+.username-container{
+	position: absolute;
+	top: 300px;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    justify-content: center;
+}
+#password{
+	position: absolute;
+	top: 370px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+}
+input[type="text"], input[type="password"]{
+	min-width: 463px;
+	min-height: 49px;
+	max-width: 463px;
+	max-height: 49px;
+	background-color: #0D0D0D;
+	border: 1px solid #fff;
+	color: #fff;
+	font-family: 'NanumMyeongjo';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 35px;
+	display: inline-block;
+}
+input::placeholder{
+
+	font-family: 'NanumMyeongjo';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 35px;
+	color: #FFFFFF;
+	opacity: 0.8;
+}
+#show-password{
+	position: fixed;
+	top: 370px;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    font-family: 'NanumMyeongjo';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 35px;
+	display: inline-block;
+	background-color: #0d0d0d;
+	color: #fff;
+	opacity: 0.8;
+	border: none;
+}
+#show-password:hover{
+	cursor: pointer;
+	opacity: 1;
+}
+.terms{
+	position: fixed;
+	top: 430px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	font-family: 'NanumMyeongjo';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 23px;
+	color: #FFFFFF;
+	opacity: 0.8;
+}
+.terms p a{
+	text-decoration: underline;
+	color: inherit;
+}
+#signup, #login{
+	position: fixed;
+    transform: translate(-50%, -50%);
+    min-width: 463px;
+	min-height: 49px;
+	max-width: 463px;
+	max-height: 49px;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	border-radius: 5px;
+	font-family: 'NanumMyeongjo';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 25px;
+	line-height: 23px;
+	color: #000000;
+}
+#signup:hover, #login:hover{
+	background-color: #ececec;
+	cursor: pointer;
+}
+#signup{
+	top: 480px;
+    left: 50%;
+}
+#login{
+	top: 570px;
+	left: 50%;
+}
+.or{
+position: absolute;
+top: 525px;
+right: 36.5%;
+transform: translate(-50%, -50%);
+color: #fff;
+font-family: 'NanumMyeongjo';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 23px;
+color: #fff;
+letter-spacing: -1em;
+}

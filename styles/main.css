@@ -1,0 +1,17 @@
+@charset "utf-8";
+@media screen {
+    body { 
+        background: url("../img/background.jpg") scroll no-repeat left top;
+        background-size: cover;
+        background-position: center center;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+:root {
+    --white: #d5d5d5;
+    --black: #000000;
+    --white-yellow: #888;
+}
+

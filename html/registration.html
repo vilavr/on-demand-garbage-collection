@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome to Throw It - Registration</title>
+	<link rel="stylesheet" href="styles/registration.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="icon" href="../img/logo.jpg" type="image/x-icon"/>
+</head>
+<body>
+	<div class="join-header">
+		<h1>Join Throw It</h1>
+	</div>
+	<form action="#" method="post">
+		<div class="username-container">
+			<input type="text" id="username" name="username" placeholder="Username" required pattern="[A-Za-z0-9!@#$%^&*()_+-=]{8,15}">
+        </div>
+		<div class="password-container">
+			<input type="password" id="password" name="password" placeholder="Password" required pattern="[A-Za-z0-9!@#$%^&*()_+-=]{8,15}">
+			<button type="button" id="show-password" onclick="showPassword()">Show</button>
+		</div>
+
+		<div class="terms">
+			<p>By clicking Agree & Join, you agree to the Throw It <a href="#">User Agreement</a>, and <a href="#">Privacy Policy</a>.</p>
+		</div>
+
+		<button type="submit" id="signup">Agree & Join</button>
+
+		<div class="or">
+			<span>--------------------- ro ---------------------</span>
+		</div>
+
+		<button type="button" id="login">Log in</button>
+	</form>
+
+	<script>
+		const showPasswordBtn = document.getElementById("show-password");
+		const passwordInput = document.getElementById("password");
+
+		showPasswordBtn.addEventListener("click", () => {
+			if (passwordInput.type === "password") {
+				passwordInput.type = "text";
+				showPasswordBtn.textContent = "Hide";
+				showPasswordBtn.classList.add("password-visible");
+			} else {
+				passwordInput.type = "password";
+				showPasswordBtn.textContent = "Show";
+				showPasswordBtn.classList.remove("password-visible");
+			}
+		});
+	</script>
+</body>
+</html>
+
