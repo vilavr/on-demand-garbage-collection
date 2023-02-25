@@ -1,45 +1,43 @@
 @charset "UTF-8";
 
-html,
-body {
-  height: 100%;
-}
-
 header {
-    background-color: #000;
-    height: 7vw;
+    height: 80px;
+    width: 100%;
+    min-width: 964px;
     margin: 0;
-}
-.header-container {
+    z-index: 1000;
+    background-color: var(--black);
     display: flex;
     justify-content: space-between;
 }
+
 .logo {
     width: auto;
-    height: 7vw;
+    height: 80px;
     margin-left: 1vw;
 }
+
 .menu {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     position: relative;
-    margin-right: 4vw;
+    margin-right: 1vw;
     text-align: center;
 }
 .menu-item {
-    margin-left: 5vw;
+    padding-left: 5vw;
     color: #fff;
     text-decoration: none;
     font-family: "Nanum Myeongjo";
-    font-size: 1.2vw;
+    font-size: 20px;
 }
 
 .user-menu {
-    display: flex;
+    display:flex;
     align-items: center;
-    margin-left: 6vw;
-    margin-right: 5vw;
+    padding-left: 3vw;
+    padding-right: 2vw;
 }
 
 .register-button:hover {
@@ -50,13 +48,12 @@ header {
     display:inline-block;
     background-color: #fff;
     color: #000;
-    margin-left: 2vw;
-    padding: 0.85vw 2vw;
-    border-radius: 1vw;
+    margin-left: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
     text-align: center;
     text-decoration: none;
-    font-size: 1.2vw;
+    font-size: 20px;
     font-family: "Nanum Myeongjo";
-
     transition: all 0.3s ease-in-out;
 }

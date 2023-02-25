@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+#main {
+    display: block;
+    margin-left: 15vw;
+    padding: 2vw;
+    color: var(--white);
+}
