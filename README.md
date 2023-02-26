@@ -1,7 +1,7 @@
 # SPECIFICATION FOR A WEBSITE
 
 ## Overview
-
+[img](img)
 General Summary:
 
 * The primary goal of the website is to provide on-demand waste management services that are easy to access, affordable, and sustainable. The website aims to reduce waste and promote recycling while providing a hassle-free solution for waste disposal.
