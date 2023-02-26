@@ -1,37 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Welcome to Throw It - Registration</title>
 	<link rel="stylesheet" href="styles/registration.css">
 	<link rel="stylesheet" href="styles/main.css">
-	<link rel="icon" href="img/icon.png">
+	<link rel="icon" href="../img/logo.jpg" type="image/x-icon" />
+
+	<link rel="stylesheet" href="styles/header.css">
+	<link rel="stylesheet" href="styles/footer.css">
 </head>
+
 <body>
-	<div class="join-header">
-		<h1>Join Throw It</h1>
+	<header class="header-container">
+		<a href="index.html">
+			<img src="img/logo.png" alt="Logo" class="logo">
+		</a>
+		<nav class="menu">
+			<a href="/index.html" class="menu-item">Home</a>
+			<a href="#" class="menu-item">About Us</a>
+			<a href="#" class="menu-item">Services</a>
+			<a href="#" class="menu-item">Terms and Conditions</a>
+		</nav>
+		<div class="user-menu">
+			<a href="#" class="menu-item">Log In</a>
+			<a href="#" class="register-button">Register</a>
+		</div>
+	</header>
+
+
+	<div id="main" class="centered">
+		<div class="join-header">
+			<h1>Join Throw It</h1>
+		</div>
+		<form action="#" method="post">
+			<div class="input-lines">
+				<div class="username-container">
+					<input type="text" id="username" class="username" name="username" placeholder="Username" required
+						pattern="[A-Za-z0-9!@#$%^&*()_+-=]{8,15}">
+				</div>
+				<div class="password-container">
+					<input type="password" id="password" class="password" name="password" placeholder="Password" required
+						pattern="[A-Za-z0-9!@#%^&*()_+-=]{8,15}">
+					<button type="button" id="show-password" class="show-password" onclick="showPassword()">Show</button>
+				</div>	
+			</div>
+
+
+			<div class="terms">
+				<p>By clicking Agree & Join, you agree to the <br>
+					Throw It
+					<a href="#">User Agreement</a>
+					, and
+					<a href="#">Privacy Policy</a>.
+				</p>
+			</div>
+<br>
+			<button type="submit" id="signup">Agree & Join</button>
+
+			<div class="or">
+				<a>
+					or
+				</a>
+			</div>
+			
+			<button type="button" id="login">Log in</button>
+		</form>
 	</div>
-	<form action="#" method="post">
-		<div class="username-container">
-			<input type="text" id="username" name="username" placeholder="Username" required pattern="[A-Za-z0-9!@#$%^&*()_+-=]{8,15}">
-        </div>
-		<div class="password-container">
-			<input type="password" id="password" name="password" placeholder="Password" required pattern="[A-Za-z0-9!@#$%^&*()_+-=]{8,15}">
-			<button type="button" id="show-password" onclick="showPassword()">Show</button>
-		</div>
-
-		<div class="terms">
-			<p>By clicking Agree & Join, you agree to the Throw It <a href="#">User Agreement</a>, and <a href="#">Privacy Policy</a>.</p>
-		</div>
-
-		<button type="submit" id="signup">Agree & Join</button>
-
-		<div class="or">
-			<span>--------------------- ro ---------------------</span>
-		</div>
-
-		<button type="button" id="login">Log in</button>
-	</form>
 
 	<script>
 		const showPasswordBtn = document.getElementById("show-password");
@@ -50,5 +86,5 @@
 		});
 	</script>
 </body>
-</html>
 
+</html>
