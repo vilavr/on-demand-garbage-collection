@@ -4,13 +4,13 @@
 
 General Summary:
 
-* This project solves the problem of garbage collection in private and multi-apartment buildings, in cases where it is required to carry out the removal outside the standard work schedule of the garbage collection team.
-* The main audience of our application will be residents of apartment buildings, private residents or those who need garbage removal outside the main work schedule of the cleaning team.
+* The primary goal of the website is to provide on-demand waste management services that are easy to access, affordable, and sustainable. The website aims to reduce waste and promote recycling while providing a hassle-free solution for waste disposal.
+* The main audience includes homeowners, apartment dwellers, and businesses who require waste management services. 
 
 ## Team Members
 
 - Ilja Grigorjev - 230646IVSB
-- Vira Lavrova 
+- Vira Lavrova - 223682IVSB
 - Ksenija Okuneva
 
 ## Goals, Objectives and Phases
@@ -35,15 +35,14 @@ General Summary:
     - Track the number of garbage collection services scheduled outside the standard work schedule and the rate of successful bookings through the application.
     - The development team will create a scheduling and notification system that coordinates with the existing cleaning teams.
     - The scheduling and notification system will leverage the existing garbage collection services to provide a reliable and efficient garbage removal service.
-    - Develop, test and integrate the scheduling and notification system within the web application within 4 months.
 
 
 - Offer a user-friendly web application for residents of apartment buildings, private residents, and businesses that require garbage removal in available time.
     - Design and develop a web application that provides a user-friendly interface for scheduling and requesting garbage removal services for private and multi-apartment buildings.
-    - Track the number of active users and user feedback to identify areas for improvement.
-    - The development team will design and develop the web application, and conduct user testing and feedback gathering.
+    - Gather user feedback for further iprovements
+    - The development team will design and develop the web application, and conduct user testing
     - The web application will prioritize the user experience and create an intuitive and user-friendly interface for garbage collection scheduling and request.
-    - Develop, test, and deploy the web application with a focus on user experience within 9 months.
+    - Develop, test, and deploy the web application with a focus on user experience
 
 ### Phases
 
@@ -55,35 +54,29 @@ General Summary:
 ## Content Structure
 - Home Page:
   - An introduction to the application
-  - A brief description of the features and benefits
+  - A brief description of the features and benefits (pricing, principles of work)
   - A call to action for users to sign up or log in
   
 - User Authentication:
   - A registration page for new users
   - A login page for existing users
-  - A forgot password page with the option to reset password via email
   
 - User Dashboard:
   - A personalized dashboard for each user with their account information
-  - A notification center for any updates or alerts
+  - A list of all orders (both finished and ongoing), cancellation opportunity
   - A sidebar navigation menu to access other sections of the application
+  - User settings
   
 - Garbage Collection Scheduling:
   - A form to schedule a garbage collection service for a user's private or multi-apartment building
   - A calendar view to select available dates and times for the service
   - A confirmation page with the details of the scheduled service
   
-- Garbage Collection Request:
-  - A form for users to request a garbage collection service outside the standard work schedule
-  - A calendar view to select available dates and times for the service
-  - A confirmation page with the details of the requested service
-  
 - User Profile:
   - A profile page for each user to view and edit their personal information
   - An option to change password or update account information
   
 - Contact Us:
-  - A page with contact information for the application's support team
   - A contact form for users to send support requests or feedback
   
 - Terms and Conditions:
@@ -96,17 +89,17 @@ Hierarchical tree :
 ```text
 HOME
   +--ABOUT US
-  |    +--INTRODUCTION
-  |    +--FEATURES AND BENEFITS
-  |    +--CALL TO ACTION
+  |    +--WHY US
+  |    +--OUR TEAM
   +--USER AUTHENTICATION
   |    +--REGISTRATION PAGE
   |    +--LOGIN PAGE
   |    +--FORGOT PASSWORD PAGE
   +--USER DASHBOARD
-  |    +--PERSONALIZED DASHBOARD
-  |    +--NOTIFICATION CENTER
+  |    +--PERSONALIZED SETTINGS
+  |    +--LIST OF ORDERS
   |    +--NAVIGATION MENU
+  |    +--BOOKING FORM
   +--GARBAGE COLLECTION SCHEDULING
   |    +--SCHEDULING FORM
   |    +--CALENDAR VIEW
@@ -120,12 +113,10 @@ HOME
   |    +--PASSWORD UPDATE
   |    +--ACCOUNT INFORMATION UPDATE
   +--CONTACT US
-  |    +--CONTACT INFORMATION
   |    +--SUPPORT REQUEST FORM
   +--TERMS AND CONDITIONS
   |    +--TERMS AND CONDITIONS PAGE
   |    +--PRIVACY POLICY PAGE
-  |    +--LEGAL INFORMATION PAGE
 ```
 
 ### Content Types
@@ -164,12 +155,28 @@ The page templates should come with CSS to give a good idea what the pages will 
 
 ## Functionality
 
-How does your website work? What are the specific parts that each of your page require?
+* Home page includes log in and sign up buttons, booking button (leads to log in page), overview of ordering process, prices. Pricing part also includes short overview of services and call to get more info. "About us" section includes two pages: "our team" and "why us". The primer one is static, whilst the latter contains links to other pages (pricing, services, our team). Services section includes three pages: one for each service (regular pickup, bulk waste removal and recycling). Each page contains short overview of service, price and booking button (also leads to log in page). Terms and condition section includes User agreement and Privacy policy pages. 
 
-* What fields are required for sign-up?
-* What happens if user leaves a comment?
-* What are the user roles?
-* What are performance requirements?
+* Username and password are required for sign up (log in); personal information like name or address is entered with the first order. Then it is saved in settings (with possible further user modifications) and in following orders is filled automatically. 
+
+* Personal dashboard includes history of orders with different possible statuses (ongoing, completed or cancelled orders), price of each order and info about driver responsible for this order
+
+* Users can be either logged in (thus they can access both info sections and personal dashboard), or logged out (thus they can access only info parts)
+
+* Performance requirements:
+- Load time: The website should load quickly, ideally in under three seconds, to prevent users from losing patience and navigating away from the site. This is especially important for mobile users, who may have slower internet connections.
+
+- Responsiveness: The website should be designed to be responsive and mobile-friendly, ensuring that it is accessible and usable on a range of devices, including smartphones and tablets.
+
+- Availability: The website should be available 24/7 to ensure that customers can access the services they need whenever they need them. The site should be hosted on a reliable server with minimal downtime.
+
+- Security: The website should be secure, protecting customer data. The site should be hosted on a server with strong security protocols and should use SSL encryption to protect user data.
+
+- Scalability: The website should be designed to handle high traffic volumes during peak usage periods, such as when a large number of customers are scheduling waste pickups simultaneously.
+
+- Usability: The website should be easy to navigate and use, with clear and concise information about the services offered and how to schedule pickups or make payments.
+
+- Performance monitoring: The website should be monitored regularly to identify any performance issues and to ensure that the site is performing optimally. Regular testing and maintenance should be performed to identify and fix any issues that may arise.
 
 ## Browser Support
 
@@ -177,7 +184,5 @@ How does your website work? What are the specific parts that each of your page r
 
   * Chrome/Chromium
   * Firefox
-  * mobile browsers (Chrome, Firefox, Safari, etc)
 
 ## Hosting
-
