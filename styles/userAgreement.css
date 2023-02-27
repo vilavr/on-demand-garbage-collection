@@ -5,7 +5,6 @@
         background-position: bottom center !important;*/
         background-image: none !important;
         background-color: var(--white) !important;
-
     }
 }
 /*html, body {
@@ -15,11 +14,11 @@
     display: flex;
     align-items: stretch;
 }
-#main{
+.agreement h1{
     margin-left: -1vw;
     margin-top: 5vw;
-    position: absolute;   
-    margin-bottom: 5vw;
+    position: relative;  
+    margin-bottom: 10vw;
 }
 .agreement{
 
@@ -28,6 +27,9 @@
     font-weight: 500;
     font-size: 32px;
     color: black;
+}
+#main{
+    padding: 1vw !important;
 }
 #main h2, .list-footer{
     font-family: 'NanumMyeongjo';
@@ -43,5 +45,4 @@
     font-size: 18px;
     color: black;
 }
-
 
