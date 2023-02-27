@@ -10,16 +10,17 @@ aside {
 }
 
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 270px; /* 0 width - change this with JavaScript */
+    height: 100%;
+    width: 270px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #1111119c; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 200px; /* Place content 60px from the top */
+    background-color: var(--transblack);
+    overflow-x: hidden;
+    padding-top: 200px;
     margin-bottom: 20vw;
+    transition: 0.5s;
 }
 
 .sidenav a {
@@ -29,8 +30,14 @@ aside {
     color: var(--white);
     display: block;
     font-family: "Nanum Myeongjo";
+    transition: 0.3s;
 }
 
 .sidenav a:hover {
     color: var(--white-yellow);
+}
+
+.sidenav .closebtn {
+    display:flex;
+    padding-bottom: 15px;
 }

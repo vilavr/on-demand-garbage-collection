@@ -8,6 +8,7 @@
     flex: 0 0 auto;
     width: 33.33333333%;
     max-width: 250px;
+    min-width:200px;
     margin: 20px;
     margin-top: 100px;
     margin-bottom: 40px;

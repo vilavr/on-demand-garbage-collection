@@ -1,10 +1,5 @@
 @charset "utf-8";
 
-.content {
-    display: block;
-    margin-left: 260px;
-}
-
 .process-line {
     width:100%;
     text-align: center;

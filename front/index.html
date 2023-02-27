@@ -42,6 +42,7 @@
   <!-- Content section of the document -->
   <aside>
     <nav id="side-panel" role="navigation" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="#book_a_collection">Book a collection</a>
       <a href="#how_it_works">How it works?</a>
       <a href="#pricing">Pricing</a>
@@ -50,6 +51,21 @@
   </aside>
 
   <div id="main" class="content">
+    <!-- Open and Close button -->
+    <div id="openbutton">
+      <button class="openbtn" onclick="openNav();">&#9783;</button>
+      <script>
+        function openNav() {
+          document.getElementById("side-panel").style.width = "270px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+  
+        function closeNav() {
+          document.getElementById("side-panel").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+      </script>     
+    </div>
 
     <!-- Book a collection subpage -->
     <div id="book_a_collection" class="book-a-collection">
@@ -266,7 +282,7 @@
     <div id="testimonials">
       <h2 class="last-headings">Testimonials</h2>
       <p class="last-subheading">Let the others speak about us</p>
-      
+
       <!-- Slider container -->
       <div class="slider-container">
 
@@ -288,8 +304,8 @@
           <img src="img/second_person.jpg" alt="Avatar 1" class="avatars">
           <div class="slider-text">
             <h2>
-              "Using an on-demand garbage collection service 
-              has been a game-changer for me. It's so convenient 
+              "Using an on-demand garbage collection service
+              has been a game-changer for me. It's so convenient
               and saves me so much time. I highly recommend it!"
             </h2>
             <div class="reference">
@@ -302,9 +318,9 @@
           <img src="img/third_person.jpg" alt="Avatar 1" class="avatars">
           <div class="slider-text">
             <h2>
-              "I was skeptical at first, but after using the 
-              their service, I'm a believer. The customer 
-              service was great, and my garbage was picked up 
+              "I was skeptical at first, but after using the
+              their service, I'm a believer. The customer
+              service was great, and my garbage was picked up
               quickly and efficiently."
             </h2>
             <div class="reference">
@@ -359,43 +375,44 @@
     </div>
 
   </div>
-    <!-- Footer section of the document-->
-    <footer class="footer-container">
-      <div>
-        <a href="index.html">
-          <img src="img/logo.png" alt="Logo" class="logo-footer">
-        </a>
-        <div class="logo-footer-caption">&#169; Throw It 2023. All rights reserved</div>
-      </div>
+  <!-- Footer section of the document-->
+  <footer class="footer-container">
+    <div>
+      <a href="index.html">
+        <img src="img/logo.png" alt="Logo" class="logo-footer">
+      </a>
+      <div class="logo-footer-caption">&#169; Throw It 2023. All rights reserved</div>
+    </div>
 
-      <div class="menu-footer">
-        <ul>
-          <li class="menu-footer-item"><a href="/index.html">Home</a></li>
-          <li class="menu-footer-subitem"><a href="/index.html#how_it_works">How it works?</a></li>
-          <li class="menu-footer-subitem"><a href="/index.html#pricing">Our pricing</a></li>
-          <li class="menu-footer-subitem"><a href="/index.html#testimonials">Testimonials</a></li>
-        </ul>
+    <div class="menu-footer">
+      <ul>
+        <li class="menu-footer-item"><a href="/index.html">Home</a></li>
+        <li class="menu-footer-subitem"><a href="/index.html#how_it_works">How it works?</a></li>
+        <li class="menu-footer-subitem"><a href="/index.html#pricing">Our pricing</a></li>
+        <li class="menu-footer-subitem"><a href="/index.html#testimonials">Testimonials</a></li>
+      </ul>
 
-        <ul>
-          <li class="menu-footer-item"><a href="/why_throw_it.html">Abous us</a></li>
-          <li class="menu-footer-subitem"><a href="/why_throw_it.html">Why Throw it?</a></li>
-          <li class="menu-footer-subitem exception-subitem"><a href="/our_team.html">Our team</a></li>
-        </ul>
+      <ul>
+        <li class="menu-footer-item"><a href="/why_throw_it.html">Abous us</a></li>
+        <li class="menu-footer-subitem"><a href="/why_throw_it.html">Why Throw it?</a></li>
+        <li class="menu-footer-subitem exception-subitem"><a href="/our_team.html">Our team</a></li>
+      </ul>
 
-        <ul>
-          <li href="#" class="menu-footer-item"><a>Services</a></li>
-          <li href="#" class="menu-footer-subitem"><a href="/regular_pickup.html">Regular pickup</a></li>
-          <li href="#" class="menu-footer-subitem"><a href="/bulk_waste.html">Bulk waste</a></li>
-          <li href="#" class="menu-footer-subitem"><a href="/recycling.html">Recycling</a></li>
-        </ul>
+      <ul>
+        <li href="#" class="menu-footer-item"><a>Services</a></li>
+        <li href="#" class="menu-footer-subitem"><a href="/regular_pickup.html">Regular pickup</a></li>
+        <li href="#" class="menu-footer-subitem"><a href="/bulk_waste.html">Bulk waste</a></li>
+        <li href="#" class="menu-footer-subitem"><a href="/recycling.html">Recycling</a></li>
+      </ul>
 
-        <ul>
-          <li href="#" class="menu-footer-item"><a>Terms and Conditions</a></li>
-          <li href="#" class="menu-footer-subitem"><a href="/user_agreement.html">User agreement</a></li>
-          <li href="#" class="menu-footer-subitem exception-subitem"><a href="/privacy_policy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-    </footer>
+      <ul>
+        <li href="#" class="menu-footer-item"><a>Terms and Conditions</a></li>
+        <li href="#" class="menu-footer-subitem"><a href="/user_agreement.html">User agreement</a></li>
+        <li href="#" class="menu-footer-subitem exception-subitem"><a href="/privacy_policy.html">Privacy Policy</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
 </body>
 
 </html>

@@ -3,6 +3,29 @@
 #main {
     padding-top: 0;
 }
+.content {
+    display: block;
+    margin-left: 250px;
+}
+.openbtn {
+    margin-top: 20px;
+    left:10px;
+    position:fixed;
+    background-color: var(--truewhite);
+    border: none;
+    outline: none;
+    height:20px;
+    width:30px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.openbtn:hover {
+    color: var(--shadowedblack);
+}
+.openbtn:focus {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+  }
+
 .headings {
 	padding-top: 60px; 
 	padding-left: 160px;
