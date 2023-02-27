@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+html, body {
+    justify-content: flex-start!important;
+}
 .centered * {
 	text-align: center;
 	font-family: "Nanum Myeongjo";
