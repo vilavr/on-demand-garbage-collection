@@ -1,0 +1,157 @@
+@charset "utf-8";
+@media screen {
+    html, body { 
+        background: url("../img/background.jpg") scroll no-repeat;
+        background-position: center center; !important;
+    }
+}
+.header-container{
+    display: flex;
+    align-items: stretch;
+}
+.whyus-header h1{
+    margin-left: -1vw;
+    margin-top: 5vw;
+    position: relative;  
+    margin-bottom: 10vw;
+}
+.whyus-header{
+
+    font-family: 'NanumMyeongjo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    color: white;
+    margin-top: -10vw;
+    margin-bottom: 15px;
+}
+#main{
+    padding: 1vw !important;
+    margin-top: 10vw;
+}
+.section1, .section2, .section3, .section4{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    margin-bottom: 2vw;
+}
+.section1 img, .section3 img{
+    margin-top: 15px;
+    margin-bottom: 2vw;
+    margin-left: 1vw;
+}
+.text1, .text3{
+    margin-right: 20px; /* Add some spacing between the text and image */
+    margin-left: 70px;
+    padding-bottom: 20px; /* Add some spacing at the bottom */
+}
+.text1 h2{
+    font-family: 'NanumMyeongjo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    color: white;
+    margin-top: 0vw;
+    margin-left: 60vw;
+    margin-bottom: 2vw;
+}
+.text3 h2{
+    font-family: 'NanumMyeongjo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    color: white;
+    margin-top: 0vw;
+    margin-left: 60vw;
+    margin-bottom: 2vw;
+}
+.text1 p, .text3 p{
+    font-family: 'NanumMyeongjo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    margin-top: 0vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-bottom: 5vw;
+}
+.btn1, .btn3{
+    margin-top: 4vw;
+    margin-left: 2vw;
+/*    margin:auto;*/
+    margin-top: 200px;
+/*    margin-bottom: 80px;*/
+    max-width: 200px;
+    min-width: 50px;
+    bottom: 30px;
+    background-color: var(--truewhite);
+    color: var(--shadowedblack);
+    padding: 10px 20px;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-size: 20px;
+    font-family: "Nanum Myeongjo";
+}
+.section2 img, .section4 img{
+    margin-top: 15px;
+    margin-bottom: 2vw;
+    margin-right: 4vw;
+}
+.text2, .text4{
+    margin-left: 20px; /* Add some spacing between the text and image */
+    margin-right: 70px;
+    padding-bottom: 20px; /* Add some spacing at the bottom */
+}
+.text2 h2, .text4 h2{
+    font-family: 'NanumMyeongjo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    color: white;
+    margin-top: 0vw;
+    margin-right: 55vw;
+    margin-bottom: 2vw;
+}
+.text2 p, .text4 p{
+    font-family: 'NanumMyeongjo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    margin-top: 0vw;
+    margin-left: 0vw;
+    margin-right: 5vw;
+    margin-bottom: 5vw;
+}
+.btn2, .btn4{
+    margin-top: 4vw;
+    margin-left: 51vw;
+/*    margin:auto;*/
+    margin-top: 200px;
+/*    margin-bottom: 80px;*/
+    max-width: 200px;
+    min-width: 50px;
+    bottom: 30px;
+    background-color: var(--truewhite);
+    color: var(--shadowedblack);
+    padding: 10px 20px;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-size: 20px;
+    font-family: "Nanum Myeongjo";
+}
+.btn1:hover, .btn2:hover, .btn3:hover, .btn4:hover{
+    cursor: pointer;
+    border: 1px var(--truewhite) solid;
+    background-color: var(--shadowedblack);
+    color: var(--truewhite);
+}
