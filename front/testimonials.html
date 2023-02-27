@@ -1,0 +1,89 @@
+    <!-- Testimonials subpage -->
+    <div id="testimonials">
+        <h2 class="headings">Testimonials</h2>
+        <p class="main-subheading">Let the others speak about us</p>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+  
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <div class="citation">
+              "I had a lot of junk to get rid of, and these guys
+              made it so easy. I highly recommend them."
+            </div>
+            <div class="text">Sara L., Manhattan</div>
+          </div>
+  
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <div class="citation">
+              "I had a lot of junk to get rid of, and these guys
+              made it so easy. I highly recommend them."
+            </div>
+            <div class="text">Sara L., Manhattan</div>
+          </div>
+  
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <div class="citation">
+              "I had a lot of junk to get rid of, and these guys
+              made it so easy. I highly recommend them."
+            </div>
+            <div class="text">Sara L., Manhattan</div>
+          </div>
+  
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+  
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <div class="testimonials-card">
+          <img src="img/logo.png" alt="Logo" class="logo">
+          <p class="citation">
+            "I had a lot of junk to get rid of, and these guys
+            made it so easy. I highly recommend them."
+          </p>
+          <p class="citation-caption">
+            Sara L., Manhattan
+          </p>
+        </div>
+  
+        <script>
+          let slideIndex = 1;
+          showSlides(slideIndex);
+  
+          // Next/previous controls
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+  
+          // Thumbnail image controls
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+  
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+          }
+        </script>
+      </div>

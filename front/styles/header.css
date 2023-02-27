@@ -26,7 +26,8 @@ header {
     text-align: center;
 }
 .menu-item {
-    padding-left: 5vw;
+    padding-right: 2vw;
+    padding-left: 2vw;
     color: #fff;
     text-decoration: none;
     font-family: "Nanum Myeongjo";
@@ -36,7 +37,7 @@ header {
 .user-menu {
     display:flex;
     align-items: center;
-    padding-left: 3vw;
+    padding-left: 1vw;
     padding-right: 2vw;
 }
 

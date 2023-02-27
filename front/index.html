@@ -1,118 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Tallinn University of Technology – Web Technologies Project - HTML & CSS">
-    <meta name="keywords" content="web_project, Throw It, book a collection">
-    <meta name="author" content="Dark Side">
-    <meta name="viewport" content="initial-scale=1">
 
-    <title>Home page</title>
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/navigation.css">
-    <link rel="stylesheet" href="styles/text.css"> 
-    <link rel="stylesheet" href="styles/main.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Tallinn University of Technology – Web Technologies Project - HTML & CSS">
+  <meta name="keywords" content="web_project, Throw It, book a collection">
+  <meta name="author" content="Dark Side">
+  <meta name="viewport" content="initial-scale=1">
 
-  </head>
+  <title>Home page</title>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/navigation.css">
+  <link rel="stylesheet" href="styles/how.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/pricing.css">
+  <link rel="stylesheet" href="styles/pages.css">
+  <link rel="stylesheet" href="styles/testimonials.css">
 
-    <body>
-        <!-- Header section of the document -->
-        <header class="header-container">
-          <a href="index.html">
-            <img src="img/logo.png" alt="Logo" class="logo">
-          </a>
-          <nav class="menu">
-            <a href="/index.html" class="menu-item">Home</a>
-            <a href="#" class="menu-item">About Us</a>
-            <a href="#" class="menu-item">Services</a>
-            <a href="#" class="menu-item">Terms and Conditions</a>
-          </nav>
-          <div class="user-menu">
-            <a href="#" class="menu-item">Log In</a>
-            <a href="#" class="register-button">Register</a>
+</head>
+
+<body>
+  <!-- Header section of the document -->
+  <header class="header-container">
+    <a href="index.html">
+      <img src="img/logo.png" alt="Logo" class="logo">
+    </a>
+    <nav class="menu">
+      <a href="/index.html" class="menu-item">Home</a>
+      <a href="/why_throw_it.html" class="menu-item">About Us</a>
+      <a href="/index.html#pricing" class="menu-item">Services</a>
+      <a href="/user_agreement.html" class="menu-item">Terms and Conditions</a>
+    </nav>
+    <div class="user-menu">
+      <a href="login.html" class="menu-item">Log In</a>
+      <a href="register.html" class="register-button">Register</a>
+    </div>
+  </header>
+
+  <!-- Content section of the document -->
+  <aside>
+    <nav id="side-panel" role="navigation" class="sidenav">
+      <a href="#book_a_collection">Book a collection</a>
+      <a href="#how_it_works">How it works?</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Testimonials</a>
+    </nav>
+  </aside>
+
+  <div id="main" class="content">
+
+    <!-- Book a collection subpage -->
+    <div id="book_a_collection" class="book-a-collection">
+      <p class="first-subpage-heading">Say goodbye to overflowing trash cans with our on-demand
+        garbage collection service!</p>
+      <p class="first-subheading">Get your garbage picked up on your schedule, without any hassle</p>
+
+      <a href="login.html" class="book-btn">Book a collection</a>
+    </div>
+
+    <!-- How it works subpage -->
+    <div id="how_it_works" class="how_it_works">
+      <h1 class="headings">How it works?</h1>
+      <p class="subheadings">Effortless and Convenient:
+        <br> how we are going to get
+        rid of your garbage
+      </p>
+
+      <!-- Workin process description -->
+      <div class="working-process">
+        <div class="row process-line">
+
+          <!-- First column block of description -->
+          <div class="block">
+            <div class="blocks-header">
+              <h3>
+                Sign up
+              </h3>
+            </div>
+            <div class="left-icon sign-up-icon">
+              <img src="img/signup.png" alt="Sign up" class="icon">
+            </div>
+            <div class="blocks-content">
+              <p>
+                During the sign-up process on our website,
+                you'll need to provide some basic information
+                such as your name, address, and payment details.
+              </p>
+            </div>
           </div>
-        </header>
 
-        <!-- Content section of the document -->
-        <aside>
-          <nav id="side-panel" role="navigation" class="sidenav">
-            <a href="#book_a_collection">Book a collection</a>
-            <a href="#how_it_works">How it works?</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#testimonials">Testimonials</a>
-          </nav>
-        </aside>
-
-        <div id="main" class="content">
-          <section id="section1">
-            <h2>Section 1</h2>
-            <p>This is the content of section 1.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-          </section>
-      
-          <section id="section2">
-            <h2>Section 2</h2>
-            <p>This is the content of section 2.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-          </section>
-      
-          <section id="section3">
-            <h2>Section 3</h2>
-            <p>This is the content of section 3.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-          </section>
-        </div>   
-
-        <!-- Footer section of the document-->
-        <div class="black-line">
-          <footer class="footer-container">
-            <div>
-              <a href="index.html">
-                <img src="img/logo.png" alt="Logo" class="logo-footer">
-              </a>
-              <div class="logo-footer-caption">&#169; Throw It 2023. All rights reserved</div>
+          <!-- Second column block of description -->
+          <div class="block">
+            <div class="blocks-header">
+              <h3>
+                Shedule
+              </h3>
             </div>
-  
-            <div class="menu-footer">
-              <ul>
-                <li class="menu-footer-item"><a href="/index.html">Home</a></li>
-                <li class="menu-footer-subitem"><a href="/index.html">How it works?</a></li>
-                <li class="menu-footer-subitem"><a href="/index.html">Our pricing</a></li>
-                <li class="menu-footer-subitem"><a href="/index.html">Testimonials</a></li>
-              </ul>
-  
-              <ul>
-                <li class="menu-footer-item"><a href="/index.html">Abous us</a></li>
-                <li class="menu-footer-subitem"><a href="/index.html">Why Throw it?</a></li>
-                <li class="menu-footer-subitem exception-subitem"><a href="/index.html">Our team</a></li>
-              </ul>
-  
-              <ul>
-                <li href="#" class="menu-footer-item"><a href="/index.html">Services</a></li>
-                <li href="#" class="menu-footer-subitem"><a href="/index.html">Regular pickup</a></li>
-                <li href="#" class="menu-footer-subitem"><a href="/index.html">Bulk waste</a></li>
-                <li href="#" class="menu-footer-subitem"><a href="/index.html">Recycling</a></li>
-              </ul>
-  
-              <ul>
-                <li href="#" class="menu-footer-item"><a href="/index.html">Terms and Conditions</a></li>
-                <li href="#" class="menu-footer-subitem"><a href="/index.html">User agreement</a></li>
-                <li href="#" class="menu-footer-subitem exception-subitem"><a href="/index.html">Privacy Policy</a></li>
-              </ul>
+            <div class="icon schedule-icon">
+              <img src="img/schedule.png" alt="Schedule" class="icon">
             </div>
-          </footer>
+            <div class="blocks-content">
+              <p>
+                Just select a date and time that works for you,
+                and we'll send a collection team to your address
+                at the scheduled time.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Third column block of description -->
+          <div class="block">
+            <div class="blocks-header">
+              <h3>
+                Collect
+              </h3>
+            </div>
+            <div class="icon collect-icon">
+              <img src="img/collect.png" alt="Collect" class="icon">
+            </div>
+            <div class="blocks-content">
+              <p>
+                On the day of your scheduled pickup,
+                our collection team will arrive at your address
+                and collect your garbage in an environmentally friendly way.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Fourth column block of description -->
+          <div class="block">
+            <div class="blocks-header">
+              <h3>
+                Pay
+              </h3>
+            </div>
+            <div class="icon pay-icon">
+              <img src="img/pay.png" alt="Pay" class="icon">
+            </div>
+            <div class="blocks-content">
+              <p>
+                After your garbage has been collected,
+                we'll charge your payment method on file for the service.
+                You'll receive a receipt via email.
+              </p>
+            </div>
+          </div>
+
+          <!-- Fifth column block of description -->
+          <div class="block">
+            <div class="blocks-header">
+              <h3>
+                Repeat
+              </h3>
+            </div>
+            <div class="right-icon repeat-icon">
+              <img src="img/repeat.png" alt="Repeat" class="icon">
+            </div>
+            <div class="blocks-content">
+              <p>
+                You can use our service as frequently or infrequently
+                as you need. Just schedule a pickup whenever you
+                have garbage that needs to be collected.
+              </p>
+            </div>
+          </div>
         </div>
-        
-    </body>
+      </div>
+    </div>
+
+    <!-- Pricing subpage -->
+    <div id="pricing" class="pricing-tabs">
+      <h2 class="headings">Our pricing</h2>
+      <div class="row justify-content-center">
+        <div id="regular-pickup-card" class="card-col single-pricing">
+          <div id="regular-pickup-card-header" class="pricing-header">
+            <h4>Regular Pickup</h4>
+            <p>10 EUR/time</p>
+          </div>
+          <div>
+            <div class="pricing-content">
+              <ul>
+                <li>
+                  <i class="checkmark"></i>
+                  Some text in 1 line
+                </li>
+                <li>
+                  <i class="checkmark"></i>
+                  Some text in 1 line
+                </li>
+                <li>
+                  <i class="checkmark"></i>
+                  Some text in 1 line
+                </li>
+              </ul>
+            </div>
+            <div class="pricing-btn">
+              <a href="regular_pickup.html">Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="bulk-waste-card" class="card-col single-pricing">
+          <div id="bulk-waste-card-header" class="pricing-header">
+            <h4>Bulk Waste Removal</h4>
+            <p>15-150 EUR/item</p>
+          </div>
+          <div>
+            <div class="pricing-content">
+              <ul>
+                <li>
+                  <i class="checkmark"></i>
+                  Some text in 1 line
+                </li>
+                <li>
+                  <i class="checkmark"></i>
+                  Some text in 1 line
+                </li>
+                <li>
+                  <i class="checkmark"></i>
+                  Some text in 1 line
+                </li>
+              </ul>
+            </div>
+            <div class="pricing-btn">
+              <a href="bulk_waste_removal.html">Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="recycling-card" class="card-col single-pricing">
+          <div id="recycling-card-header" class="pricing-header">
+            <h4>Recycling</h4>
+            <p>10 EUR/time</p>
+          </div>
+          <div>
+            <div class="pricing-content">
+              <ul>
+                <li>
+                  <i class="checkmark"></i>
+                  Some text in 1 line
+                </li>
+                <li>
+                  <i class="checkmark"></i>
+                  Eco-friendly
+                </li>
+                <li>
+                  <i class="checkmark"></i>
+                  Some text in 1 line
+                </li>
+              </ul>
+            </div>
+            <div class="pricing-btn">
+              <a href="regular_pickup.html">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials subpage -->
+    <div id="testimonials">
+      <h2 class="last-headings">Testimonials</h2>
+      <p class="last-subheading">Let the others speak about us</p>
+      
+      <!-- Slider container -->
+      <div class="slider-container">
+
+        <!-- Avatars and caption text -->
+        <div class="mySlides fade">
+          <img src="img/first_person.jpg" alt="Avatar 1" class="avatars">
+          <div class="slider-text">
+            <h2>
+              "I had a lot of junk to get rid of, and these guys
+              made it so easy. I highly recommend them."
+            </h2>
+            <div class="reference">
+              Sarah Johnson
+            </div>
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/second_person.jpg" alt="Avatar 1" class="avatars">
+          <div class="slider-text">
+            <h2>
+              "Using an on-demand garbage collection service 
+              has been a game-changer for me. It's so convenient 
+              and saves me so much time. I highly recommend it!"
+            </h2>
+            <div class="reference">
+              John Smith
+            </div>
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/third_person.jpg" alt="Avatar 1" class="avatars">
+          <div class="slider-text">
+            <h2>
+              "I was skeptical at first, but after using the 
+              their service, I'm a believer. The customer 
+              service was great, and my garbage was picked up 
+              quickly and efficiently."
+            </h2>
+            <div class="reference">
+              Michael Brown
+            </div>
+          </div>
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <!-- Animation -->
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) { slideIndex = 1 }
+          if (n < 1) { slideIndex = slides.length }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+      </script>
+    </div>
+
+  </div>
+    <!-- Footer section of the document-->
+    <footer class="footer-container">
+      <div>
+        <a href="index.html">
+          <img src="img/logo.png" alt="Logo" class="logo-footer">
+        </a>
+        <div class="logo-footer-caption">&#169; Throw It 2023. All rights reserved</div>
+      </div>
+
+      <div class="menu-footer">
+        <ul>
+          <li class="menu-footer-item"><a href="/index.html">Home</a></li>
+          <li class="menu-footer-subitem"><a href="/index.html#how_it_works">How it works?</a></li>
+          <li class="menu-footer-subitem"><a href="/index.html#pricing">Our pricing</a></li>
+          <li class="menu-footer-subitem"><a href="/index.html#testimonials">Testimonials</a></li>
+        </ul>
+
+        <ul>
+          <li class="menu-footer-item"><a href="/why_throw_it.html">Abous us</a></li>
+          <li class="menu-footer-subitem"><a href="/why_throw_it.html">Why Throw it?</a></li>
+          <li class="menu-footer-subitem exception-subitem"><a href="/our_team.html">Our team</a></li>
+        </ul>
+
+        <ul>
+          <li href="#" class="menu-footer-item"><a>Services</a></li>
+          <li href="#" class="menu-footer-subitem"><a href="/regular_pickup.html">Regular pickup</a></li>
+          <li href="#" class="menu-footer-subitem"><a href="/bulk_waste.html">Bulk waste</a></li>
+          <li href="#" class="menu-footer-subitem"><a href="/recycling.html">Recycling</a></li>
+        </ul>
+
+        <ul>
+          <li href="#" class="menu-footer-item"><a>Terms and Conditions</a></li>
+          <li href="#" class="menu-footer-subitem"><a href="/user_agreement.html">User agreement</a></li>
+          <li href="#" class="menu-footer-subitem exception-subitem"><a href="/privacy_policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </footer>
+</body>
+
 </html>

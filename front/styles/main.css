@@ -1,7 +1,7 @@
 @charset "utf-8";
 @media screen {
     html, body { 
-        background: url("../img/background.jpg") scroll no-repeat left top;
+        background: url("../img/background.jpg") scroll no-repeat left bottom;
         padding: 0;
         margin: 0;
         height: 100%;
@@ -15,6 +15,15 @@
 
 :root {
     --white: #d5d5d5;
+    --truewhite: #efefef;
     --black: #000000;
+    --shadowedblack: #0D0D0D;
     --white-yellow: #888;
+}
+
+#main {
+    display: block;
+    padding: 2vw;
+    color: var(--white);
+    font-family: "Nanum Myeongjo";
 }
