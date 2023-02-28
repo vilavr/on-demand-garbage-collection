@@ -41,7 +41,8 @@
     flex-wrap: wrap;
     margin-top: calc(var(--bs-gutter-y) * -1);
     margin-right: calc(var(--bs-gutter-x) * -.5);
-	margin-left:30px;
+    justify-content: space-around;
+	margin-left: 30px;
 }
 
 .justify-content-center {

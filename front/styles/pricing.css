@@ -1,9 +1,11 @@
 @charset "utf-8";
 
+/* Display block when active */
 .pricing-tabs > .active {
     display: block;
 }
 
+/* Displaying as cards */
 .card-col {
     flex: 0 0 auto;
     width: 33.33333333%;
@@ -14,6 +16,7 @@
     margin-bottom: 40px;
 }
 
+/* Cards specification */
 .single-pricing {
     color: var(--black);
     border-radius: 40px;
@@ -22,6 +25,7 @@
     padding: 15px 30px;
 }
 
+/* Cards header specification */
 .single-pricing .pricing-header {
     padding-bottom: 15px;
     border-bottom: 2px solid #ddd;

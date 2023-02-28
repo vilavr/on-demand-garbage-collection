@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/* Background positioning fix */
+html, body {
+    background: url("../img/background.jpg") scroll no-repeat center top;
+}
+
+/* Default left margin fix */
+.content {
+    margin-left: 10%;
+}
+
+/* Links back */
+.links-back a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* Changing default card appearance */
+.single-pricing {
+    color: var(--truewhite);
+    background: var(--grey);
+    box-shadow: none;
+}
+
+.single-pricing .pricing-header {
+    padding-bottom: 10%;
+    border-bottom: none;
+    text-align: center;
+}
+
+.pricing-btn {
+    margin: auto;
+    /* max-width: 200px;
+    min-width: 50px; */
+    bottom: 0;
+    background-color: var(--white);
+    color: var(--black);
+    text-align: center;
+}
+
+.pricing-btn a {
+    color: var(--black);
+}
+
+/* Defining small text */
+.small-bottom-text {
+    font-size: 16px;
+    position: absolute;
+    margin: 10px;
+    bottom:10px;
+    height:30%
+}
+/* Make subtext and button be in the bottom */
+.card-col {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+/* Make cards be different sizes */
+.left-col {
+    width: 60%;
+    max-width: 560px;
+    min-width:200px;
+    min-height: 340px;
+}
+.right-col {
+    width:40%;
+    max-width: 310px;
+    min-height: 100px;
+}
+
+/* What included card styling */
+.what-included h4 {
+    font-size: 22px;
+}
+
+.what-included p {
+    font-size: 18px;
+}

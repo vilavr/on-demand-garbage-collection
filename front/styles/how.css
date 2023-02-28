@@ -25,9 +25,11 @@
 	width:48px;
 }
 .icon:before, .icon:after, .right-icon:before, .left-icon:after {
+	z-index: 0;
 	content: "";
 	display: block;
-	width: 150px;
+	max-width: 600px;
+	min-width: 220px;
 	height: 1px;
 	background: var(--white);
 	top: 50%;

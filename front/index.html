@@ -41,7 +41,7 @@
 
   <!-- Content section of the document -->
   <aside>
-    <nav id="side-panel" role="navigation" class="sidenav">
+    <nav id="side-panel" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="#book_a_collection">Book a collection</a>
       <a href="#how_it_works">How it works?</a>
@@ -53,18 +53,18 @@
   <div id="main" class="content">
     <!-- Open and Close button -->
     <div id="openbutton">
-      <button class="openbtn" onclick="openNav();">&#9783;</button>
+      <button class="openbtn" type="button" onclick="openNav();">&#9783;</button>
       <script>
         function openNav() {
           document.getElementById("side-panel").style.width = "270px";
           document.getElementById("main").style.marginLeft = "250px";
         }
-  
+
         function closeNav() {
           document.getElementById("side-panel").style.width = "0";
           document.getElementById("main").style.marginLeft = "0";
         }
-      </script>     
+      </script>
     </div>
 
     <!-- Book a collection subpage -->
@@ -202,15 +202,15 @@
               <ul>
                 <li>
                   <i class="checkmark"></i>
-                  Some text in 1 line
+                  Classic one
                 </li>
                 <li>
                   <i class="checkmark"></i>
-                  Some text in 1 line
+                  Simple and fast
                 </li>
                 <li>
                   <i class="checkmark"></i>
-                  Some text in 1 line
+                  At preplanned time
                 </li>
               </ul>
             </div>
@@ -230,15 +230,15 @@
               <ul>
                 <li>
                   <i class="checkmark"></i>
-                  Some text in 1 line
+                  As much as you order
                 </li>
                 <li>
                   <i class="checkmark"></i>
-                  Some text in 1 line
+                  Anywhere in Tallinn
                 </li>
                 <li>
                   <i class="checkmark"></i>
-                  Some text in 1 line
+                  Faster than you thought
                 </li>
               </ul>
             </div>
@@ -258,20 +258,20 @@
               <ul>
                 <li>
                   <i class="checkmark"></i>
-                  Some text in 1 line
-                </li>
-                <li>
-                  <i class="checkmark"></i>
                   Eco-friendly
                 </li>
                 <li>
                   <i class="checkmark"></i>
-                  Some text in 1 line
+                  Convinient and effective
+                </li>
+                <li>
+                  <i class="checkmark"></i>
+                  At preplanned time
                 </li>
               </ul>
             </div>
             <div class="pricing-btn">
-              <a href="regular_pickup.html">Learn more</a>
+              <a href="recycling.html">Learn more</a>
             </div>
           </div>
         </div>
@@ -287,7 +287,7 @@
       <div class="slider-container">
 
         <!-- Avatars and caption text -->
-        <div class="mySlides fade">
+        <div class="slider fade">
           <img src="img/first_person.jpg" alt="Avatar 1" class="avatars">
           <div class="slider-text">
             <h2>
@@ -300,7 +300,7 @@
           </div>
         </div>
 
-        <div class="mySlides fade">
+        <div class="slider fade">
           <img src="img/second_person.jpg" alt="Avatar 1" class="avatars">
           <div class="slider-text">
             <h2>
@@ -314,7 +314,7 @@
           </div>
         </div>
 
-        <div class="mySlides fade">
+        <div class="slider fade">
           <img src="img/third_person.jpg" alt="Avatar 1" class="avatars">
           <div class="slider-text">
             <h2>
@@ -335,7 +335,7 @@
       <br>
 
       <!-- The dots/circles -->
-      <div style="text-align:center">
+      <div class="dots">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
@@ -358,7 +358,7 @@
 
         function showSlides(n) {
           let i;
-          let slides = document.getElementsByClassName("mySlides");
+          let slides = document.getElementsByClassName("slider");
           let dots = document.getElementsByClassName("dot");
           if (n > slides.length) { slideIndex = 1 }
           if (n < 1) { slideIndex = slides.length }
@@ -399,16 +399,16 @@
       </ul>
 
       <ul>
-        <li href="#" class="menu-footer-item"><a>Services</a></li>
-        <li href="#" class="menu-footer-subitem"><a href="/regular_pickup.html">Regular pickup</a></li>
-        <li href="#" class="menu-footer-subitem"><a href="/bulk_waste.html">Bulk waste</a></li>
-        <li href="#" class="menu-footer-subitem"><a href="/recycling.html">Recycling</a></li>
+        <li class="menu-footer-item"><a>Services</a></li>
+        <li class="menu-footer-subitem"><a href="/regular_pickup.html">Regular pickup</a></li>
+        <li class="menu-footer-subitem"><a href="/bulk_waste.html">Bulk waste</a></li>
+        <li class="menu-footer-subitem"><a href="/recycling.html">Recycling</a></li>
       </ul>
 
       <ul>
-        <li href="#" class="menu-footer-item"><a>Terms and Conditions</a></li>
-        <li href="#" class="menu-footer-subitem"><a href="/user_agreement.html">User agreement</a></li>
-        <li href="#" class="menu-footer-subitem exception-subitem"><a href="/privacy_policy.html">Privacy Policy</a>
+        <li class="menu-footer-item"><a>Terms and Conditions</a></li>
+        <li class="menu-footer-subitem"><a href="/user_agreement.html">User agreement</a></li>
+        <li class="menu-footer-subitem exception-subitem"><a href="/privacy_policy.html">Privacy Policy</a>
         </li>
       </ul>
     </div>
