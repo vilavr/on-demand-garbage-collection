@@ -1,7 +1,8 @@
 # SPECIFICATION FOR A WEBSITE
 
 ## Overview
-[img](img)
+enos link: https://enos.itcollege.ee/~ksokun/web-project/
+branch for milestone 1 (html+css): development
 General Summary:
 
 * The primary goal of the website is to provide on-demand waste management services that are easy to access, affordable, and sustainable. The website aims to reduce waste and promote recycling while providing a hassle-free solution for waste disposal.
@@ -9,10 +10,9 @@ General Summary:
 
 ## Team Members
 
-- Ilja Grigorjev - 230646IVSB
-- Vira Lavrova - 223682IVSB
-- Ksenija Okuneva - 223391IVSB
-
+- Ilja Grigorjev - 230646IVSB 
+- Vira Lavrova - 223682IVSB (vilavr@ttu.ee)
+- Ksenija Okuneva - 223391IVSB (ksokun@ttu.ee)
 ## Goals, Objectives and Phases
 
 ### Objective
