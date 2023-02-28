@@ -14,33 +14,21 @@
     <link rel="icon" href="img/icon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navigation.css">
     <link rel="stylesheet" href="styles/booking.css">
     <link rel="stylesheet" href="styles/orders.css">
 </head>
 
 <body>
-    <div class="booking">
-        <div class="sidebar">
-            <div class="sidebar-box">
-                <div class="photo-username">
-                    <div class="user-photo"></div>
-                    <div class="username">UserName</div>
-                </div>
-                <div class="navbar-box">
-                    <div class="ellipse"></div>
-                    <div class="circle"></div>
-                    <nav class="order">
-                        <ul>
-                            <li><a href="booking.html">Booking</a></li>
-                            <li><a href="orders.html">Orders</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="logout">
-                    <a>Logout</a>
-                </div>
-            </div>
-        </div>
+    <aside>
+        <nav id="side-panel" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="booking.html">Booking</a>
+            <a href="orders.html">Orders</a>
+            <a href="logout.html" class="log-out">Log out</a>
+        </nav>
+    </aside>
+    <div id="booking-main" class="booking">
         <div id="main" class="orders">
             <h1>See all the orders</h1>
             <!-- Slider container -->

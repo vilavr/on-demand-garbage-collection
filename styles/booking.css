@@ -13,15 +13,19 @@
     }
 }
 
-/* Sidenavigation */
 .booking {
     height: 100%;
-    position: absolute;
+    margin-left: 250px;
+    transition: all 0.5s ease-out;
 }
 
+/* Sidenavigation */
 .sidenav {
     width: 180px;
+    background: url("../img/background.jpg") scroll no-repeat left bottom;
+    opacity: 0.9;
 }
+
 .sidenav a {
     padding-left: 40px;
 }
@@ -45,11 +49,11 @@
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Old code */
-.logout {
-    display: flex;
-    bottom: 20px;
+.line input{
+    width: 250px;
+}
+.log-out {
+    margin-top: 40px;
 }
 
 .navbar-box {
@@ -121,32 +125,20 @@
 }
 
 .booking-header {
-    width: 271px;
-    height: 70px;
-    position: absolute;
-    left: 250px;
-    top: 17px;
+    position: relative;
 }
 
 .booking-header-headline {
-    color: rgba(0, 0, 0, 1);
-    width: 271px;
-    height: 45px;
-    position: absolute;
-    left: 0;
-    top: 0;
+    color: var(--black);
     text-align: left;
     font-size: 36px;
-    letter-spacing: 0;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .booking-header-timestamp {
     color: rgba(0, 0, 0, 0.8);
-    width: 254px;
-    height: 25px;
-    position: absolute;
-    left: 0;
-    top: 45px;
+    /* position: absolute; */
     text-align: left;
     font-size: 22px;
     letter-spacing: 0;
@@ -161,63 +153,29 @@
 } */
 
 .user-info-disclaimer {
-    width: 100%;
+    /* width: 100%; */
     height: 70px;
-    position: absolute;
-    left: 250px;
-    top: 100px;
+    /* position: absolute; */
+    /* left: 250px;
+    top: 100px; */
 }
 
-.user-disclaimer {
-    color: rgba(26, 20, 20, 0.8);
+.user-info-disclaimer p {
+    margin-top: 40px;
+    opacity: 0.8;
     width: 100%;
-    height: 25px;
-    position: absolute;
-    left: 0;
-    top: 45px;
+    /* position: absolute; */
     text-align: left;
     font-size: 22px;
     letter-spacing: 0;
 }
 
 .form-rows {
-    width: 519px;
-    height: 471px;
-    position: absolute;
-    left: 0;
-    top: 105px;
+    margin-top: 40px;
 }
 
-.form-row,
-.form-row2,
-.form-row3,
-.form-row-4,
-.address-info,
-.phone-box {
-    width: 400px;
-    height: 65px;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
 
-.form-row2 {
-    top: 70px;
-}
-
-.phone-box {
-    top: 145px;
-}
-
-.form-row3 {
-    top: 215px;
-}
-
-.form-row-4 {
-    top: 290px;
-}
-
-.form-row-5, .form-row-6, .form-row-7 {
+/* .form-row-5, .form-row-6, .form-row-7 {
     width: calc(33.33% - 5px);
     height: 65px;
     position: relative;
@@ -369,4 +327,4 @@ input {
 
 span {
     color: #888888;
-}
+} */

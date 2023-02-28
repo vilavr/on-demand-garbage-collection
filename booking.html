@@ -24,7 +24,7 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="booking.html">Booking</a>
             <a href="orders.html">Orders</a>
-            <a href="/logout.html" class="log-out">Log out</a>
+            <a href="logout.html" class="log-out">Log out</a>
         </nav>
     </aside>
     <div id="booking-main" class="booking">
@@ -34,92 +34,59 @@
             <script>
                 function openNav() {
                     document.getElementById("side-panel").style.width = "180px";
-                    document.getElementById("booking-main").style.marginLeft = "190px";
+                    document.getElementById("booking-main").style.marginLeft = "250px";
                 }
 
                 function closeNav() {
                     document.getElementById("side-panel").style.width = "0";
-                    document.getElementById("booking-main").style.marginLeft = "0";
+                    document.getElementById("booking-main").style.marginLeft = "30px";
                 }
             </script>
         </div>
         <div class="booking-header">
             <p class="booking-header-headline">Book a collection</p>
-            <p class="booking-header-timestamp">23 February 2023 - 14:46</p>
+            <span id="date-time" class="booking-header-timestamp"></span>
+            <script>
+                let dt = new Date();
+                let dayOfMonth = dt.getDate();
+                let month = dt.toLocaleString('default', { month: 'long' });
+                let year = dt.getFullYear();
+                let time = dt.toLocaleTimeString('en-US', { hour12: false });
+                let timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+                dt = `${dayOfMonth} ${month} ${year} - ${time} (${timeZone})`;
+                document.getElementById('date-time').innerHTML = dt;
+            </script>
         </div>
         <div class="order-form">
             <div class="user-info-disclaimer">
-                <span class="user-disclaimer">Enter your info (or confirm that it’s correct)</span>
-                <div class="form-rows">
-                    <div class="form-row">
-                        <input class="black-row">
-                        <span class="input-badge">Name</span>
-                    </div>
-                    <div class="form-row2">
-                        <input class="black-row">
-                        <span class="input-badge">Surname</span>
-                    </div>
-                    <div class="phone-box">
-                        <div class=phone-number-input>
-                            <input class="black-row-phone">
-                            <span class="input-badge">Phone number</span>
+                <p>Enter your info (or confirm that it is correct)</p>
+                <form action="#" method="post" class="form-rows">
+                    <div class="input-lines">
+                        <div class="line">
+                            <input type="text" id="name" name="name" placeholder="Name"
+                                required pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+([ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*">
                         </div>
-                        <div class="country-code">
-                            <div class="black-row-small-phone">
-                                <span class="input-badge">Country</span>
-                                <div class="dropdown-box">
-                                    <div class="arrow"></div>
-                                    <ul class="dropdown-menu">
-                                        <li>+372</li>
-                                        <li>+333</li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <div class="line">
+                            <input type="text" id="surname" name="surname" placeholder="Surname"
+                                required pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+([ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*">
+                        </div>
+                        <div class="line">
+                            <input type="text" id="phone" name="phone" placeholder="+372 58678900"
+                                required pattern="\+372 [0-9]{7,}">
+                        </div>
+                        <div class="line">
+                            <input type="email" id="email" name="email" placeholder="name@example.com"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        </div>
+                        <div class="line">
+                            <input type="text" id="address" name="address" placeholder="Street 5, 221B, 20105, Tallinn, Estonia"
+                            pattern="[A-Za-z\s]+ \d{1,3},\s*\d{1,3},\s*\d{5},\s*Tallinn,\s*Estonia">
                         </div>
                     </div>
-                    <div class=form-row3>
-                        <input class="black-row">
-                        <span class="input-badge">E-mail</span>
-                        <span class="input-example">name@example.com</span>
-                    </div>
-                    <div class=form-row-4>
-                        <input class="black-row">
-                        <span class="input-badge">Street address</span>
-                        <span class="input-example">Building, street, entrance, appartment</span>
-                    </div>
-                    <div class="address-info">
-                        <div class=form-row-5>
-                            <div class="black-row-small">
-                                <span class="input-badge">Country</span>
-                                <div class="dropdown-box">
-                                    <div class="arrow"></div>
-                                    <ul class="dropdown-menu">
-                                        <li>EST</li>
-                                        <li>LAT</li>
-                                        <li>FIN</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row-6">
-                            <div class="black-row-small">
-                                <span class="input-badge">City</span>
-                                <div class="dropdown-box">
-                                    <div class="arrow"></div>
-                                    <ul class="dropdown-menu">
-                                        <li>Tallinn</li>
-                                        <li>Riga</li>
-                                        <li>Helsiki</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=form-row-7>
-                            <input class="black-row-small">
-                            <span class="input-badge">ZIP</span>
-                        </div>
-                    </div>
-                </div>
+
+                    <button type="submit" name="submit-form">Submit</button>
+                </form>
             </div>
         </div>
     </div>

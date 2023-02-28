@@ -93,18 +93,23 @@ input::placeholder{
 	cursor: pointer;
 	opacity: 1;
 }
-#signup, #login{
-    min-width: 475px;
+#signup,
+#login {
+	min-width: 475px;
 	min-height: 49px;
 	max-width: 475px;
 	max-height: 49px;
 	background-color: var(--truewhite);
+	padding: 10px 20px;
 	border-radius: 12px;
 	font-family: 'NanumMyeongjo';
 	border-width: 0;
 	font-size: 25px;
 	color: var(--black);
+	text-decoration: none;
+	margin-top:10px;
 }
+
 #signup a, #login a{
 	text-decoration: none;
 	color: var(--black);
