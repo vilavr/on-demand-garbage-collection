@@ -2,7 +2,7 @@
 
 footer {
     background-color: var(--black);
-    height: 180px;
+    min-height: 180px;
     margin: 0;
     position: relative;
     left: 0;
