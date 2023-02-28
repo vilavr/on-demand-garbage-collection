@@ -1,19 +1,15 @@
 @charset "UTF-8";
 
-.black-line {
-    background-color: #fff;
-    height: 180px;
-}
 footer {
     background-color: var(--black);
-    height: 180px;
+    min-height: 180px;
     margin: 0;
     position: relative;
     left: 0;
     bottom: 0;
     min-width:964px;
     width: 100%;
-    box-sizing: border box;
+    box-sizing:border-box;
     z-index: 1000;
     padding-bottom: 10px;
 }
@@ -46,8 +42,9 @@ footer {
     justify-content: space-between;
     position: relative;
     width: 100%;
-    padding-left: 60px;
-    padding-right: 120px;
+    margin-top: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
     padding-bottom: 20px;
     text-align: center;
 }

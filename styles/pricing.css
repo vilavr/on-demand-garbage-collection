@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/* Display block when active */
+.pricing-tabs > .active {
+    display: block;
+}
+
+/* Displaying as cards */
+.card-col {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+    max-width: 250px;
+    min-width:200px;
+    margin: 20px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+/* Cards specification */
+.single-pricing {
+    color: var(--black);
+    border-radius: 40px;
+    background: var(--truewhite);
+    box-shadow: 0 0 59px rgb(191 191 191 / 16%);
+    padding: 15px 30px;
+}
+
+/* Cards header specification */
+.single-pricing .pricing-header {
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 15px;
+    font-size: 22px;
+    text-align: left;
+}
+.single-pricing .pricing-header h4 {
+    margin-bottom: 10px;
+}
+.single-pricing .pricing-header p {
+    margin-top: 12px;
+}
+
+.single-pricing .pricing-content {
+    margin-bottom: 30px;
+    text-align: left;
+    font-size: 20px;
+}
+.pricing-content ul {
+    list-style: none;
+    padding-left: 10px;
+}
+.pricing-content ul li {
+    padding-bottom: 20px;
+}
+.checkmark:before {
+    content: "\2713";
+}
+
+.pricing-btn a:hover {
+    color: var(--black);
+}
+.pricing-btn:hover {
+    color: var(--black);
+    background-color: var(--truewhite);
+    border: var(--black) solid 1px;
+}
+.pricing-btn {
+    /* margin:auto; */
+    position:relative;
+    width: inherit;
+    max-width: 200px;
+    min-width: 50px;
+    bottom: 10px;
+    background-color: var(--shadowedblack);
+    color: var(--truewhite);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.pricing-btn a {
+    font-size: 20px;
+    font-family: "Nanum Myeongjo";
+    text-decoration: inherit;
+    color: var(--truewhite);
+
+}

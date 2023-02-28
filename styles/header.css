@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 header {
-    height: 80px;
+    min-height: 80px;
     width: 100%;
     min-width: 964px;
     margin: 0;
@@ -22,11 +22,15 @@ header {
     align-items: center;
     justify-content: space-evenly;
     position: relative;
-    margin-right: 1vw;
+    margin-right: 5px;
     text-align: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
 }
 .menu-item {
-    padding-left: 5vw;
+    padding-right: 10px;
+    padding-left: 10px;
     color: #fff;
     text-decoration: none;
     font-family: "Nanum Myeongjo";
@@ -36,7 +40,7 @@ header {
 .user-menu {
     display:flex;
     align-items: center;
-    padding-left: 3vw;
+    padding-left: 1vw;
     padding-right: 2vw;
 }
 
@@ -48,7 +52,7 @@ header {
     display:inline-block;
     background-color: #fff;
     color: #000;
-    margin-left: 20px;
+    margin-left: 10px;
     padding: 10px 20px;
     border-radius: 10px;
     text-align: center;
@@ -57,4 +61,3 @@ header {
     font-family: "Nanum Myeongjo";
     transition: all 0.3s ease-in-out;
 }
-

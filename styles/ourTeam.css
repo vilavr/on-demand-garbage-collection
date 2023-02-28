@@ -2,7 +2,7 @@
 @media screen {
     html, body { 
         background: url("../img/background.jpg") scroll no-repeat;
-        background-position: center bottom; !important;
+        background-position: center bottom !important;
         background-size: cover;
     }
 }

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Booking Form</title>
+    <meta name="description" content="Booking form">
+    <meta name="author" content="Dark side">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/booking.css">
+</head>
+
+<body>
+
+    <!-- Content section of the document -->
+    <aside>
+        <nav id="side-panel" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="booking.html">Booking</a>
+            <a href="orders.html">Orders</a>
+            <a href="/logout.html" class="log-out">Log out</a>
+        </nav>
+    </aside>
+    <div id="booking-main" class="booking">
+        <!-- Open and Close button -->
+        <div id="openbutton">
+            <button class="openbtn" type="button" onclick="openNav();">&#9783;</button>
+            <script>
+                function openNav() {
+                    document.getElementById("side-panel").style.width = "180px";
+                    document.getElementById("booking-main").style.marginLeft = "190px";
+                }
+
+                function closeNav() {
+                    document.getElementById("side-panel").style.width = "0";
+                    document.getElementById("booking-main").style.marginLeft = "0";
+                }
+            </script>
+        </div>
+        <div class="booking-header">
+            <p class="booking-header-headline">Book a collection</p>
+            <p class="booking-header-timestamp">23 February 2023 - 14:46</p>
+        </div>
+        <div class="order-form">
+            <div class="user-info-disclaimer">
+                <span class="user-disclaimer">Enter your info (or confirm that it’s correct)</span>
+                <div class="form-rows">
+                    <div class="form-row">
+                        <input class="black-row">
+                        <span class="input-badge">Name</span>
+                    </div>
+                    <div class="form-row2">
+                        <input class="black-row">
+                        <span class="input-badge">Surname</span>
+                    </div>
+                    <div class="phone-box">
+                        <div class=phone-number-input>
+                            <input class="black-row-phone">
+                            <span class="input-badge">Phone number</span>
+                        </div>
+                        <div class="country-code">
+                            <div class="black-row-small-phone">
+                                <span class="input-badge">Country</span>
+                                <div class="dropdown-box">
+                                    <div class="arrow"></div>
+                                    <ul class="dropdown-menu">
+                                        <li>+372</li>
+                                        <li>+333</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=form-row3>
+                        <input class="black-row">
+                        <span class="input-badge">E-mail</span>
+                        <span class="input-example">name@example.com</span>
+                    </div>
+                    <div class=form-row-4>
+                        <input class="black-row">
+                        <span class="input-badge">Street address</span>
+                        <span class="input-example">Building, street, entrance, appartment</span>
+                    </div>
+                    <div class="address-info">
+                        <div class=form-row-5>
+                            <div class="black-row-small">
+                                <span class="input-badge">Country</span>
+                                <div class="dropdown-box">
+                                    <div class="arrow"></div>
+                                    <ul class="dropdown-menu">
+                                        <li>EST</li>
+                                        <li>LAT</li>
+                                        <li>FIN</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row-6">
+                            <div class="black-row-small">
+                                <span class="input-badge">City</span>
+                                <div class="dropdown-box">
+                                    <div class="arrow"></div>
+                                    <ul class="dropdown-menu">
+                                        <li>Tallinn</li>
+                                        <li>Riga</li>
+                                        <li>Helsiki</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=form-row-7>
+                            <input class="black-row-small">
+                            <span class="input-badge">ZIP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
