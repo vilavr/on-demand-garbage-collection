@@ -7,9 +7,9 @@
     <title>Booking Form</title>
     <meta name="description" content="Booking form">
     <meta name="author" content="Dark side">
-    <link rel="stylesheet" href="styles/booking.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/booking.css">
 </head>
 
 <body>
@@ -23,19 +23,19 @@
             <a href="/logout.html" class="log-out">Log out</a>
         </nav>
     </aside>
-    <div class="booking">
+    <div id="booking-main" class="booking">
         <!-- Open and Close button -->
         <div id="openbutton">
             <button class="openbtn" type="button" onclick="openNav();">&#9783;</button>
             <script>
                 function openNav() {
-                    document.getElementById("side-panel").style.width = "270px";
-                    document.getElementById("main").style.marginLeft = "250px";
+                    document.getElementById("side-panel").style.width = "180px";
+                    document.getElementById("booking-main").style.marginLeft = "190px";
                 }
 
                 function closeNav() {
                     document.getElementById("side-panel").style.width = "0";
-                    document.getElementById("main").style.marginLeft = "0";
+                    document.getElementById("booking-main").style.marginLeft = "0";
                 }
             </script>
         </div>

@@ -1,65 +1,55 @@
 @charset "UTF-8";
+@media screen {
+    html, body { 
+        background: var(--snowwhite);
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-size: cover;
+    }
+}
 
+/* Sidenavigation */
 .booking {
-    background-color: var(--snowwhite);
-    width: 100%;
     height: 100%;
     position: absolute;
 }
 
 .sidenav {
-    width: 30px;
+    width: 180px;
 }
-.sidebar {
-    position: absolute;
-    left: -77px;
-    top: -12px;
+.sidenav a {
+    padding-left: 40px;
 }
 
-.sidebar-box {
-    width: 300px;
-    height: 1044px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-image: url(../img/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.openbtn {
+    margin-top: 20px;
+    left:10px;
+    position:fixed;
+    background-color: var(--truewhite);
+    border: none;
+    outline: none;
+    height:20px;
+    width:30px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.openbtn:hover {
+    color: var(--shadowedblack);
+}
+.openbtn:focus {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
 }
 
-.photo-username {
-    position: absolute;
-    width: 161px;
-    height: 160px;
-    left: 30px;
-    top: 40px;
-}
 
-.username {
-    position: absolute;
-    width: 149px;
-    height: 39px;
-    left: 98px;
-    top: 180px;
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 40px;
-    color: #FFFFFF;
-}
-
-.user-photo {
-    box-sizing: border-box;
-    border-radius: 50%;
-    position: absolute;
-    width: 153px;
-    height: 157px;
-    left: 86px;
-
-    background: url(../img/person.jpg);
-    border: 2px solid #000000;
-    background-size: cover;
+/* Old code */
+.logout {
+    display: flex;
+    bottom: 20px;
 }
 
 .navbar-box {
