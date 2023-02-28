@@ -2,11 +2,16 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="description" content="Tallinn University of Technology – Web Technologies Project - HTML & CSS">
+    <meta name="keywords" content="web_project, Throw It, book a collection">
+    <meta name="author" content="Dark Side">
+    <meta name="viewport" content="initial-scale=1">
+
 	<title>Welcome to Throw It - Log In</title>
 	<link rel="stylesheet" href="styles/login.css">
 	<link rel="stylesheet" href="styles/main.css">
-	<link rel="icon" href="img/icon.png" type="image/x-icon" />
+	<link rel="icon" href="img/icon.png" type="image/x-icon">
 
 	<link rel="stylesheet" href="styles/header.css">
 	<link rel="stylesheet" href="styles/footer.css">
@@ -18,21 +23,21 @@
 			<img src="img/logo.png" alt="Logo" class="logo">
 		</a>
 		<nav class="menu">
-			<a href="/index.html" class="menu-item">Home</a>
-			<a href="#" class="menu-item">About Us</a>
-			<a href="#" class="menu-item">Services</a>
-			<a href="#" class="menu-item">Terms and Conditions</a>
+			<a href="index.html" class="menu-item">Home</a>
+			<a href="why_throw_it.html" class="menu-item">About Us</a>
+			<a href="index.html#pricing" class="menu-item">Services</a>
+			<a href="user_agreement.html" class="menu-item">Terms and Conditions</a>
 		</nav>
 		<div class="user-menu">
-			<a href="#" class="menu-item">Log In</a>
-			<a href="#" class="register-button">Register</a>
+			<a href="login.html" class="menu-item">Log In</a>
+			<a href="registration.html" class="register-button">Register</a>
 		</div>
 	</header>
 
 
 	<div id="main" class="centered">
 		<div class="welcome-header">
-			<h1>Welcome to </br> Throw It</h1>
+			<h1>Welcome to <br> Throw It</h1>
 		</div>
 		<form action="#" method="post">
 			<div class="input-lines">
@@ -41,26 +46,27 @@
 						pattern="[A-Za-z0-9!@#$%^&*()_+-=]{8,15}">
 				</div>
 				<div class="password-container">
-					<input type="password" id="password" class="password" name="password" placeholder="Password" required
-						pattern="[A-Za-z0-9!@#%^&*()_+-=]{8,15}">
-					<button type="button" id="show-password" class="show-password" onclick="showPassword()">Show</button>
-				</div>	
+					<input type="password" id="password" class="password" name="password" placeholder="Password"
+						required pattern="[A-Za-z0-9!@#%^&*()_+-=]{8,15}">
+					<button type="button" id="show-password" class="show-password"
+						onclick="showPassword()">Show</button>
+				</div>
 			</div>
 
 
 			<div class="forgot-password">
-					<a href="#">Forgot password?</a>
+				<a href="#">Forgot password?</a>
 			</div>
-<br>
-			<button type="submit" id="login"><a href="booking.html">Log in</a></button>
+			<br>
+			<button type="submit" id="login" href="booking.html">Log in</button>
 
 			<div class="or">
 				<a>
 					or
 				</a>
 			</div>
-			
-			<button type="button" id="signup"><a href="registration.html">New to Throw It? Join now</a></button>
+
+			<button type="button" id="signup" href="registration.html">New to Throw It? Join now</button>
 		</form>
 	</div>
 

@@ -102,10 +102,8 @@ input::placeholder{
 	border-radius: 12px;
 	font-family: 'NanumMyeongjo';
 	border-width: 0;
-	/* font-style: normal; */
 	font-size: 25px;
-	/* line-height: 23px; */
-	
+	color: var(--black);
 }
 #signup a, #login a{
 	text-decoration: none;

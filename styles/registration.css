@@ -13,13 +13,11 @@ div {
 	display: block;
 }
 
-
 .join-header h1{
     font-size: 58px;
 	font-style: normal;
 	font-weight: 50;
 	color: var(--truewhite);
-	/* line-height: 69px; */
 }
 .input-lines {
 	position:relative;
@@ -101,10 +99,8 @@ input::placeholder{
 	border-radius: 12px;
 	font-family: 'NanumMyeongjo';
 	border-width: 0;
-	/* font-style: normal; */
 	font-size: 25px;
-	/* line-height: 23px; */
-	
+	color: var(--black);	
 }
 #signup a, #login a{
 	text-decoration: none;
