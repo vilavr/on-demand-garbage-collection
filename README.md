@@ -11,7 +11,7 @@ General Summary:
 
 - Ilja Grigorjev - 230646IVSB
 - Vira Lavrova - 223682IVSB
-- Ksenija Okuneva
+- Ksenija Okuneva - 223391IVSB
 
 ## Goals, Objectives and Phases
 
