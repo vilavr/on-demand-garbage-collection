@@ -62,7 +62,30 @@
         <div class="order-form">
             <div class="user-info-disclaimer">
                 <p>Enter your info (or confirm that it is correct)</p>
-                <form action="#" method="post" class="form-rows">
+                <?php
+                    session_start();
+
+                    if (isset($_POST['submit-form'])) {
+                        // Capture form data
+                        $name = $_POST['name'];
+                        $email = $_POST['email'];
+                        $surname = $_POST['surname'];
+                        $phone = $_POST['phone'];
+                        $address = $_POST['address'];
+
+                        // Store form data in session variable
+                        $_SESSION['name'] = $name;
+                        $_SESSION['email'] = $email;
+                        $_SESSION['surname'] = $surname;
+                        $_SESSION['phone'] = $phone;
+                        $_SESSION['address'] = $address;
+
+                        // Display success message
+                        // echo "<p>Form submitted successfully!</p>";
+                    }
+                ?>
+
+                <form action="order_confirmation.php" method="post" class="form-rows">
                     <div class="input-lines">
                         <div class="line">
                             <input type="text" id="name" name="name" placeholder="Name"
@@ -81,13 +104,13 @@
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                         </div>
                         <div class="line">
-                            <input type="text" id="address" name="address" placeholder="Street 5, 221B, 20105, Tallinn, Estonia"
-                            pattern="[A-Za-z\s]+ \d{1,3},\s*\d{1,3},\s*\d{5},\s*Tallinn,\s*Estonia">
+                            <input type="text" id="address" name="address" placeholder="Street 5, 221B, 20105, Tallinn, Estonia" pattern="[A-Za-z\s]+ \d{1,3},\s*\d{1,3},\s*\d{5},\s*Tallinn,\s*Estonia">
                         </div>
                     </div>
 
                     <button type="submit" name="submit-form">Book!</button>
                 </form>
+
             </div>
         </div>
     </div>

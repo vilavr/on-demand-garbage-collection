@@ -50,10 +50,20 @@
         <div class="personal-data-header">
             <div class="pdata-header"><p>Personal info</p></div>
             <div class="pdata">
-                <p>Name Surname</p>
-                <p>Phone number</p>
-                <p>Email</p>
-                <p>Street 5, 221B, 20105, Tallinn, Estonia</p>
+                <?php
+                    session_start();
+                    $name = $_SESSION['name'];
+                    $email = $_SESSION['email'];
+                    $phone = $_SESSION['phone'];
+                    $address = $_SESSION['address'];
+                    $surname = $_SESSION['surname'];
+                ?>
+
+                <!-- Display form data on page -->
+                <p><?php echo $name; ?>, <?php echo $surname; ?></p>
+                <p><?php echo $phone; ?></p>
+                <p><?php echo $email; ?></p>
+                <p><?php echo $address; ?></p>
             </div>
         </div>
         <div class="order-data-header">
