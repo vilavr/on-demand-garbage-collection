@@ -22,7 +22,7 @@
     <aside>
         <nav id="side-panel" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="booking.html">Booking</a>
+            <a href="booking.php">Booking</a>
             <a href="orders.html">Orders</a>
             <a href="settings.html">Settings</a>
             <a href="index.html" class="log-out">Log out</a>
@@ -86,7 +86,6 @@
                             <input type="text" id="address" name="address" placeholder="Street 5, 221B, 20105, Tallinn, Estonia" pattern="[A-Za-z\s]+ \d{1,3},\s*\d{1,3},\s*\d{5},\s*Tallinn,\s*Estonia">
                         </div>
                     </div>
-
                     <button type="submit" name="submit-form">Book!</button>
                 </form>
 
