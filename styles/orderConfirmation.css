@@ -1,0 +1,218 @@
+@charset "UTF-8";
+@media screen {
+    html, body { 
+        background: var(--snowwhite);
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-size: cover;
+    }
+}
+@media screen and (max-width: 768px) {
+    .buttons {flex-direction: column !important; width: 70px;}
+    .confirm-btn {margin-bottom: 20px !important;}
+    .buttons a {font-size: 25px;}
+    .pdata, .odata {margin-right: 10px !important;}
+}
+
+.confirmation {
+    height: 100%;
+    margin-left: 250px;
+    transition: all 0.5s ease-out;
+/*    font-family: 'NanumMyeongjo';*/
+    font-style: normal;
+    font-weight: 500;
+    color: black;
+}
+
+/* Sidenavigation */
+.sidenav {
+    width: 180px;
+    background: url("../img/background.jpg") scroll no-repeat left bottom;
+    opacity: 0.9;
+}
+
+.sidenav a {
+    padding-left: 40px;
+}
+
+.openbtn {
+    margin-top: 20px;
+    left:10px;
+    position:fixed;
+    background-color: var(--truewhite);
+    border: none;
+    outline: none;
+    height:20px;
+    width:30px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.openbtn:hover {
+    color: var(--shadowedblack);
+}
+.openbtn:focus {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.line input{
+    width: 250px;
+}
+.log-out {
+    margin-top: 40px;
+}
+
+.navbar-box {
+    width: 301px;
+    height: 232px;
+    position: absolute;
+    left: 107px;
+    top: 620px;
+}
+
+.order-box {
+    top: 10px;
+}
+
+.order {
+    width: 261px;
+    height: 232px;
+    position: absolute;
+    left: -10px;
+    top: -25px;
+    font-family: sans-serif;
+    text-align: left;
+    font-size: 28px;
+    letter-spacing: 0;
+}
+
+.order a {
+    text-decoration: none;
+    color: rgba(230, 238, 254, 1);
+}
+
+.circle {
+    border-radius: 500px;
+    background-color: rgba(217, 217, 217, 1);
+    width: 14px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+
+.ellipse {
+    box-sizing: border-box;
+    position: relative;
+    width: 170px;
+    height: 0;
+    left: -78px;
+    top: 70px;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(90deg);
+}
+
+.logout {
+    position: absolute;
+    width: 96px;
+    height: 32px;
+    left: 135px;
+    top: 903px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.confirmation-header {
+    position: relative;
+}
+
+.confirmation-headline {
+    color: var(--black);
+    text-align: left;
+    font-size: 36px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.pdata-header, .odata-header{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+    width: 100%;
+    /* position: absolute; */
+    text-align: left;
+    font-size: 22px;
+    letter-spacing: 0;
+}
+.pdata p, .odata p{
+    color: var(--black);
+    margin-top: 2px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.pdata, .odata{
+    background-color: var(--truewhite);
+    border: 1px var(--shadowedblack) solid;
+    border-radius: 5px; 
+    margin-right: 20vw;
+}
+.buttons{
+    margin-top: 150px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+}
+.confirm-btn{
+    position: relative;
+    width: inherit;
+    max-width: 300px;
+    min-width: 50px;
+    bottom: 30px;
+    background-color: var(--shadowedblack);
+    color: var(--truewhite);
+    padding: 10px 20px;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    margin-right: 5vw;
+}
+.confirm-btn:hover{
+    cursor: pointer;
+    background-color: var(--transblack);
+}
+.back-btn{
+    position: relative;
+    width: inherit;
+    max-width: 300px;
+    min-width: 50px;
+    bottom: 30px;
+    background-color: var(--truewhite);
+    color: var(--shadowedblack);
+    padding: 10px 20px;
+    border: 1px var(--shadowedblack) solid;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+.back-btn:hover{
+    cursor: pointer;
+    background-color: var(--snowwhite);
+}
+
