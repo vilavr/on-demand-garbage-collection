@@ -1,0 +1,51 @@
+@charset "utf-8";
+@media screen {
+    html, body { 
+        /*background: url("../img/background.jpg") scroll no-repeat;
+        background-position: bottom center !important;*/
+        background-image: none !important;
+        background-color: var(--truewhite) !important;
+    }
+}
+/*html, body {
+    justify-content: flex-start!important;
+}*/
+.header-container{
+    display: flex;
+    align-items: stretch;
+}
+.policy h1{
+    margin-left: -1vw;
+    margin-top: 5vw;
+    position: relative;  
+    margin-bottom: 10vw;
+}
+.policy{
+
+    font-family: 'NanumMyeongjo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    color: black;
+}
+#main{
+    padding: 1vw !important;
+}
+#main h2, .policy-footer, #main h3{
+    font-family: 'NanumMyeongjo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+}
+.policy-footer a{
+    text-decoration: underline;
+    color: inherit;
+}
+#main p{
+    font-family: 'NanumMyeongjo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+}

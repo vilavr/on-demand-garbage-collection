@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+/* Main text */
+.orders h1 {
+    font-weight: 200;
+    color: var(--shadowedblack);
+}
+
+/* Change circle position */
+.circle {
+    border-radius: 500px;
+    background-color: var(--snowwhite);
+    width: 14px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: 45px;
+}
+
+/* Slider container */
+.slider-container {
+    max-width: 700px;
+    min-height: 200px;
+    position: relative;
+    margin: 40px auto 10px 0;
+    padding: 10px;
+    background-color: var(--snowwhite);
+    color: var(--black);
+    border-radius: 20px;
+    border: 2px solid var(--shadowedblack) !important;
+}
+
+/* Hide the images by default */
+.slider {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    left:47%;
+    transform:rotate(90deg);
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: var(--black);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+.next {
+    border-radius: 3px 0 0 3px;
+    top:90%;
+}
+
+/* Caption text */
+.slider-text {
+    color: var(--black);
+    font-size: 15px;
+    margin: 20px;
+    position: absolute;
+    width: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+
+.active {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* Display items in card in a row */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    justify-content: space-between;
+    margin-left: 30px;
+    flex-direction: row;
+    align-content: stretch;
+}
+
+/* Display price in the right */
+.price {
+    right: 5%;
+    top:47%;
+    position: absolute;
+}

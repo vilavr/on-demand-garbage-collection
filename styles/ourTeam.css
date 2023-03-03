@@ -1,0 +1,75 @@
+@charset "utf-8";
+@media screen {
+    html, body { 
+        background: url("../img/background.jpg") scroll no-repeat;
+        background-position: center bottom !important;
+        background-size: cover;
+    }
+}
+/*html, body {
+    justify-content: flex-start!important;
+}*/
+.header-container{
+    display: flex;
+    align-items: stretch;
+}
+.ourteam-header h1{
+    margin-left: -1vw;
+    margin-top: 5vw;
+    position: relative;  
+    margin-bottom: 10vw;
+}
+.ourteam-header{
+
+    font-family: 'NanumMyeongjo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    color: white;
+    margin-top: -10vw;
+    margin-bottom: 15px;
+}
+#main{
+    padding: 1vw !important;
+    margin-top: 10vw;
+}
+#main h2{
+    font-family: 'NanumMyeongjo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    color: white;
+}
+.ksenija, .vira, .ilja, .victoria, .adrian, .emily, .alex{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 1vw;
+}
+.cofounders, .manager, .driver, .custservice, .recycling{
+    display: flex;
+    flex-direction: row;
+}
+.cofounders-description{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-width: 500px;
+    max-width: 700px;
+    margin-left: 10%;
+    font-size: 18px;
+    background-color: var(--transblack);
+    border-radius: 5px;
+}
+.manager-description, .driver-description, .custservice-description, .recycling-description{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-width: 500px;
+    max-width: 700px;
+    margin-left: 32%;
+    font-size: 18px;
+    background-color: var(--transblack);
+    border-radius: 5px;
+}

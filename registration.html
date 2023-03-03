@@ -2,11 +2,15 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="description" content="Tallinn University of Technology – Web Technologies Project - HTML & CSS">
+    <meta name="keywords" content="web_project, Throw It, book a collection">
+    <meta name="author" content="Dark Side">
+    <meta name="viewport" content="initial-scale=1">
 	<title>Welcome to Throw It - Registration</title>
 	<link rel="stylesheet" href="styles/registration.css">
 	<link rel="stylesheet" href="styles/main.css">
-	<link rel="icon" href="img/icon.png" type="image/x-icon" />
+	<link rel="icon" href="img/icon.png" type="image/x-icon">
 
 	<link rel="stylesheet" href="styles/header.css">
 	<link rel="stylesheet" href="styles/footer.css">
@@ -18,14 +22,14 @@
 			<img src="img/logo.png" alt="Logo" class="logo">
 		</a>
 		<nav class="menu">
-			<a href="/index.html" class="menu-item">Home</a>
-			<a href="#" class="menu-item">About Us</a>
-			<a href="#" class="menu-item">Services</a>
-			<a href="#" class="menu-item">Terms and Conditions</a>
+			<a href="index.html" class="menu-item">Home</a>
+			<a href="why_throw_it.html" class="menu-item">About Us</a>
+			<a href="index.html#pricing" class="menu-item">Services</a>
+			<a href="user_agreement.html" class="menu-item">Terms and Conditions</a>
 		</nav>
 		<div class="user-menu">
-			<a href="#" class="menu-item">Log In</a>
-			<a href="#" class="register-button">Register</a>
+			<a href="login.html" class="menu-item">Log In</a>
+			<a href="registration.html" class="register-button">Register</a>
 		</div>
 	</header>
 
@@ -34,39 +38,42 @@
 		<div class="join-header">
 			<h1>Join Throw It</h1>
 		</div>
-		<form action="#" method="post">
+		<div>
+		<!-- <form action="#" method="post"> will be returned after php implmentation -->
 			<div class="input-lines">
 				<div class="username-container">
 					<input type="text" id="username" class="username" name="username" placeholder="Username" required
 						pattern="[A-Za-z0-9!@#$%^&*()_+-=]{8,15}">
 				</div>
 				<div class="password-container">
-					<input type="password" id="password" class="password" name="password" placeholder="Password" required
-						pattern="[A-Za-z0-9!@#%^&*()_+-=]{8,15}">
-					<button type="button" id="show-password" class="show-password" onclick="showPassword()">Show</button>
-				</div>	
+					<input type="password" id="password" class="password" name="password" placeholder="Password"
+						required pattern="[A-Za-z0-9!@#%^&*()_+-=]{8,15}">
+					<button type="button" id="show-password" class="show-password"
+						onclick="showPassword()">Show</button>
+				</div>
 			</div>
 
 
 			<div class="terms">
-				<p>By clicking Agree & Join, you agree to the <br>
+				<p>By clicking Agree &amp; Join, you agree to the <br>
 					Throw It
-					<a href="#">User Agreement</a>
+					<a href="user_agreement.html">User Agreement</a>
 					, and
-					<a href="#">Privacy Policy</a>.
+					<a href="privacy_policy.html">Privacy Policy</a>.
 				</p>
 			</div>
-<br>
-			<button type="submit" id="signup"><a href="#">Agree & Join</a></button>
+			<br>
+			<a id="signup" href="booking.html">Agree &amp; Join</a>
 
 			<div class="or">
 				<a>
 					or
 				</a>
 			</div>
-			
-			<button type="button" id="login"><a href="login.html">Already have an account? Log in</a></button>
-		</form>
+
+			<a id="login" href="login.html">Already have an account? Log in</a>
+		<!-- </form> -->
+		</div>
 	</div>
 
 	<script>
