@@ -1,6 +1,9 @@
 @charset "utf-8";
 
 /* Main text */
+.orders {
+    margin-left: 20%;
+}
 .orders h1 {
     font-weight: 200;
     color: var(--shadowedblack);
