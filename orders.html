@@ -23,9 +23,10 @@
     <aside>
         <nav id="side-panel" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="booking.php">Booking</a>
+            <a href="booking.html">Booking</a>
             <a href="orders.html">Orders</a>
             <a href="settings.html">Settings</a>
+            <a href="index.html">Home</a>
             <a href="index.html" class="log-out">Log out</a>
         </nav>
     </aside>
@@ -33,17 +34,6 @@
         <!-- Open and Close button -->
         <div id="openbutton">
             <button class="openbtn" type="button" onclick="openNav();">&#9783;</button>
-            <script>
-                function openNav() {
-                    document.getElementById("side-panel").style.width = "180px";
-                    document.getElementById("booking-main").style.marginLeft = "250px";
-                }
-
-                function closeNav() {
-                    document.getElementById("side-panel").style.width = "0";
-                    document.getElementById("booking-main").style.marginLeft = "30px";
-                }
-            </script>
         </div>
         <div id="main" class="orders">
 
@@ -56,7 +46,7 @@
                     <div class="row">
                         <div class="slider-text">
                             <h2>
-                                Regular pickup
+                                #1 Regular pickup
                             </h2>
                             <p>Completed on 22 February 2023</p>
                             <p>Driver: Sarah Johnson</p>
@@ -71,9 +61,9 @@
                     <div class="row">
                         <div class="slider-text">
                             <h2>
-                                Bulk waste removal
+                                #2 Bulk waste removal
                             </h2>
-                            <p>Completed on 1 February 2023</p>
+                            <p>Completed on 14 February 2023</p>
                             <p>Driver: Sarah Johnson</p>
                         </div>
                         <div class="price">
@@ -86,9 +76,9 @@
                     <div class="row">
                         <div class="slider-text">
                             <h2>
-                                Recycling
+                                #3 Recycling
                             </h2>
-                            <p>Completed on 14 February 2023</p>
+                            <p>Completed on 1 February 2023</p>
                             <p>Driver: Sarah Johnson</p>
                         </div>
                         <div class="price">
@@ -99,6 +89,11 @@
                 <!-- Next and previous buttons -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                  </div>
             </div>
             <br>
 
@@ -134,12 +129,13 @@
                 }
                 function openNav() {
                     document.getElementById("side-panel").style.width = "180px";
-                    document.getElementById("booking-main").style.marginLeft = "250px";
+                    document.getElementById("booking-main").style.marginLeft = "200px";
                 }
 
                 function closeNav() {
                     document.getElementById("side-panel").style.width = "0";
-                    document.getElementById("booking-main").style.marginLeft = "30px";
+                    document.getElementById("booking-main").style.marginLeft = "20px";
+                    document.getElementById("booking-main").style.marginRight = "20px";
                 }
             </script>
         </div>

@@ -15,7 +15,7 @@
 
 .booking {
     height: 100%;
-    margin-left: 250px;
+    margin-left: 200px;
     transition: all 0.5s ease-out;
 }
 
@@ -132,7 +132,7 @@
     color: var(--black);
     text-align: left;
     font-size: 36px;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-bottom: 10px;
 }
 
