@@ -162,6 +162,21 @@
     }
 }
 
+/* Cancel button */
+.cancel-btn {
+    border: 1px solid;
+    font-family: "Nanum Myeongjo";;
+    background-color: none;
+    background-color: var(--snowwhite); 
+    color: var(--shadowedblack);
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
 @media screen and (max-width: 555px) {
     .price {
         left: 2%;
