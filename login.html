@@ -39,8 +39,7 @@
 		<div class="welcome-header">
 			<h1>Welcome to <br> Throw It</h1>
 		</div>
-		<!-- <form action="#" method="post"> will be returned after php implmentation-->
-		<div>
+		<form action="#" method="post" id="login">
 			<div class="input-lines">
 				<div class="username-container">
 					<input type="text" id="username" class="username" name="username" placeholder="Username" required
@@ -59,7 +58,7 @@
 				<a href="#">Forgot password?</a>
 			</div>
 			<br>
-			<a id="login" href="booking.php">Log in</a>
+			<button type="submit" class="login" form="login" href="booking.php">Log in</button>
 
 			<div class="or">
 				<a>
@@ -67,9 +66,8 @@
 				</a>
 			</div>
 
-			<a id="signup" href="registration.html">New to Throw It? Join now</a>
-		<!-- </form> -->
-		</div>
+			<button type="button" class="signup" onclick="window.location.href='registration.html';">New to Throw It? Join now</button>
+		</form>
 	</div>
 
 	<script>

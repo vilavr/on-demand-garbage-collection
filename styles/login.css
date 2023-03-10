@@ -89,17 +89,17 @@ input::placeholder{
 	opacity: 0.8;
 }
 
-#show-password:hover{
+.show-password:hover{
 	cursor: pointer;
 	opacity: 1;
 }
-#signup,
-#login {
+.signup,
+.login {
 	min-width: 475px;
 	min-height: 49px;
 	max-width: 475px;
 	max-height: 49px;
-	background-color: var(--truewhite);
+	background-color: var(--snowwhite);
 	padding: 10px 20px;
 	border-radius: 12px;
 	font-family: 'NanumMyeongjo';
@@ -110,22 +110,18 @@ input::placeholder{
 	margin-top:10px;
 }
 
-#signup a, #login a{
+.signup a, .login a{
 	text-decoration: none;
 	color: var(--black);
 }
-#signup:hover, #login:hover{
+.signup:hover, .login:hover{
 	background-color: var(--white);
 	cursor: pointer;
 }
 
-#signup{
-	margin-bottom: 40px;
-}
-
 .or {
 	margin: 20px auto;
-	color: #ffffff;
+	color: var(--snowwhite);
 	text-align: center;
 	font-size: 18px;
 	max-width: 473px;
