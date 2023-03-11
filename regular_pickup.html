@@ -27,13 +27,14 @@
     <!-- Header section of the document -->
     <header class="header-container">
         <a href="index.html">
-            <img src="img/logo.png" alt="Logo" class="logo">
+            <img src="img/logo.jpg" alt="Logo" class="logo logo-square">
+            <img src="img/logo.png" alt="Logo" class="logo logo-wide">
         </a>
         <nav class="menu">
             <a href="index.html" class="menu-item">Home</a>
             <a href="why_throw_it.html" class="menu-item">About Us</a>
             <a href="index.html#pricing" class="menu-item">Services</a>
-            <a href="user_agreement.html" class="menu-item">Terms and Conditions</a>
+            <a href="user_agreement.html" class="menu-item">Terms &amp; Conditions</a>
         </nav>
         <div class="user-menu">
             <a href="login.html" class="menu-item">Log In</a>
@@ -80,42 +81,83 @@
             </div>
         </div>
     </div>
-    <!-- Footer section of the document-->
-    <footer class="footer-container">
-        <div>
-            <a href="index.html">
-                <img src="img/logo.png" alt="Logo" class="logo-footer">
-            </a>
-            <div class="logo-footer-caption">&#169; Throw It 2023. All rights reserved</div>
-        </div>
-
+    <!-- Footer section of the document if wide screen-->
+    <footer class="footer-container footer-regular">
         <div class="menu-footer">
+            <ul class="logo-caption-footer">
+                <li href="index.html">
+                    <img src="img/logo.png" alt="Logo" class="logo-footer">
+                </li>
+                <li class="logo-caption">&#169; Throw It 2023. All rights reserved</li>
+            </ul>
             <ul>
                 <li class="menu-footer-item"><a href="index.html">Home</a></li>
                 <li class="menu-footer-subitem"><a href="index.html#how_it_works">How it works?</a></li>
                 <li class="menu-footer-subitem"><a href="index.html#pricing">Our pricing</a></li>
                 <li class="menu-footer-subitem"><a href="index.html#testimonials">Testimonials</a></li>
             </ul>
-
             <ul>
                 <li class="menu-footer-item"><a href="why_throw_it.html">Abous us</a></li>
                 <li class="menu-footer-subitem"><a href="why_throw_it.html">Why Throw it?</a></li>
                 <li class="menu-footer-subitem exception-subitem"><a href="our_team.html">Our team</a></li>
             </ul>
-
             <ul>
                 <li class="menu-footer-item"><a>Services</a></li>
                 <li class="menu-footer-subitem"><a href="regular_pickup.html">Regular pickup</a></li>
                 <li class="menu-footer-subitem"><a href="bulk_waste.html">Bulk waste</a></li>
                 <li class="menu-footer-subitem"><a href="recycling.html">Recycling</a></li>
             </ul>
-
-            <ul>
-                <li class="menu-footer-item"><a>Terms and Conditions</a></li>
+            <ul class="footer-last-column">
+                <li class="menu-footer-item"><a>Terms &amp; Conditions</a></li>
                 <li class="menu-footer-subitem"><a href="user_agreement.html">User agreement</a></li>
                 <li class="menu-footer-subitem exception-subitem"><a href="privacy_policy.html">Privacy Policy</a>
                 </li>
             </ul>
+        </div>
+    </footer>
+    <!-- Footer section of the document if narrow screen-->
+    <footer class="footer-container footer-mobile">
+        <div class="footer-column exclude-logo">
+            <ul class="logo-caption-footer">
+                <li href="index.html">
+                    <img src="img/logo.png" alt="Logo" class="logo-footer">
+                </li>
+                <li class="logo-caption">&#169; Throw It 2023.<br>All rights reserved</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <div class="footer-row">
+                <ul>
+                    <li class="menu-footer-item"><a href="index.html">Home</a></li>
+                    <li class="menu-footer-subitem"><a href="index.html#how_it_works">How it works?</a></li>
+                    <li class="menu-footer-subitem"><a href="index.html#pricing">Our pricing</a></li>
+                    <li class="menu-footer-subitem"><a href="index.html#testimonials">Testimonials</a></li>
+                </ul>
+                <ul>
+                    <li class="menu-footer-item"><a>Services &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </a></li>
+                    <li class="menu-footer-subitem"><a href="regular_pickup.html">Regular pickup</a></li>
+                    <li class="menu-footer-subitem"><a href="bulk_waste.html">Bulk waste removal</a></li>
+                    <li class="menu-footer-subitem"><a href="recycling.html">Recycling</a></li>
+                </ul>
+            </div>
+            <div class="footer-row">
+                <ul>
+                    <li class="menu-footer-item"><a href="why_throw_it.html">Abous us</a></li>
+                    <li class="menu-footer-subitem"><a href="why_throw_it.html">Why Throw it?</a></li>
+                    <li class="menu-footer-subitem exception-subitem"><a href="our_team.html">Our team</a></li>
+                </ul>
+                <ul class="footer-last-column">
+                    <li class="menu-footer-item"><a>Terms &amp; Conditions</a></li>
+                    <li class="menu-footer-subitem"><a href="user_agreement.html">User agreement</a></li>
+                    <li class="menu-footer-subitem exception-subitem"><a href="privacy_policy.html">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="include-when-narrow">
+                <a class="logo-caption">&#169; Throw It 2023. All rights reserved</a>
+            </div>
         </div>
     </footer>
 </body>
