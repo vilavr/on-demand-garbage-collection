@@ -1,17 +1,18 @@
 @charset "utf-8";
 
-.process-line {
-    width:100%;
-    text-align: center;
-}
-
 
 .block {
 	/* same - white line problem */
-    /* width: 180px; */
+    width: 180px;
 	padding-right: 20px;
 	padding-left: 20px;
     display: inline-block;
+}
+
+@media screen and (max-width: 1200px){
+	.block {
+		width: 100px;
+	}
 }
 
 .icon, .left-icon, .right-icon {
@@ -40,6 +41,21 @@
 	right: 0;
 }
 
+@media screen and (max-width: 735px){
+	.icon:before, .icon:after, .right-icon:before, .left-icon:after {
+		content: none;
+		display: none;
+	}
+}
+@media screen and (max-width: 460px){
+	.working-process .row {
+		flex-direction: column;
+		align-items: center;
+	}
+	.block {
+		width: 200px;
+	}
+}
 .how_it_works h3 {
 	font-weight:550;
 	font-size:24px;
@@ -51,6 +67,11 @@
 
 .blocks-content {
 	font-size: 20px;
+}
+
+.process-line {
+    width:100%;
+    text-align: center;
 }
 
 @media screen and (max-width: 1273px) {

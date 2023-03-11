@@ -38,9 +38,9 @@
 }
 .row {
     /* white line fixing */
-    /* display: flex; */
+    display: flex;
 
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin-top: calc(var(--bs-gutter-y) * -1);
     margin-right: calc(var(--bs-gutter-x) * -.5);
     justify-content: space-evenly;
@@ -51,9 +51,9 @@
     /* margin-left: 30px; */
 }
 
-.justify-content-center {
+/* .justify-content-center {
     justify-content: center!important;
-}
+} */
 
 .first-subpage-heading {
 	padding-top: 60px; 

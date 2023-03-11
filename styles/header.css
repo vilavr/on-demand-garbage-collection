@@ -7,10 +7,6 @@ header {
     margin: 0;
     z-index: 1000;
     background-color: var(--black);
-
-    /* white line fixing */
-    /* background-color: red; */
-
     display: flex;
     justify-content: space-between;  
 }
