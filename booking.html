@@ -43,65 +43,12 @@
 
                 function closeNav() {
                     document.getElementById("side-panel").style.width = "0";
-                    document.getElementById("booking-main").style.marginLeft = "50px";
+                    if (window.innerWidth < 420) {
+                        document.getElementById("booking-main").style.marginLeft = "10px";
+                    } else {
+                        document.getElementById("booking-main").style.marginLeft = "50px";
+                    }
                 }
-
-
-                // Calendar 
-                var datepicker = document.getElementById('datepicker');
-                var calendarContainer = document.querySelector('.calendar-container');
-                var calendarMonthYear = document.querySelector('.calendar-month-year');
-                var calendarDays = document.querySelector('.calendar-days');
-                var calendarPrevMonth = document.querySelector('.calendar-prev-month');
-                var calendarNextMonth = document.querySelector('.calendar-next-month');
-
-                var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-                var daysOfWeek = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
-
-                var currentDate = new Date();
-                var selectedDate = currentDate;
-                var currentMonth = currentDate.getMonth();
-                var currentYear = currentDate.getFullYear();
-
-                function updateCalendar() {
-                    calendarMonthYear.innerHTML = months[currentMonth] + ' ' + currentYear;
-
-                    var firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
-                    var daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-
-                    var daysHtml = '';
-
-                    for (var i = 0; i < daysOfWeek.length; i++) {
-                        daysHtml += '<div class="calendar-day">' + daysOfWeek[i] + '</div>';
-                    }
-
-                    for (var i = 0; i < firstDayOfMonth; i++) {
-                        daysHtml += '<div class="calendar-day"></div>';
-                    }
-
-                    for (var i = 1; i <= daysInMonth; i++) {
-                        var date = new Date(currentYear, currentMonth, i);
-                        var classes = 'calendar-day';
-                        if (date.getTime() === selectedDate.getTime()) {
-                            classes += ' selected';
-                        }
-                        daysHtml += '<div class="' + classes + '">' + i + '</div>';
-                    }
-
-                    calendarDays.innerHTML = daysHtml;
-                }
-
-                updateCalendar();
-
-                calendarPrevMonth.addEventListener('click', function () {
-                    currentMonth--;
-                    if (currentMonth < 0) {
-                        currentMonth = 11;
-                        currentYear--;
-                    }
-                    updateCalendar();
-                });
-
             </script>
         </div>
         <div class="main-content">
@@ -134,17 +81,22 @@
                                     pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+([ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*">
                             </div>
                             <div class="line">
-                                <input type="text" id="phone" name="phone" placeholder="+372 58678900" required
+                                <input type="text" id="phone" name="phone" placeholder="+372 58678900"
                                     pattern="\+372 [0-9]{7,}">
                             </div>
                             <div class="line">
                                 <input type="email" id="email" name="email" placeholder="name@example.com"
-                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                    pattern="^[\w\-\.]{1,50}@([\w-]{1,50}\.){1,50}[\w-]{2,4}$">
                             </div>
                             <div class="line">
-                                <input type="text" id="address" name="address"
-                                    placeholder="Street 5, 221B, 20105, Tallinn, Estonia"
-                                    pattern="[A-Za-z\s]+ \d{1,3},\s*\d{1,3},\s*\d{5},\s*Tallinn,\s*Estonia">
+                                <div class="line">
+                                    <input type="text" id="street" name="street" placeholder="Street Name and Number"
+                                        pattern="[A-Za-z0-9\s-]+">
+                                    <input type="text" id="house" name="house" placeholder="House Number"
+                                        pattern="\d{1,3}">
+                                    <input type="text" id="index" name="index" placeholder="Index" pattern="\d{5}">
+                                    <span>Tallinn, Estonia</span>
+                                </div>
                             </div>
                         </div>
                         <label for="datepicker">Select a date:</label>
@@ -157,6 +109,91 @@
                             <div class="calendar-days"></div>
                         </div>
                         <input type="hidden" id="datepicker" name="datepicker">
+                        <script>
+                            var datepicker = document.getElementById('datepicker');
+                            var calendarContainer = document.querySelector('.calendar-container');
+                            var calendarMonthYear = document.querySelector('.calendar-month-year');
+                            var calendarDays = document.querySelector('.calendar-days');
+                            var calendarPrevMonth = document.querySelector('.calendar-prev-month');
+                            var calendarNextMonth = document.querySelector('.calendar-next-month');
+
+                            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                            var daysOfWeek = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
+
+                            var currentDate = new Date();
+                            var selectedDate = currentDate;
+                            var currentMonth = currentDate.getMonth();
+                            var currentYear = currentDate.getFullYear();
+
+                            function updateCalendar() {
+                                calendarMonthYear.innerHTML = months[currentMonth] + ' ' + currentYear;
+
+                                var firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay() - 1; // Sunday is the 0th day, subtract 1 to make Monday the 0th day
+                                if (firstDayOfMonth < 0) {
+                                    firstDayOfMonth = 6; // If the first day is Sunday, set it to 6 (Sunday is the last day of the week in this case)
+                                }
+
+                                var daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+                                var daysHtml = '';
+
+                                for (var i = 0; i < daysOfWeek.length; i++) {
+                                    daysHtml += '<div class="calendar-day">' + daysOfWeek[i] + '</div>';
+                                }
+
+                                for (var i = 0; i < firstDayOfMonth; i++) {
+                                    daysHtml += '<div class="calendar-day"></div>';
+                                }
+
+                                for (var i = 1; i <= daysInMonth; i++) {
+                                    var date = new Date(currentYear, currentMonth, i);
+                                    var classes = 'calendar-day';
+                                    if (date.getTime() === selectedDate.getTime()) {
+                                        classes += ' selected';
+                                    }
+                                    daysHtml += '<div class="' + classes + '">' + i + '</div>';
+                                }
+
+                                calendarDays.innerHTML = daysHtml;
+                            }
+
+                            updateCalendar();
+
+                            calendarPrevMonth.addEventListener('click', function () {
+                                currentMonth--;
+                                if (currentMonth < 0) {
+                                    currentMonth = 11;
+                                    currentYear--;
+                                }
+                                updateCalendar();
+                            });
+
+                            calendarNextMonth.addEventListener('click', function () {
+                                currentMonth++;
+                                if (currentMonth > 11) {
+                                    currentMonth = 0;
+                                    currentYear++;
+                                }
+                                updateCalendar();
+                            });
+
+                            datepicker.addEventListener('click', function () {
+                                calendarContainer.classList.toggle('show');
+                            });
+
+                            calendarDays.addEventListener('click', function (event) {
+                                var dayElement = event.target;
+                                if (!dayElement.classList.contains('calendar-day')) {
+                                    return;
+                                }
+                                var day = parseInt(dayElement.innerHTML);
+                                selectedDate = new Date(currentYear, currentMonth, day);
+                                updateCalendar();
+                                datepicker.value = selectedDate.toLocaleDateString();
+                                calendarContainer.classList.remove('show');
+                            });
+
+                        </script>
                         <br>
 
 
