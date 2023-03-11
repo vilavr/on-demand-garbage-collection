@@ -62,30 +62,36 @@
         <div class="order-form">
             <div class="user-info-disclaimer">
                 <p>Enter your info (or confirm that it is correct)</p>
-                
+
 
                 <form action="order_confirmation.php" method="post" class="form-rows">
                     <div class="input-lines">
                         <div class="line">
-                            <input type="text" id="name" name="name" placeholder="Name"
-                                required pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+([ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*">
+                            <input type="text" id="name" name="name" placeholder="Name" required
+                                pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+([ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*">
                         </div>
                         <div class="line">
-                            <input type="text" id="surname" name="surname" placeholder="Surname"
-                                required pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+([ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*">
+                            <input type="text" id="surname" name="surname" placeholder="Surname" required
+                                pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+([ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*">
                         </div>
                         <div class="line">
-                            <input type="text" id="phone" name="phone" placeholder="+372 58678900"
-                                required pattern="\+372 [0-9]{7,}">
+                            <input type="text" id="phone" name="phone" placeholder="+372 58678900" required
+                                pattern="\+372 [0-9]{7,}">
                         </div>
                         <div class="line">
                             <input type="email" id="email" name="email" placeholder="name@example.com"
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                         </div>
                         <div class="line">
-                            <input type="text" id="address" name="address" placeholder="Street 5, 221B, 20105, Tallinn, Estonia" pattern="[A-Za-z\s]+ \d{1,3},\s*\d{1,3},\s*\d{5},\s*Tallinn,\s*Estonia">
+                            <input type="text" id="address" name="address"
+                                placeholder="Street 5, 221B, 20105, Tallinn, Estonia"
+                                pattern="[A-Za-z\s]+ \d{1,3},\s*\d{1,3},\s*\d{5},\s*Tallinn,\s*Estonia">
                         </div>
                     </div>
+                    <label for="dateArrive">Date of arrival*: </label>
+                    <input type="date" id="dateArrive" name="dateArrive" min="2023-01-01" max="2033-01-01" required><br>
+
+
                     <button type="submit" name="submit-form">Book!</button>
                 </form>
 

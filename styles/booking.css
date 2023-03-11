@@ -12,7 +12,9 @@
         background-size: cover;
     }
 }
-
+.main-content {
+    margin-left: 15px;
+}
 .booking {
     height: 100%;
     margin-left: 200px;
@@ -34,7 +36,7 @@
     margin-top: 20px;
     left:10px;
     position:fixed;
-    background-color: var(--truewhite);
+    background-color: #0000;
     border: none;
     outline: none;
     height:20px;
@@ -42,8 +44,9 @@
     cursor: pointer;
     transition: all 0.5s ease-out;
 }
-.openbtn:hover {
-    color: var(--shadowedblack);
+.openbtn img {
+    width: 30px;
+    height: auto;
 }
 .openbtn:focus {
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
@@ -132,7 +135,7 @@
     color: var(--black);
     text-align: left;
     font-size: 36px;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -173,3 +176,50 @@
 .form-rows {
     margin-top: 40px;
 }
+
+
+/* Calender */
+.calendar-container {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  
+  .calendar-days {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  
+  .calendar-day {
+    width: calc(100% / 7);
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .calendar-day:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .calendar-day.selected {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .calendar-prev-month,
+  .calendar-next-month {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  

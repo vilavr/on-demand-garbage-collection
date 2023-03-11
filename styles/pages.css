@@ -11,13 +11,17 @@
     margin-top: 20px;
     left:10px;
     position:fixed;
-    background-color: var(--truewhite);
+    background-color: #0000;
     border: none;
     outline: none;
     height:20px;
     width:30px;
     cursor: pointer;
     transition: all 0.5s ease-out;
+}
+.openbtn img {
+    width: 40px;
+    height: auto;
 }
 .openbtn:hover {
     color: var(--shadowedblack);
@@ -37,23 +41,14 @@
 	margin: 50px 180px 120px;
 }
 .row {
-    /* white line fixing */
     display: flex;
-
     flex-wrap: wrap;
     margin-top: calc(var(--bs-gutter-y) * -1);
     margin-right: calc(var(--bs-gutter-x) * -.5);
     justify-content: space-evenly;
     flex-direction: row;
     align-items: flex-start;
-	
-    /* white line fixing */
-    /* margin-left: 30px; */
 }
-
-/* .justify-content-center {
-    justify-content: center!important;
-} */
 
 .first-subpage-heading {
 	padding-top: 60px; 
