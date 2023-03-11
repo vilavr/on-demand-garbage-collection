@@ -2,13 +2,10 @@
 @media screen {
     html, body { 
         background: url("../img/background.jpg") scroll no-repeat;
-        background-position: center center; !important;
+        background-position: center center !important;
     }
 }
-.header-container{
-    display: flex;
-    align-items: stretch;
-}
+
 .whyus-header h1{
     margin-left: -1vw;
     margin-top: 5vw;

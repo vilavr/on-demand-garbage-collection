@@ -6,13 +6,7 @@
         background-size: cover;
     }
 }
-/*html, body {
-    justify-content: flex-start!important;
-}*/
-.header-container{
-    display: flex;
-    align-items: stretch;
-}
+
 .ourteam-header h1{
     margin-left: -1vw;
     margin-top: 5vw;

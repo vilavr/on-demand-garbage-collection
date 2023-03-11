@@ -7,13 +7,7 @@
         background-color: var(--truewhite) !important;
     }
 }
-/*html, body {
-    justify-content: flex-start!important;
-}*/
-.header-container{
-    display: flex;
-    align-items: stretch;
-}
+
 .policy h1{
     margin-left: -1vw;
     margin-top: 5vw;
