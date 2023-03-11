@@ -7,7 +7,8 @@
 
 
 .block {
-    width: 180px;
+	/* same - white line problem */
+    /* width: 180px; */
 	padding-right: 20px;
 	padding-left: 20px;
     display: inline-block;
@@ -50,4 +51,11 @@
 
 .blocks-content {
 	font-size: 20px;
+}
+
+@media screen and (max-width: 1273px) {
+	/* in case of side-nav opened white line starts here */
+}
+@media screen and (max-width: 1042px) {
+	/* without side-nav starts here */
 }

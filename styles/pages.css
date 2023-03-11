@@ -37,12 +37,18 @@
 	margin: 50px 180px 120px;
 }
 .row {
-    display: flex;
-    flex-wrap: wrap;
+    /* white line fixing */
+    /* display: flex; */
+
+    flex-wrap: nowrap;
     margin-top: calc(var(--bs-gutter-y) * -1);
     margin-right: calc(var(--bs-gutter-x) * -.5);
-    justify-content: space-around;
-	margin-left: 30px;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: flex-start;
+	
+    /* white line fixing */
+    /* margin-left: 30px; */
 }
 
 .justify-content-center {

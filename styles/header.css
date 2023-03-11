@@ -7,8 +7,14 @@ header {
     margin: 0;
     z-index: 1000;
     background-color: var(--black);
+
+    /* white line fixing */
+    background-color: red;
+
     display: flex;
     justify-content: space-between;
+
+    
 }
 
 .logo {
@@ -60,4 +66,21 @@ header {
     font-size: 20px;
     font-family: "Nanum Myeongjo";
     transition: all 0.3s ease-in-out;
+}
+
+@media  screen and (max-width: 963px) {
+    header {
+        min-width: 0;
+    }
+    .logo {
+        margin-left: 0;
+        height:60px;
+        margin-top: 10px;
+    }
+    .menu {
+        justify-content: flex-start;
+    }
+    .user-menu {
+        padding-right: 5px;
+    }
 }
