@@ -22,6 +22,8 @@
     --shadowedblack: #0D0D0D;
     --transblack: #1111119c;
     --grey: #1c1c1c;
+    --lightgrey: rgb(128,128,128);
+    --blue: #3e5664;
     --white-yellow: #888;
 }
 

@@ -58,10 +58,10 @@
 .openbtn:focus {
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
 }
-
+/* 
 .line input {
     width: 250px;
-}
+} */
 
 .log-out {
     margin-top: 40px;
@@ -151,46 +151,30 @@
     color: rgba(0, 0, 0, 0.8);
     /* position: absolute; */
     text-align: left;
-    font-size: 22px;
+    font-size: 18px;
     letter-spacing: 0;
-}
-
-/* .order-form {
-    width: 519px;
-    height: 471px;
-    position: absolute;
-    left: 0;
-    top: 0;
-} */
-
-.user-info-disclaimer {
-    /* width: 100%; */
-    height: 70px;
-    /* position: absolute; */
-    /* left: 250px;
-    top: 100px; */
 }
 
 .user-info-disclaimer p {
     margin-top: 40px;
     opacity: 0.8;
     width: 100%;
-    /* position: absolute; */
     text-align: left;
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 0;
 }
 
 .form-rows {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 
 /* Calender */
 .calendar-container {
+    margin-top: 10px;
     width: 300px;
     border: 1px solid var(--grey);
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -206,6 +190,7 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-gap: 5px;
+    padding: 0 5px;
 }
 
 .calendar-day {
@@ -220,7 +205,8 @@
 }
 
 .calendar-day.selected {
-    background-color: #007bff;
+    /* background-color: var(--transblack); */
+    background-color: var(--blue);
     color: var(--snowwhite);
 }
 
@@ -231,12 +217,71 @@
     cursor: pointer;
 }
 
+.today {
+    border: 1px solid var(--black);
+    border-radius: 10px;
+}
+.past-date {
+    color: var(--lightgrey);
+}
+
+/* Form */
+.input-lines {
+    display: flex;
+    flex-direction: column;
+}
+.input-lines input {
+    width: 360px;
+}
+.line {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom:20px;
+}
+.field {
+    margin: 5px 0;
+    height: 30px;
+}
+.address-group {
+    width: 100px;
+    padding-right: 15px;
+} 
+.address-group input {
+    width: 90px;
+}
+.street {
+    width:140px;
+}
+.street input{
+    width:130px;
+}
+.Tallinn {
+    padding-top:9px;
+    padding-right:4px;
+    margin-top:15px;
+    margin-bottom: 15px;
+    background-color: var(--snowwhite);
+    border-radius:7px;
+    border: 1px solid var(--blue);
+    width: 360px;
+    height: 30px;
+}
+input {
+    background-color: var(--snowwhite);
+    border-radius:7px;
+    border: 1px solid var(--blue);
+}
 /* Mobile versions */
 
 @media screen and (max-width: 420px) {
     .booking {
         margin-left: 10px;
     }
+
     .main-content {
         margin-top: 60px;
     }
