@@ -59,8 +59,13 @@
 				<a href="#">Forgot password?</a>
 			</div>
 			<br>
-			<button type="submit" class="login" form="login" href="booking.php">Log in</button>
-
+			<button type="submit" class="login" form="login">Log in</button>
+			<script>
+				document.getElementById('login').addEventListener('submit', function (event) {
+					event.preventDefault(); // prevent the default form submit behavior
+					window.location.href = 'booking.php'; // redirect to booking.php
+				});
+			</script>
 			<div class="or">
 				<a>
 					or
