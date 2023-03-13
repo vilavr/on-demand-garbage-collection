@@ -1,4 +1,4 @@
-@charset "utf-8";
+/*@charset "utf-8";
 @media screen {
     html, body { 
         background: url("../img/background.jpg") scroll no-repeat;
@@ -67,3 +67,4 @@
     background-color: var(--transblack);
     border-radius: 5px;
 }
+*/
