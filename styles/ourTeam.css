@@ -1,12 +1,44 @@
-/*@charset "utf-8";
+@charset "utf-8";
 @media screen {
     html, body { 
         background: url("../img/background.jpg") scroll no-repeat;
-        background-position: center bottom !important;
+        background-position: center bottom;
         background-size: cover;
     }
 }
-
+@media screen and (max-width: 768px){
+    html, body{
+        background-position: top right !important;
+    }
+    .ourteam-header{
+        font-size: 25px !important;
+    }
+    #main h2{
+        font-size: 20px !important;
+    }
+    #main img{
+        width: 100px;
+        height: 100px;
+    }
+    .cofounders-images{
+        flex-direction: column !important;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    .cofounders-images p, .victoria p, .adrian p, .emily p, .alex p{
+        font-size: 13px !important;
+    }
+    .cofounders-description{
+        margin-left: 50px !important;
+        width: 200px !important;
+        font-size: 18px !important;
+    }
+    .manager-description, .driver-description, .custservice-description, .recycling-description{
+        width: 200px !important;
+        font-size: 18px !important;
+        margin-left: 50px !important;
+    }
+}
 .ourteam-header h1{
     margin-left: -1vw;
     margin-top: 5vw;
@@ -17,7 +49,7 @@
 
     font-family: 'NanumMyeongjo';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 50;
     font-size: 32px;
     color: white;
     margin-top: -10vw;
@@ -41,17 +73,23 @@
     align-items: center;
     margin-right: 1vw;
 }
+.cofounders-images{
+    display: flex;
+    flex-direction: row;
+}
 .cofounders, .manager, .driver, .custservice, .recycling{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
 }
 .cofounders-description{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    min-width: 500px;
+    min-width: 100px;
     max-width: 700px;
-    margin-left: 10%;
+    margin-left: 21%;
     font-size: 18px;
     background-color: var(--transblack);
     border-radius: 5px;
@@ -60,11 +98,10 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    min-width: 500px;
+    min-width: 100px;
     max-width: 700px;
     margin-left: 32%;
     font-size: 18px;
     background-color: var(--transblack);
     border-radius: 5px;
 }
-*/
