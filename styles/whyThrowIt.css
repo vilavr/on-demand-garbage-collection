@@ -5,7 +5,54 @@
         background-position: center center !important;
     }
 }
-
+@media screen and (max-width: 768px){
+    .whyus-header{
+        font-size: 28px !important;
+    }
+    .section1 img{
+        width: 200px !important;
+        height: 170px !important;
+    }
+    .text1, .text3{
+        margin-left: 20px !important;
+    }
+    .text1 h2, .text3 h2{
+        margin-left: 7px !important;
+        font-size: 22px !important;
+    }
+    .text1 p, .text2 p, .text3 p, .text4 p{
+        font-size: 17px !important;
+    }
+    .btn1, .btn2, .btn3, .btn4{
+        display: flex !important;
+        width: 100px !important;
+        font-size: 20px !important;
+        margin-top: 35px !important;
+    }
+    .section2 img{
+        width: 190px !important;
+        height: 180px !important;
+    }
+    .text2, .text4{
+        margin-right: 20px !important;
+        margin-left: 5px !important;
+        width: 150px !important;
+    }
+    .text2 h2, .text4 h2{
+        font-size: 22px !important;
+    }
+    .btn2, .btn4{
+        margin-left: 3px !important;
+    }
+    .section3 img{
+        width: 190px !important;
+        height: 150px !important;
+    }
+    .section4 img{
+        width: 190px !important;
+        height: 170px !important;
+    }
+}
 .whyus-header h1{
     margin-left: -1vw;
     margin-top: 5vw;
@@ -28,8 +75,9 @@
 }
 .section1, .section2, .section3, .section4{
     display: flex;
-    align-items: left;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: normal;
     margin-bottom: 2vw;
 }
 .section1 img, .section3 img{
