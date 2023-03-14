@@ -67,9 +67,9 @@
                     document.getElementById('date-time').innerHTML = dt;
                 </script>
             </div>
-            <div class="order-form">
+            <div class="order-form line time">
                 <div class="user-info-disclaimer">
-                    <p>Enter your information</p>
+                    <p class="booking-form-title">Enter your information</p>
                     <form action="order_confirmation.php" method="post" class="form-rows">
                         <div class="input-lines">
                             <label for="name">Name</label>
@@ -85,38 +85,52 @@
                             <input type="email" id="email" name="email" class="field" placeholder=" name@example.com"
                                 pattern="^[\w\-\.]{1,50}@([\w-]{1,50}\.){1,50}[\w-]{2,4}$">
 
-                            <span class="Tallinn">&nbsp;Tallinn, Estonia</span>
+                            <span class="Tallinn">Address: &nbsp;Tallinn, Estonia</span>
                             <div class="line">
                                 <div class="address-group street">
                                     <label for="street">Street name</label>
-                                    <input type="text" id="street" name="street" class="field" placeholder=" Kopli"
-                                        pattern="[A-Za-z0-9\s-]+">
+                                    <input type="text" id="street" name="street" class="field"
+                                        placeholder=" Akadeemia tee" pattern="[A-Za-z0-9\s-]+">
                                 </div>
-                                <div class="address-group">
+                                <div class="address-group house">
                                     <label for="house">House</label>
-                                    <input type="text" id="house" name="house" class="field house" placeholder=" 8"
+                                    <input type="text" id="house" name="house" class="field" placeholder=" 8"
                                         pattern="\d{1,3}">
                                 </div>
-                                <div class="address-group">
+                                <div class="address-group index">
                                     <label for="index">Postcode</label>
-                                    <input type="text" id="index" name="index" class="field index" placeholder=" 21800"
+                                    <input type="text" id="index" name="index" class="field" placeholder=" 21800"
                                         pattern="\d{5}">
                                 </div>
                             </div>
 
                         </div>
-                        <div class="time">
-                            <label for="datepicker" class="calendar-label">Select a date:</label>
-                            <div class="calendar-container">
-                                <div class="calendar-header">
-                                    <div class="calendar-prev-month">&lt;</div>
-                                    <div class="calendar-month-year"></div>
-                                    <div class="calendar-next-month">&gt;</div>
+                        <div class="line time">
+                            <div class="date-row">
+                                <label for="datepicker" class="calendar-label">Select a date:</label>
+                                <div class="calendar-container">
+                                    <div class="calendar-header">
+                                        <div class="calendar-prev-month">&lt;</div>
+                                        <div class="calendar-month-year"></div>
+                                        <div class="calendar-next-month">&gt;</div>
+                                    </div>
+                                    <div class="calendar-days"></div>
                                 </div>
-                                <div class="calendar-days"></div>
                             </div>
-                            <div class="calendar-time">
-                                <p>Free slots</p>
+                            <div class="date-row">
+                                <label for="datepicker" class="calendar-label time-slots">Free slots:</label>
+                                <div class="calendar-container time-slots time-selector">
+                                    <input type="radio" id="time1" name="time" value="time1" checked>
+                                    <label for="time1">10:00</label><br>
+                                    <input type="radio" id="time2" name="time" value="time2" disabled>
+                                    <label for="time2" disabled>11:00</label><br>
+                                    <input type="radio" id="time3" name="time" value="time3">
+                                    <label for="time3">12:00</label><br>
+                                    <input type="radio" id="time4" name="time" value="time4" disabled>
+                                    <label for="time4" disabled>13:00</label><br>
+                                    <input type="radio" id="time5" name="time" value="time5">
+                                    <label for="time5">14:00</label>
+                                </div>
                             </div>
                         </div>
 
@@ -227,6 +241,21 @@
                         <button type="submit" name="submit-form">Book!</button>
                     </form>
 
+                </div>
+                <div class="order-details">
+                    <p class="booking-form-title">Select the service you want</p>
+                    <div class="calendar-container time-slots time-selector">
+                        <input type="radio" id="time1" name="time" value="time1" checked>
+                        <label for="time1">Regular pickup</label><br>
+                        <input type="radio" id="time2" name="time" value="time2" disabled>
+                        <label for="time2" disabled>Recycling</label><br>
+                        <input type="radio" id="time3" name="time" value="time3">
+                        <label for="time3">12:00</label><br>
+                        <input type="radio" id="time4" name="time" value="time4" disabled>
+                        <label for="time4" disabled>13:00</label><br>
+                        <input type="radio" id="time5" name="time" value="time5">
+                        <label for="time5">14:00</label>
+                    </div>
                 </div>
             </div>
         </div>

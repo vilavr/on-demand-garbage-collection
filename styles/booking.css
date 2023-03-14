@@ -58,6 +58,7 @@
 .openbtn:focus {
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
 }
+
 /* 
 .line input {
     width: 250px;
@@ -155,7 +156,7 @@
     letter-spacing: 0;
 }
 
-.user-info-disclaimer p {
+.booking-form-title {
     margin-top: 40px;
     opacity: 0.8;
     width: 100%;
@@ -168,11 +169,10 @@
     margin-top: 20px;
 }
 
-
 /* Calender */
 .calendar-container {
-    margin-top: 10px;
-    width: 300px;
+    margin: 10px 20px 20px 0;
+    width: 210px;
     border: 1px solid var(--grey);
     border-radius: 10px;
     overflow: hidden;
@@ -221,18 +221,68 @@
     border: 1px solid var(--black);
     border-radius: 10px;
 }
+
 .past-date {
     color: var(--lightgrey);
 }
+
+/* Time */
+
+.time-slots {
+    width: 100px;
+}
+.time-selector {
+    padding: 10px 0 15px 5px;
+}
+
+.time-slots input {
+    appearance: none;
+
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid var(--lightgrey);
+    transition: 0.2s all linear;
+    margin-right: 5px;
+
+    position: relative;
+    top: 4px;
+}
+.time-slots input:checked {
+    border: 6px solid var(--blue);
+}
+.time-slots input:disabled {
+    border: 8px solid var(--lightgrey);
+    opacity: 0.5;
+}
+
+
 
 /* Form */
 .input-lines {
     display: flex;
     flex-direction: column;
 }
+
 .input-lines input {
-    width: 360px;
+    width: 330px;
 }
+
+.Tallinn {
+    padding-top: 9px;
+    padding-right: 4px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 383px) {
+    .input-lines input {
+        width: 300px;
+    }
+}
+
+
 .line {
     display: flex;
     flex-direction: row;
@@ -240,41 +290,54 @@
     align-content: center;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
+
 .field {
     margin: 5px 0;
     height: 30px;
 }
+
 .address-group {
     width: 100px;
     padding-right: 15px;
-} 
+}
+
 .address-group input {
     width: 90px;
 }
+.house {
+    width: 45px;
+}
+.house input {
+    width: 40px;
+}
+.index {
+    width: 65px;
+}
+.index input {
+    width: 60px;
+}
+
 .street {
-    width:140px;
+    width: 195px;
 }
-.street input{
-    width:130px;
+
+.street input {
+    width: 190px;
 }
-.Tallinn {
-    padding-top:9px;
-    padding-right:4px;
-    margin-top:15px;
-    margin-bottom: 15px;
-    background-color: var(--snowwhite);
-    border-radius:7px;
-    border: 1px solid var(--blue);
-    width: 360px;
-    height: 30px;
-}
+
 input {
     background-color: var(--snowwhite);
-    border-radius:7px;
+    border-radius: 7px;
     border: 1px solid var(--blue);
 }
+
+/* Date and time picker */
+.time {
+    align-items: flex-start;
+}
+
 /* Mobile versions */
 
 @media screen and (max-width: 420px) {
