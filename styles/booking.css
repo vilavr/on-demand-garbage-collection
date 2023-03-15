@@ -257,7 +257,7 @@
 }
 
 .time-slots input:disabled {
-    border: 8px solid var(--lightgrey);
+    border: 3px solid var(--lightgrey);
     opacity: 0.5;
 }
 
@@ -278,7 +278,7 @@
 }
 
 .service-selector input:checked {
-    border: 6px solid var(--blue);
+    border: 3px solid var(--blue);
 }
 
 
@@ -445,17 +445,51 @@ input {
     width: 103%;
     height: 60px;
     border-radius: 10px;
-    border: 1px solid #15384c;
-    background-color: #15384c;
+    border: 1px solid var(--lightblue);;
+    background-color: var(--lightblue);;
     opacity: 0.8;
     color: var(--snowwhite);
     font-size: 20px;
     font-weight: 600;
     font-family: "Nanum Myeongjo";
 }
+.settings-save-btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--lightblue);
+    background-color: var(--snowwhite);
+    opacity: 0.8;
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 200;
+    font-family: "Nanum Myeongjo";
+    width: 140px;
+}
 
 /* Checkbox for saving data */
 .save-data-checkbox {
+    margin-top: 10px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+input {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.order-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.save-settings-checkbox {
     margin-top: 10px;
     display: flex;
     align-content: center;
