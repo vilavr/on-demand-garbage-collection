@@ -369,6 +369,7 @@ input {
 .order-details {
     min-width: 297px;
 }
+
 .form-line {
     display: flex;
     align-items: center;
@@ -444,19 +445,26 @@ input {
     width: 103%;
     height: 60px;
     border-radius: 10px;
-    border: 1px solid  #15384c;
+    border: 1px solid #15384c;
     background-color: #15384c;
-
-    /* background-color: #6c96ae; */
     opacity: 0.8;
     color: var(--snowwhite);
     font-size: 20px;
-    font-weight:600;
+    font-weight: 600;
     font-family: "Nanum Myeongjo";
 }
 
-/* Mobile versions */
+/* Checkbox for saving data */
+.save-data-checkbox {
+    margin-top: 10px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
 
+/* Mobile versions */
 @media screen and (max-width: 420px) {
     .booking {
         margin-left: 10px;
