@@ -44,34 +44,27 @@
                         <p class="booking-form-title">Enter your information</p>
                         <div class="input-lines">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" class="field" placeholder=" Name" required
-                                pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{2,200}$">
+                            <input type="text" id="name" name="name" class="field" placeholder=" Name" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{2,200}$">
                             <label for="surname">Surname</label>
-                            <input type="text" id="surname" name="surname" class="field" placeholder=" Surname" required
-                                pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{2,200}$">
+                            <input type="text" id="surname" name="surname" class="field" placeholder=" Surname" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{2,200}$">
                             <label for="phone">Phone</label>
-                            <input type="text" id="phone" name="phone" class="field" placeholder=" +372 58678900"
-                                pattern="^[0-9\-\+ ]{7,15}$">
+                            <input type="text" id="phone" name="phone" class="field" placeholder=" +372 58678900" pattern="^[0-9\-\+ ]{7,15}$">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="field" placeholder=" name@example.com"
-                                pattern="^[\w\-\.]{1,50}@([\w-]{1,50}\.){1,50}[\w-]{2,4}$">
+                            <input type="email" id="email" name="email" class="field" placeholder=" name@example.com" pattern="^[\w\-\.]{1,50}@([\w-]{1,50}\.){1,50}[\w-]{2,4}$">
 
                             <span class="Tallinn">Address: &nbsp;Tallinn, Estonia</span>
                             <div class="line">
                                 <div class="address-group street">
                                     <label for="street">Street name</label>
-                                    <input type="text" id="street" name="street" class="field"
-                                        placeholder=" Akadeemia tee" pattern="[A-Za-z0-9\s-]+">
+                                    <input type="text" id="street" name="street" class="field" placeholder=" Akadeemia tee" pattern="[A-Za-z0-9\s-]+">
                                 </div>
                                 <div class="address-group house">
                                     <label for="house">House</label>
-                                    <input type="text" id="house" name="house" class="field" placeholder=" 8"
-                                        pattern="\d{1,5}">
+                                    <input type="text" id="house" name="house" class="field" placeholder=" 8" pattern="\d{1,5}">
                                 </div>
                                 <div class="address-group index">
                                     <label for="index">Postcode</label>
-                                    <input type="text" id="index" name="index" class="field" placeholder=" 21800"
-                                        pattern="\d{5}">
+                                    <input type="text" id="index" name="index" class="field" placeholder=" 21800" pattern="\d{5}">
                                 </div>
                             </div>
                         </div>
@@ -144,9 +137,12 @@
                         </div>
                         <!-- Comments field -->
                         <p>Anything else you want to add?</p>
-                        <input maxlength="200" class="comment" type="text" name="comment" id="comment"
-                            pattern="^[\w\s\.,'\-\#\@\;\:\$\%\^\=\(\)\~\&\€\>\+=\*\/\<\?!{}\[\]]{1,200}$"
-                            placeholder="Leave a comment"><br>
+                        <input maxlength="200" class="comment" type="text" name="comment" id="comment" pattern="^[\w\s\.,'\-\#\@\;\:\$\%\^\=\(\)\~\&\€\>\+=\*\/\<\?!{}\[\]]{1,200}$" placeholder="Leave a comment"><br>
+                        <!-- Checkbox for saving user data -->
+                        <div class="save-data-checkbox">
+                            <input type="checkbox" id="saveData" name="saveData" value="saveData" disabled>
+                            <label for="saveData" disabled>Save my information for futher orders</label><br>
+                        </div>
                         <!-- Submit form button -->
                         <button type="submit" name="submit-form" class="book-btn">Book!</button>
                     </div>
