@@ -3,7 +3,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="booking.php">Booking</a>
         <a href="orders.html">Orders</a>
-        <a href="settings.html">Settings</a>
+        <a href="settings.php">Settings</a>
         <a href="index.html">Home</a>
         <a href="index.html" class="log-out">Log out</a>
     </nav>
