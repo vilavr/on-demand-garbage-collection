@@ -1,19 +1,19 @@
 <?php
-    session_start();
-    if (isset($_POST['submit-form'])) {
-        // Capture form data
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $surname = $_POST['surname'];
-        $phone = $_POST['phone'];
-        $address = $_POST['address'];
-        // Store form data in session variable
-        $_SESSION['name'] = $name;
-        $_SESSION['email'] = $email;
-        $_SESSION['surname'] = $surname;
-        $_SESSION['phone'] = $phone;
-        $_SESSION['address'] = $address;
-    }
+session_start();
+if (isset($_POST['submit-form'])) {
+    // Capture form data
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $surname = $_POST['surname'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+    // Store form data in session variable
+    $_SESSION['name'] = $name;
+    $_SESSION['email'] = $email;
+    $_SESSION['surname'] = $surname;
+    $_SESSION['phone'] = $phone;
+    $_SESSION['address'] = $address;
+}
 ?>
 <!DOCTYPE html>
 
@@ -35,16 +35,8 @@
 
 <body>
 
-    <!-- Content section of the document -->
-    <aside>
-        <nav id="side-panel" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="booking.html">Booking</a>
-            <a href="orders.html">Orders</a>
-            <a href="settings.html">Settings</a>
-            <a href="index.html" class="log-out">Log out</a>
-        </nav>
-    </aside>
+    <!-- Navigation -->
+    <?php require('sidenav.php'); ?>
     <div id="booking-main" class="confirmation">
         <!-- Open and Close button -->
         <div id="openbutton">
@@ -65,7 +57,9 @@
             <p class="confirmation-headline">Please, check all the data and confirm the booking</p>
         </div>
         <div class="personal-data-header">
-            <div class="pdata-header"><p>Personal info</p></div>
+            <div class="pdata-header">
+                <p>Personal info</p>
+            </div>
             <div class="pdata">
                 <!-- Display form data on page -->
                 <p><?php echo $name; ?>, <?php echo $surname; ?></p>
@@ -75,7 +69,9 @@
             </div>
         </div>
         <div class="order-data-header">
-            <div class="odata-header"><p>Order info</p></div>
+            <div class="odata-header">
+                <p>Order info</p>
+            </div>
             <div class="odata">
                 <p>Name of service</p>
                 <p>Number of items</p>
