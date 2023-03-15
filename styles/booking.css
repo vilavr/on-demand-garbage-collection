@@ -24,6 +24,7 @@
     height: 100%;
     margin-left: 200px;
     transition: all 0.5s ease-out;
+    font-family: "Nanum Myeongjo";
 }
 
 /* Sidenavigation */
@@ -231,6 +232,7 @@
 .time-slots {
     width: 100px;
 }
+
 .time-selector {
     padding: 10px 0 15px 5px;
 }
@@ -249,14 +251,35 @@
     position: relative;
     top: 4px;
 }
+
 .time-slots input:checked {
     border: 6px solid var(--blue);
 }
+
 .time-slots input:disabled {
     border: 8px solid var(--lightgrey);
     opacity: 0.5;
 }
 
+.service-selector {
+    margin-left: 10%;
+}
+
+.service-selector input {
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--lightgrey);
+    transition: 0.2s all linear;
+    margin-right: 5px;
+    position: relative;
+    top: 4px;
+}
+
+.service-selector input:checked {
+    border: 6px solid var(--blue);
+}
 
 
 /* Form */
@@ -306,15 +329,19 @@
 .address-group input {
     width: 90px;
 }
+
 .house {
     width: 45px;
 }
+
 .house input {
     width: 40px;
 }
+
 .index {
     width: 65px;
 }
+
 .index input {
     width: 60px;
 }
@@ -336,6 +363,96 @@ input {
 /* Date and time picker */
 .time {
     align-items: flex-start;
+}
+
+/* Items selector */
+.order-details {
+    min-width: 297px;
+}
+.form-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-line input[type="text"],
+.form-line select {
+    margin-right: 10px;
+}
+
+.form-line .remove-line {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.form-line .remove-line:hover {
+    background-color: #d32f2f;
+}
+
+#add-line {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+
+}
+
+.add-elem {
+    justify-content: flex-end;
+}
+
+#add-line:hover {
+    background-color: #388e3c;
+}
+
+.total-price {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment {
+    min-height: 50px;
+    width: 100%;
+}
+
+.comment::placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+/* Book button */
+.book-btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 103%;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid  #15384c;
+    background-color: #15384c;
+
+    /* background-color: #6c96ae; */
+    opacity: 0.8;
+    color: var(--snowwhite);
+    font-size: 20px;
+    font-weight:600;
+    font-family: "Nanum Myeongjo";
 }
 
 /* Mobile versions */
