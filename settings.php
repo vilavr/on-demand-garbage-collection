@@ -74,8 +74,8 @@
                         <div class="input-lines">
                             <!-- Username -->
                             <p class="booking-form-title">Account information</p>
-                            <label for="name">Username</label>
-                            <input type="text" id="name" name="name" class="field" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{2,200}$">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" class="field" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{2,200}$">
 
                             <!-- Change password -->
                             <p class="booking-form-title">Change password</p>
@@ -87,10 +87,10 @@
                             <input type="password" id="repeat-password" class="field" name="password" required pattern="[A-Za-z0-9!@#%^&*()_+-=]{8,15}">
 
                             <!-- Checkbox for saving user data -->
-                            <!-- <div class="save-settings-checkbox">
+                            <div class="save-settings-checkbox">
                                 <input type="checkbox" id="saveData" name="saveData" value="saveData" disabled>
-                                <label for="saveData" disabled>I confirm that I want to save this info</label><br>
-                            </div> -->
+                                <label for="saveData" disabled>&nbsp;&nbsp;I confirm saving this info</label>
+                            </div>
                             <!-- Submit form button -->
                             <button type="submit" name="submit-form" class="settings-save-btn">Submit and save</button>
                         </div>
@@ -100,7 +100,8 @@
         </div>
 
     </div>
-
+    <script src="js/dashboard-navigation.js"></script>
+    <script src="js/current-date.js"></script>
 </body>
 
 </html>

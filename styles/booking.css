@@ -445,14 +445,17 @@ input {
     width: 103%;
     height: 60px;
     border-radius: 10px;
-    border: 1px solid var(--lightblue);;
-    background-color: var(--lightblue);;
+    border: 1px solid var(--lightblue);
+    ;
+    background-color: var(--lightblue);
+    ;
     opacity: 0.8;
     color: var(--snowwhite);
     font-size: 20px;
     font-weight: 600;
     font-family: "Nanum Myeongjo";
 }
+
 .settings-save-btn {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -466,6 +469,8 @@ input {
     font-weight: 200;
     font-family: "Nanum Myeongjo";
     width: 140px;
+    position: relative;
+    left: 59%;
 }
 
 /* Checkbox for saving data */
@@ -477,10 +482,12 @@ input {
     justify-content: flex-start;
     align-items: center;
 }
+
 input {
     padding-left: 5px;
     padding-right: 5px;
 }
+
 .order-form {
     display: flex;
     flex-direction: row;
@@ -489,13 +496,19 @@ input {
     justify-content: space-evenly;
     align-items: flex-start;
 }
+
 .save-settings-checkbox {
+    width: 300px;
     margin-top: 10px;
     display: flex;
     align-content: center;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
+}
+
+.save-settings-checkbox input {
+    width: 15px;
 }
 
 /* Mobile versions */
@@ -506,5 +519,9 @@ input {
 
     .main-content {
         margin-top: 60px;
+    }
+
+    .settings-save-btn {
+        left: 55%;
     }
 }

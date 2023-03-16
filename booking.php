@@ -152,7 +152,6 @@
 
     </div>
 
-
     <script src="js/dashboard-navigation.js"></script>
     <script src="js/bulk-waste-item.js"></script>
     <script src="js/dashboard-calendar.js"></script>
