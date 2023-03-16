@@ -26,7 +26,7 @@
 	z-index: 9;
 	width:48px;
 }
-.icon:before, .icon:after, .right-icon:before, .left-icon:after {
+/* .icon:before, .icon:after, .right-icon:before, .left-icon:after {
 	z-index: 0;
 	content: "";
 	display: block;
@@ -39,14 +39,14 @@
 }
 .icon:after, .right-icon:before {
 	right: 0;
-}
+} */
 
-@media screen and (max-width: 735px){
+/* @media screen and (max-width: 735px){
 	.icon:before, .icon:after, .right-icon:before, .left-icon:after {
 		content: none;
 		display: none;
 	}
-}
+} */
 @media screen and (max-width: 460px){
 	.working-process .row {
 		flex-direction: column;
@@ -72,11 +72,4 @@
 .process-line {
     width:100%;
     text-align: center;
-}
-
-@media screen and (max-width: 1273px) {
-	/* in case of side-nav opened white line starts here */
-}
-@media screen and (max-width: 1042px) {
-	/* without side-nav starts here */
 }

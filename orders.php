@@ -20,23 +20,13 @@
 </head>
 
 <body>
-    <aside>
-        <nav id="side-panel" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="booking.html">Booking</a>
-            <a href="orders.html">Orders</a>
-            <a href="settings.html">Settings</a>
-            <a href="index.html">Home</a>
-            <a href="index.html" class="log-out">Log out</a>
-        </nav>
-    </aside>
+    <!-- Content section of the document -->
+    <?php require_once('sidenav.php'); ?>
     <div id="booking-main" class="booking">
-        <!-- Open and Close button -->
-        <div id="openbutton">
-            <button class="openbtn" type="button" onclick="openNav();">&#9783;</button>
-        </div>
+        <!-- Open button -->
+        <?php require_once('open-btn.php'); ?>
+        <!-- Content of the page -->
         <div id="main" class="orders">
-
             <h1>See all the orders</h1>
             <!-- Slider container -->
             <div class="slider-container">
@@ -94,51 +84,12 @@
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
                     <span class="dot" onclick="currentSlide(3)"></span>
-                  </div>
+                </div>
             </div>
             <br>
 
             <!-- Animation -->
-            <script>
-                let slideIndex = 1;
-                showSlides(slideIndex);
-
-                // Next/previous controls
-                function plusSlides(n) {
-                    showSlides(slideIndex += n);
-                }
-
-                // Thumbnail image controls
-                function currentSlide(n) {
-                    showSlides(slideIndex = n);
-                }
-
-                function showSlides(n) {
-                    let i;
-                    let slides = document.getElementsByClassName("slider");
-                    let dots = document.getElementsByClassName("dot");
-                    if (n > slides.length) { slideIndex = 1 }
-                    if (n < 1) { slideIndex = slides.length }
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                    }
-                    slides[slideIndex - 1].style.display = "block";
-                    dots[slideIndex - 1].className += " active";
-                }
-                function openNav() {
-                    document.getElementById("side-panel").style.width = "180px";
-                    document.getElementById("booking-main").style.marginLeft = "200px";
-                }
-
-                function closeNav() {
-                    document.getElementById("side-panel").style.width = "0";
-                    document.getElementById("booking-main").style.marginLeft = "20px";
-                    document.getElementById("booking-main").style.marginRight = "20px";
-                }
-            </script>
+            <script src="js/orders-slider.js"></script>
         </div>
 
     </div>

@@ -22,12 +22,8 @@
     <!-- Content section of the document -->
     <?php require_once('sidenav.php'); ?>
     <div id="booking-main" class="booking">
-        <!-- Open and Close button -->
-        <div id="openbutton">
-            <button class="openbtn" type="button" onclick="openNav();">
-                <img src="img/menu-dash.png" alt="toggle menu">
-            </button>
-        </div>
+        <!-- Open button -->
+        <?php require_once('open-btn.php'); ?>
         <!-- Content of the page -->
         <div class="main-content">
             <!-- Booking header and current time -->

@@ -24,24 +24,8 @@
 
 <body>
   <!-- Header section of the document -->
-  <header class="header-container">
-    <a href="index.html">
-      <img src="img/logo.jpg" alt="Logo" class="logo logo-square">
-      <img src="img/logo.png" alt="Logo" class="logo logo-wide">
-    </a>
-    <nav class="menu">
-      <a href="index.html" class="menu-item">Home</a>
-      <a href="why_throw_it.html" class="menu-item">About Us</a>
-      <a href="index.html#pricing" class="menu-item">Services</a>
-      <a href="user_agreement.html" class="menu-item">Terms &amp; Conditions</a>
-    </nav>
-    <div class="user-menu">
-      <a href="login.html" class="menu-item">Log In</a>
-      <a href="registration.html" class="register-button">Register</a>
-    </div>
-  </header>
-
-  <!-- Content section of the document -->
+  <?php require_once('header.php'); ?>
+  <!-- Page navigation -->
   <aside>
     <nav id="side-panel" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -52,33 +36,13 @@
     </nav>
   </aside>
 
+  <!-- Content section of the document -->
   <div id="main" class="content">
-    <!-- Open and Close button -->
+    <!-- Open button -->
     <div id="openbutton">
       <button class="openbtn" type="button" onclick="openNav();">
         <img src="img/menu.png" alt="toggle menu" >
       </button>
-      <script>
-        function openNav() {
-          if (window.innerWidth < 820) {
-            if (window.innerWidth < 480) {
-              document.getElementById("main").style.marginLeft = "20px";
-            } else {
-              document.getElementById("main").style.marginLeft = "100px";
-
-            }
-            document.getElementById("side-panel").style.width = "180px";
-          } else {
-            document.getElementById("side-panel").style.width = "270px";
-            document.getElementById("main").style.marginLeft = "250px";
-          }
-        }
-
-        function closeNav() {
-          document.getElementById("side-panel").style.width = "0";
-          document.getElementById("main").style.marginLeft = "0";
-        }
-      </script>
     </div>
 
     <!-- Book a collection subpage -->
@@ -87,7 +51,7 @@
         garbage collection service!</p>
       <p class="first-subheading">Get your garbage picked up on your schedule, without any hassle</p>
 
-      <a href="login.html" class="book-btn">Book a collection</a>
+      <a href="login.php" class="book-btn">Book a collection</a>
     </div>
 
     <!-- How it works subpage -->
@@ -228,7 +192,7 @@
               </ul>
             </div>
             <div class="pricing-btn">
-              <a href="regular_pickup.html">Learn more</a>
+              <a href="regular_pickup.php">Learn more</a>
             </div>
           </div>
         </div>
@@ -256,7 +220,7 @@
               </ul>
             </div>
             <div class="pricing-btn">
-              <a href="bulk_waste_removal.html">Learn more</a>
+              <a href="bulk_waste_removal.php">Learn more</a>
             </div>
           </div>
         </div>
@@ -284,7 +248,7 @@
               </ul>
             </div>
             <div class="pricing-btn">
-              <a href="recycling.html">Learn more</a>
+              <a href="recycling.php">Learn more</a>
             </div>
           </div>
         </div>
@@ -353,123 +317,14 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
-
-      <!-- Animation -->
-      <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        // Next/previous controls
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-
-        // Thumbnail image controls
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-          let i;
-          let slides = document.getElementsByClassName("slider");
-          let dots = document.getElementsByClassName("dot");
-          if (n > slides.length) { slideIndex = 1 }
-          if (n < 1) { slideIndex = slides.length }
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex - 1].style.display = "block";
-          dots[slideIndex - 1].className += " active";
-        }
-      </script>
     </div>
-
   </div>
-  <!-- Footer section of the document if wide screen-->
-  <footer class="footer-container footer-regular">
-    <div class="menu-footer">
-      <ul class="logo-caption-footer">
-        <li href="index.html">
-          <img src="img/logo.png" alt="Logo" class="logo-footer">
-        </li>
-        <li class="logo-caption">&#169; Throw It 2023. All rights reserved</li>
-      </ul>
-      <ul>
-        <li class="menu-footer-item"><a href="index.html">Home</a></li>
-        <li class="menu-footer-subitem"><a href="index.html#how_it_works">How it works?</a></li>
-        <li class="menu-footer-subitem"><a href="index.html#pricing">Our pricing</a></li>
-        <li class="menu-footer-subitem"><a href="index.html#testimonials">Testimonials</a></li>
-      </ul>
-      <ul>
-        <li class="menu-footer-item"><a href="why_throw_it.html">Abous us</a></li>
-        <li class="menu-footer-subitem"><a href="why_throw_it.html">Why Throw it?</a></li>
-        <li class="menu-footer-subitem exception-subitem"><a href="our_team.html">Our team</a></li>
-      </ul>
-      <ul>
-        <li class="menu-footer-item"><a>Services</a></li>
-        <li class="menu-footer-subitem"><a href="regular_pickup.html">Regular pickup</a></li>
-        <li class="menu-footer-subitem"><a href="bulk_waste.html">Bulk waste</a></li>
-        <li class="menu-footer-subitem"><a href="recycling.html">Recycling</a></li>
-      </ul>
-      <ul class="footer-last-column">
-        <li class="menu-footer-item"><a>Terms &amp; Conditions</a></li>
-        <li class="menu-footer-subitem"><a href="user_agreement.html">User agreement</a></li>
-        <li class="menu-footer-subitem exception-subitem"><a href="privacy_policy.html">Privacy Policy</a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-  <!-- Footer section of the document if narrow screen-->
-  <footer class="footer-container footer-mobile">
-    <!-- <div class="menu-footer"> -->
-    <div class="footer-column exclude-logo">
-      <ul class="logo-caption-footer">
-        <li href="index.html">
-          <img src="img/logo.png" alt="Logo" class="logo-footer">
-        </li>
-        <li class="logo-caption">&#169; Throw It 2023.<br>All rights reserved</li>
-      </ul>
-    </div>
-    <div class="footer-column">
-      <div class="footer-row">
-        <ul>
-          <li class="menu-footer-item"><a href="index.html">Home</a></li>
-          <li class="menu-footer-subitem"><a href="index.html#how_it_works">How it works?</a></li>
-          <li class="menu-footer-subitem"><a href="index.html#pricing">Our pricing</a></li>
-          <li class="menu-footer-subitem"><a href="index.html#testimonials">Testimonials</a></li>
-        </ul>
-        <ul>
-          <li class="menu-footer-item"><a>Services &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </a></li>
-          <li class="menu-footer-subitem"><a href="regular_pickup.html">Regular pickup</a></li>
-          <li class="menu-footer-subitem"><a href="bulk_waste.html">Bulk waste removal</a></li>
-          <li class="menu-footer-subitem"><a href="recycling.html">Recycling</a></li>
-        </ul>
-      </div>
-      <div class="footer-row">
-        <ul>
-          <li class="menu-footer-item"><a href="why_throw_it.html">Abous us</a></li>
-          <li class="menu-footer-subitem"><a href="why_throw_it.html">Why Throw it?</a></li>
-          <li class="menu-footer-subitem exception-subitem"><a href="our_team.html">Our team</a></li>
-        </ul>
-        <ul class="footer-last-column">
-          <li class="menu-footer-item"><a>Terms &amp; Conditions</a></li>
-          <li class="menu-footer-subitem"><a href="user_agreement.html">User agreement</a></li>
-          <li class="menu-footer-subitem exception-subitem"><a href="privacy_policy.html">Privacy Policy</a>
-          </li>
-        </ul>
-      </div>
-      <div class="include-when-narrow">
-        <a class="logo-caption">&#169; Throw It 2023. All rights reserved</a>
-      </div>
-    </div>
 
-    <!-- </div> -->
-  </footer>
+  <!-- Footer section of the document -->
+  <?php require_once('footer.php'); ?>
+
+  <script src="js/index-navigation.js"></script>
+  <script src="js/testimonials-slider.js"></script>
 </body>
 
 </html>
