@@ -1,22 +1,6 @@
-<?php
-    session_start();
-    if (isset($_POST['submit-form'])) {
-        // Capture form data
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $surname = $_POST['surname'];
-        $phone = $_POST['phone'];
-        $address = $_POST['address'];
-        // Store form data in session variable
-        $_SESSION['name'] = $name;
-        $_SESSION['email'] = $email;
-        $_SESSION['surname'] = $surname;
-        $_SESSION['phone'] = $phone;
-        $_SESSION['address'] = $address;
-    }
-?>
-<!DOCTYPE html>
+<?php require_once('form-data.php'); ?>
 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -35,37 +19,20 @@
 
 <body>
 
-    <!-- Content section of the document -->
-    <aside>
-        <nav id="side-panel" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="booking.html">Booking</a>
-            <a href="orders.html">Orders</a>
-            <a href="settings.html">Settings</a>
-            <a href="index.html" class="log-out">Log out</a>
-        </nav>
-    </aside>
-    <div id="booking-main" class="confirmation">
-        <!-- Open and Close button -->
-        <div id="openbutton">
-            <button class="openbtn" type="button" onclick="openNav();">&#9783;</button>
-            <script>
-                function openNav() {
-                    document.getElementById("side-panel").style.width = "180px";
-                    document.getElementById("booking-main").style.marginLeft = "250px";
-                }
+    <!-- Navigation -->
+    <?php require('sidenav.php'); ?>
 
-                function closeNav() {
-                    document.getElementById("side-panel").style.width = "0";
-                    document.getElementById("booking-main").style.marginLeft = "30px";
-                }
-            </script>
-        </div>
+    <div id="booking-main" class="confirmation">
+        <!-- Open button -->
+        <?php require_once('open-btn.php'); ?>
+        
         <div class="confirmation-header">
             <p class="confirmation-headline">Please, check all the data and confirm the booking</p>
         </div>
         <div class="personal-data-header">
-            <div class="pdata-header"><p>Personal info</p></div>
+            <div class="pdata-header">
+                <p>Personal info</p>
+            </div>
             <div class="pdata">
                 <!-- Display form data on page -->
                 <p><?php echo $name; ?>, <?php echo $surname; ?></p>
@@ -75,7 +42,9 @@
             </div>
         </div>
         <div class="order-data-header">
-            <div class="odata-header"><p>Order info</p></div>
+            <div class="odata-header">
+                <p>Order info</p>
+            </div>
             <div class="odata">
                 <p>Name of service</p>
                 <p>Number of items</p>
@@ -84,10 +53,12 @@
             </div>
         </div>
         <div class="buttons">
-            <a href="order_accepted.html" class="confirm-btn">Confirm the order</a>
-            <a href="booking.html" class="back-btn">Back to booking</a>
+            <a href="order_accepted.php" class="confirm-btn">Confirm the order</a>
+            <a href="booking.php" class="back-btn">Back to booking</a>
         </div>
     </div>
+
+    <script src="js/dashboard-navigation.js"></script>
 </body>
 
 </html>
