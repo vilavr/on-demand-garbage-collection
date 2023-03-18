@@ -18,10 +18,6 @@
 	input::placeholder, .show-password{
 		font-size: 18px !important;
 	}
-	.terms{
-		margin-left: 200px !important;
-		margin-top: 7px !important;
-	}
 	.signup, .login{
 		width: 300px !important;
 		height: 40px !important;
