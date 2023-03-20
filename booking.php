@@ -131,13 +131,15 @@
                         </div>
                         <!-- Bulk waste removal items item-weight form -->
                         <div class="form-container">
-                            <p>Enter the weight of blocks of items</p>
+                            <p>Enter the weight of items</p>
                             <div class="form-line">
-                                <input type="text" name="field[]" placeholder="Field">
+                                <label for="selector1" class="item">Item 1</label>
                                 <select name="selector[]">
-                                    <option value="option1">Option 1</option>
-                                    <option value="option2">Option 2</option>
-                                    <option value="option3">Option 3</option>
+                                    <option value="option1">less than 5kg</option>
+                                    <option value="option2">5 - 10 kg</option>
+                                    <option value="option3">10 - 50 kg</option>
+                                    <option value="option3">50 - 100 kg</option>
+                                    <option value="option3">100 - 500 kg</option>
                                 </select>
                                 <button type="button" class="remove-btn">&minus;</button>
                             </div>
@@ -160,7 +162,7 @@
                             <label for="saveData" disabled>Save my information for futher orders</label><br>
                         </div>
                         <!-- Submit form button -->
-                        <button type="submit" name="submit-form" class="book-btn">Book!</button>
+                        <button type="submit" name="submitBooking" class="book-btn">Book!</button>
                     </div>
                 </div>
             </form>

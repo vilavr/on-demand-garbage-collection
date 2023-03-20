@@ -173,7 +173,7 @@
 /* Calender */
 .calendar-container {
     margin: 10px 20px 20px 0;
-    width: 210px;
+    width: 235px;
     border: 1px solid var(--grey);
     border-radius: 10px;
     overflow: hidden;
@@ -198,6 +198,7 @@
     width: auto;
     padding: 5px;
     text-align: center;
+    font-size: 15px;
 }
 
 .calendar-day:hover {
@@ -230,7 +231,7 @@
 /* Time */
 
 .time-slots {
-    width: 100px;
+    width: 80px;
 }
 
 .time-selector {
@@ -253,7 +254,7 @@
 }
 
 .time-slots input:checked {
-    border: 6px solid var(--blue);
+    border: 3px solid var(--blue);
 }
 
 .time-slots input:disabled {
@@ -436,6 +437,26 @@ input {
     top: 0;
     left: 0;
     padding: 10px;
+}
+
+.item {
+    background-color: var(--snowwhite);
+    border-radius: 7px;
+    border: 1px solid var(--blue);
+    padding: 5px 20px;
+    margin-right: 10px;
+}
+
+.form-line select {
+    background-color: var(--snowwhite);
+    border-radius: 7px;
+    border: 1px solid var(--blue);
+    width: 173px;
+    padding: 6px 20px;
+}
+
+.remove-btn, .add-btn {
+    border-radius: 20px;
 }
 
 /* Book button */

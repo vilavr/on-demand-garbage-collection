@@ -7,92 +7,52 @@ const selectors = document.querySelectorAll(".form-container select");
 let optionCounter = 1;
 let isOption3 = false;
 
-// Set the default value of the select element to "Option 1"
-selectors.forEach((selector) => {
-  selector.value = "option1";
+// Add a click event listener to the add button
+addButton.addEventListener('click', () => {
+  // Create a new form line
+  const newFormLine = document.createElement('div');
+  newFormLine.classList.add('form-line');
+
+  // Determine the number of existing form lines
+  const numFormLines = formContainer.querySelectorAll('.form-line').length;
+
+  // Add the HTML for the new form line
+  newFormLine.innerHTML = `
+    <label for="selector${numFormLines + 1}" class="item">Item ${numFormLines + 1}</label>
+    <select name="selector[]" id="selector${numFormLines + 1}">
+      <option value="option1">less than 5kg</option>
+      <option value="option2">5 - 10 kg</option>
+      <option value="option3">10 - 50 kg</option>
+      <option value="option3">50 - 100 kg</option>
+      <option value="option3">100 - 500 kg</option>
+    </select>
+    <button class="remove-btn">&minus;</button>
+  `;
+
+  // Add a click event listener to the remove button
+  const removeButton = newFormLine.querySelector('.remove-btn');
+  removeButton.addEventListener('click', () => {
+    newFormLine.remove();
+  });
+
+  // Add the new form line to the form container
+  formContainer.insertBefore(newFormLine, addButton.parentElement);
+
+  // Update the labels for all form lines
+  updateFormLineLabels();
 });
 
-// Add event listener to the Add button
-addButton.addEventListener("click", () => {
-  // Create a new form line element
-  const formLine = document.createElement("div");
-  formLine.classList.add("form-line");
-
-  // Create the input element
-  const input = document.createElement("input");
-  input.type = "text";
-  input.name = "field[]";
-  input.placeholder = "Field";
-
-  // Create the select element
-  const select = document.createElement("select");
-  select.name = "selector[]";
-  select.disabled = true;
-
-  // Create the options for the select element
-  const option1 = document.createElement("option");
-  option1.value = "option1";
-  option1.textContent = "Option 1";
-
-  const option2 = document.createElement("option");
-  option2.value = "option2";
-  option2.textContent = "Option 2";
-
-  const option3 = document.createElement("option");
-  option3.value = "option3";
-  option3.textContent = "Option 3";
-
-  // Add the options to the select element
-  select.appendChild(option1);
-
-  if (optionCounter >= 2) {
-    select.appendChild(option2);
-  }
-
-  if (optionCounter === 3) {
-    isOption3 = true;
-  }
-
-  if (!isOption3) {
-    select.appendChild(option3);
-  }
-
-  // Create the remove button
-  const removeButton = document.createElement("button");
-  removeButton.type = "button";
-  removeButton.classList.add("remove-btn");
-  removeButton.textContent = "−";
-
-  // Add the elements to the form line
-  formLine.appendChild(input);
-  formLine.appendChild(select);
-  formLine.appendChild(removeButton);
-
-  // Add the form line to the form container
-  const formContainer = document.querySelector(".form-container");
-  formContainer.insertBefore(formLine, formContainer.lastElementChild);
-
-  // Increment the option counter
-  optionCounter++;
-
-  // Disable the Add button if option 3 has been added
-  if (isOption3) {
-    addButton.disabled = true;
-  }
-
-  // Add event listener to the new remove button
-  removeButton.addEventListener("click", () => {
-    // Remove the form line from the form container
-    formContainer.removeChild(formLine);
-
-    // Decrement the option counter
-    optionCounter--;
-
-    // Enable the Add button
-    addButton.disabled = false;
-
-    // Reset the isOption3 flag
-    isOption3 = false;
+// Update the labels for all form lines
+function updateFormLineLabels() {
+  const formLines = formContainer.querySelectorAll('.form-line');
+  formLines.forEach((formLine, index) => {
+    const label = formLine.querySelector('label');
+    label.textContent = `Item ${index + 1}`;
+    const select = formLine.querySelector('select');
+    select.id = `selector${index + 1}`;
+    label.setAttribute('for', `selector${index + 1}`);
+  });
+}
 
     // Update the options in the select elements
     selectors.forEach((selector) => {

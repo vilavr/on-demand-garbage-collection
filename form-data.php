@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_POST['submit-form'])) {
+if (isset($_POST['submitBooking'])) {
     // Capture form data
     $name = $_POST['name'];
     $email = $_POST['email'];
