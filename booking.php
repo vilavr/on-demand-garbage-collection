@@ -142,7 +142,7 @@
                             <label for="saveData" disabled>Save my information for futher orders</label><br>
                         </div>
                         <!-- Submit form button -->
-                        <button type="submit" name="submit-form" class="book-btn">Book!</button>
+                        <button type="submit" name="submitBooking" class="book-btn">Book!</button>
                     </div>
                 </div>
             </form>
