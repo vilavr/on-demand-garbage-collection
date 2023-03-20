@@ -1,11 +1,9 @@
-// Get the relevant elements
-const addButton = document.querySelector(".add-btn");
-const removeButtons = document.querySelectorAll(".remove-btn");
-const selectors = document.querySelectorAll(".form-container select");
+// Add and remove lines of bulk waste
+// Get the form container
+const formContainer = document.querySelector('.form-container');
 
-// Initialize variables
-let optionCounter = 1;
-let isOption3 = false;
+// Get the add button
+const addButton = document.querySelector('.add-btn');
 
 // Add a click event listener to the add button
 addButton.addEventListener('click', () => {
@@ -54,22 +52,24 @@ function updateFormLineLabels() {
   });
 }
 
-    // Update the options in the select elements
-    selectors.forEach((selector) => {
-      const options = selector.querySelectorAll("option");
-      options.forEach((option) => {
-        if (option.value === "option2" && optionCounter < 2) {
-          selector.removeChild(option);
-        }
+// Fields appear only when bulk waste removal is checked
+// Hide the form container by default
+formContainer.style.display = 'none';
 
-        if (option.value === "option3" && optionCounter < 3) {
-          selector.removeChild(option);
-        }
+// Get a reference to the radio buttons
+const regularRadio = document.getElementById('regular');
+const recyclingRadio = document.getElementById('recycling');
+const bulkRadio = document.getElementById('bulk');
 
-        if (option.value === "option3" && optionCounter === 3) {
-          isOption3 = true;
-        }
-      });
-    });
-  });
+// Add an event listener to each radio button
+regularRadio.addEventListener('change', () => {
+  formContainer.style.display = 'none';
+});
+
+recyclingRadio.addEventListener('change', () => {
+  formContainer.style.display = 'none';
+});
+
+bulkRadio.addEventListener('change', () => {
+  formContainer.style.display = 'block';
 });
