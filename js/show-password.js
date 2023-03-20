@@ -1,7 +1,4 @@
-const showPasswordBtn = document.getElementById("show-password");
-const passwordInput = document.getElementById("password");
-
-showPasswordBtn.addEventListener("click", () => {
+document.getElementById("show-password").addEventListener("click", () => {
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
         showPasswordBtn.textContent = "Hide";
