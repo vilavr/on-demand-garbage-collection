@@ -1,3 +1,24 @@
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Open the file in append mode
+    $file = fopen("user_data.csv", "a");
+
+    // Write the username and password to the file
+    fputcsv($file, array($username, $password));
+
+    // Close the file
+    fclose($file);
+
+    // Redirect the user to the dashboard
+    header("Location: booking.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,7 +45,7 @@
         <h1>Join Throw It</h1>
       </div>
       <div class="form-wrapper">
-        <form id="signup" action="booking.php" method="post">
+        <form id="signup" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
           <div class="input-lines">
             <div class="username-container">
               <input type="text" id="username" class="username" name="username" placeholder="Username" required pattern="^[A-Za-z][A-Za-z0-9_.]{4,14}$">
@@ -54,6 +75,6 @@
       </div>
     </div>
     <script src="js/show-password.js"></script>
-    <script src="js/registration-errormessages.js"></script>
+    <script src="js/error-messages.js"></script>
   </body>
 </html>
