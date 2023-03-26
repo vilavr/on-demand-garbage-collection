@@ -157,7 +157,7 @@ if (!isset($_SESSION['loggedIn'])) {
     </div>
 
     <script src="js/dashboard-navigation.js"></script>
-    <script src="js/bulk-waste-item.js"></script>
+    <script src="js/bulk-waste-add-item.js"></script>
     <script src="js/dashboard-calendar.js"></script>
     <script src="js/current-date.js"></script>
     <script src="js/booking-totalprice.js"></script>
