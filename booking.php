@@ -124,8 +124,8 @@ if (!isset($_SESSION['loggedIn'])) {
                                     <option value="option1">10 - 20 kg</option>
                                     <option value="option2">20 - 50 kg</option>
                                     <option value="option3">50 - 100 kg</option>
-                                    <option value="option3">100 - 200 kg</option>
-                                    <option value="option3">200 - 500 kg</option>
+                                    <option value="option4">100 - 200 kg</option>
+                                    <option value="option5">200 - 500 kg</option>
                                 </select>
                                 <button type="button" class="remove-btn">&minus;</button>
                             </div>

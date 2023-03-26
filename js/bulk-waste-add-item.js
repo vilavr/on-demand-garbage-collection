@@ -52,10 +52,12 @@ function updateFormLineLabels() {
   const formLines = formContainer.querySelectorAll('.form-line');
   formLines.forEach((formLine, index) => {
     const label = formLine.querySelector('label');
-    label.textContent = `Item ${index + 1}`;
-    const select = formLine.querySelector('select');
-    select.id = `selector${index + 1}`;
-    label.setAttribute('for', `selector${index + 1}`);
+    if (label) {
+      label.textContent = `Item ${index + 1}`;
+      const select = formLine.querySelector('select');
+      select.id = `selector${index + 1}`;
+      label.setAttribute('for', `selector${index + 1}`);
+    }
   });
 }
 

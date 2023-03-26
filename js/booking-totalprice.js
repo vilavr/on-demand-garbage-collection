@@ -1,86 +1,51 @@
-// keep track of the weights for each option
-const optionWeights = {
-    option1: null,
-    option2: null,
-    option3: null
-  };
-  
-  document.querySelector('.order-details').addEventListener('change', function() {
-    const selectedService = document.querySelector('input[name="time"]:checked').value;
-    let totalPrice = 0;
-  
-    if (selectedService === 'bulk') {
-      const bulkItems = document.querySelectorAll('.form-container input[name="field[]"]');
-      bulkItems.forEach(function(item) {
-        const itemWeight = parseInt(item.value);
-        if (!isNaN(itemWeight)) {
-          totalPrice += itemWeight * 3;
-        }
-      });
-    } else if (selectedService === 'regular') {
-      totalPrice = 10;
-    } else if (selectedService === 'recycling') {
-      totalPrice = 15;
-    }
-  
-    document.querySelector('.total-price p:last-of-type').textContent = totalPrice.toFixed(2) + ' EUR';
-  });
-  
-  // add event listeners to the weight inputs for each option
-  const optionInputs = document.querySelectorAll('.form-container input[name="field[]"]');
-  optionInputs.forEach(function(input) {
-    const select = input.nextElementSibling;
-    const optionValue = select.value;
-  
-    // update the weight and price when the input value changes
-    input.addEventListener('change', function() {
-      const weight = parseInt(input.value);
-      if (!isNaN(weight)) {
-        optionWeights[optionValue] = weight;
-        updateTotalPrice();
+// Get the relevant elements from the DOM
+const serviceSelector = document.querySelector('.service-selector');
+const formContainerElem = document.querySelector('.form-container');
+const addBtn = document.querySelector('.add-btn');
+const totalPrice = document.querySelector('.total-price p:last-of-type');
+
+// Calculate the total price based on the selected service and item weights
+function calculateTotalPrice() {
+  let total = 0;
+
+  if (document.querySelector('#regular').checked) {
+    total = 10;
+  } else if (document.querySelector('#recycling').checked) {
+    total = 15;
+  } else if (document.querySelector('#bulk').checked) {
+    const itemWeightSelects = formContainerElem.querySelectorAll('select');
+    itemWeightSelects.forEach((select) => {
+      const weight = select.value;
+      if (weight === 'option1') {
+        total += 45;
+      } else if (weight === 'option2') {
+        total += 90;
+      } else if (weight === 'option3') {
+        total += 200;
+      } else if (weight === 'option4') {
+        total += 420;
+      } else if (weight === 'option5') {
+        total += 750;
       }
     });
-  
-    // remove the weight and price when the input is deleted
-    input.addEventListener('input', function() {
-      if (input.value === '') {
-        optionWeights[optionValue] = null;
-        updateTotalPrice();
-      }
-    });
-  
-    // update the weight and price when the option is changed
-    select.addEventListener('change', function() {
-      const newOptionValue = select.value;
-      if (optionWeights[newOptionValue] !== null) {
-        input.value = optionWeights[newOptionValue];
-        optionWeights[optionValue] = null;
-        optionValue = newOptionValue;
-        updateTotalPrice();
-      } else {
-        optionWeights[newOptionValue] = optionWeights[optionValue];
-        optionWeights[optionValue] = null;
-        optionValue = newOptionValue;
-        input.value = '';
-        updateTotalPrice();
-      }
-    });
-    
-    // remove the weight and price when the remove button is clicked
-    input.parentElement.querySelector('.remove-btn').addEventListener('click', function() {
-      optionWeights[optionValue] = null;
-      input.value = '';
-      updateTotalPrice();
-    });
-  });
-  // function to update the total price based on the current weights
-  function updateTotalPrice() {
-    let totalPrice = 0;
-    for (const optionValue in optionWeights) {
-      const weight = optionWeights[optionValue];
-      if (weight !== null) {
-        totalPrice += weight * 3;
-      }
-    }
-    document.querySelector('.total-price p:last-of-type').textContent = totalPrice.toFixed(2) + ' EUR';
   }
+
+  totalPrice.textContent = `${total.toFixed(2)} EUR`;
+}
+
+// Add event listeners to the relevant elements
+serviceSelector.addEventListener('change', calculateTotalPrice);
+addBtn.addEventListener('click', calculateTotalPrice);
+formContainerElem.addEventListener('change', (event) => {
+  if (event.target.tagName === 'SELECT') {
+    calculateTotalPrice();
+  }
+});
+formContainerElem.addEventListener('click', (event) => {
+  if (event.target.classList.contains('remove-btn')) {
+    calculateTotalPrice();
+  }
+});
+
+// Initial calculation of the total price based on the default values
+calculateTotalPrice();
