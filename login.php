@@ -1,4 +1,5 @@
 <?php
+session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve the entered username and password
     $username = $_POST['username'];
@@ -11,6 +12,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (($handle = fopen("user_data.csv", "r")) !== FALSE) {
             while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
                 if ($data[0] === $username && $data[1] === $password) {
+                    // Regenerate the session ID
+                    session_regenerate_id(true);
+
+                    // Set the session variable
+                    $_SESSION['loggedIn'] = true;
+
                     // Redirect to booking.php if the username and password are valid
                     header("Location: booking.php");
                     exit;

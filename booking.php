@@ -1,3 +1,13 @@
+<?php
+// Start the session
+session_start();
+
+// If the session variable is not set, redirect to the login page
+if (!isset($_SESSION['loggedIn'])) {
+    header("Location: login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
