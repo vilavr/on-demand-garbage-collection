@@ -14,6 +14,11 @@ addButton.addEventListener('click', () => {
   // Determine the number of existing form lines
   const numFormLines = formContainer.querySelectorAll('.form-line').length;
 
+  if (numFormLines >= 10) {
+    addButton.style.display = 'none';
+    return;
+  }
+
   // Add the HTML for the new form line
   newFormLine.innerHTML = `
     <label for="selector${numFormLines + 1}" class="item">Item ${numFormLines + 1}</label>
@@ -31,6 +36,8 @@ addButton.addEventListener('click', () => {
   const removeButton = newFormLine.querySelector('.remove-btn');
   removeButton.addEventListener('click', () => {
     newFormLine.remove();
+    addButton.style.display = 'inline-block';
+    updateFormLineLabels();
   });
 
   // Add the new form line to the form container

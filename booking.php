@@ -23,30 +23,6 @@ if (!isset($_SESSION['loggedIn'])) {
     <link rel="stylesheet" href="styles/navigation.css">
     <link rel="stylesheet" href="styles/booking.css">
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var selectService = document.getElementById('service');
-            var price = document.getElementById('price');
-
-            selectService.addEventListener('change', function() {
-                var service = selectService.value;
-                if (service === 'regular-pickup') {
-                    price.textContent = '10 EUR';
-                } else if (service === 'recycling') {
-                    price.textContent = '15 EUR';
-                } else if (service === 'bulk-waste-removal') {
-                    var items = document.querySelectorAll('.field');
-                    var weight = 0;
-                    for (var i = 0; i < items.length; i++) {
-                        if (items[i].value) {
-                            weight += parseInt(items[i].value);
-                        }
-                    }
-                    price.textContent = weight * 3 + ' EUR';
-                }
-            });
-        });
-    </script>
 </head>
 <body>
     <!-- Content section of the document -->
