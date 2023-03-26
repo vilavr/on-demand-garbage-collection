@@ -1,22 +1,27 @@
 <?php
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
+    // Retrieve the entered username and password
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Open the file in append mode
-    $file = fopen("user_data.csv", "a");
+    // Check if the entered username and password are valid
+    if (preg_match('/^[A-Za-z][A-Za-z0-9_.]{4,14}$/', $username) && preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@_!%*?&])[A-Za-z\d@_!%*?&]{8,15}$/', $password)) {
+        // Open the file in append mode
+        $file = fopen("user_data.csv", "a");
 
-    // Write the username and password to the file
-    fputcsv($file, array($username, $password));
+        // Write the username and password to the file
+        fputcsv($file, array($username, $password));
 
-    // Close the file
-    fclose($file);
+        // Close the file
+        fclose($file);
 
-    // Redirect the user to the dashboard
-    header("Location: booking.php");
-    exit;
+        // Redirect the user to the booking page
+        header("Location: booking.php");
+        exit;
+    } else {
+        // Display error message if the username and/or password are invalid
+        $errorMessage = "Invalid username and/or password.";
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -57,6 +62,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               <div class="error-msg" id="password-error"></div>
             </div>
           </div>
+		  <?php if(isset($errorMessage)): ?>
+            <script>
+			  alert('<?php echo $errorMessage; ?>');
+			</script>
+          <?php endif; ?>
           <div class="terms">
             <p>By clicking Agree &amp; Join, you agree to the <br>
               Throw It

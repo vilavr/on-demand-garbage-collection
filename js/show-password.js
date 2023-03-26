@@ -5,4 +5,4 @@ const passwordInp = document.querySelector('#password');
     const type = passwordInp.getAttribute('type') === 'password' ? 'text' : 'password';
     passwordInp.setAttribute('type', type);
     showPasswordButton.textContent = type === 'password' ? 'Show' : 'Hide';
-  });
+  }); 
