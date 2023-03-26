@@ -14,6 +14,11 @@ addButton.addEventListener('click', () => {
   // Determine the number of existing form lines
   const numFormLines = formContainer.querySelectorAll('.form-line').length;
 
+  if (numFormLines >= 10) {
+    addButton.style.display = 'none';
+    return;
+  }
+
   // Add the HTML for the new form line
   newFormLine.innerHTML = `
     <label for="selector${numFormLines + 1}" class="item">Item ${numFormLines + 1}</label>
@@ -31,6 +36,7 @@ addButton.addEventListener('click', () => {
   const removeButton = newFormLine.querySelector('.remove-btn');
   removeButton.addEventListener('click', () => {
     newFormLine.remove();
+    addButton.style.display = 'inline-block';
     updateFormLineLabels();
   });
 
@@ -46,20 +52,10 @@ function updateFormLineLabels() {
   const formLines = formContainer.querySelectorAll('.form-line');
   formLines.forEach((formLine, index) => {
     const label = formLine.querySelector('label');
-    if (index === 0) {
-      label.textContent = 'Item 1';
-      label.setAttribute('for', 'selector1');
-      const select = formLine.querySelector('select');
-      select.id = 'selector1';
-    } else {
-      const prevLabel = formLines[index - 1].querySelector('label');
-      const prevNum = parseInt(prevLabel.textContent.match(/\d+/));
-      const newNum = prevNum + 1;
-      label.textContent = `Item ${newNum}`;
-      label.setAttribute('for', `selector${newNum}`);
-      const select = formLine.querySelector('select');
-      select.id = `selector${newNum}`;
-    }
+    label.textContent = `Item ${index + 1}`;
+    const select = formLine.querySelector('select');
+    select.id = `selector${index + 1}`;
+    label.setAttribute('for', `selector${index + 1}`);
   });
 }
 
