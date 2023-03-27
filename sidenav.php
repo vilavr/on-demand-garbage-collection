@@ -5,6 +5,6 @@
         <a href="orders.php">Orders</a>
         <a href="settings.php">Settings</a>
         <a href="index.php">Home</a>
-        <a href="index.php" class="log-out">Log out</a>
+        <a href="logout.php" class="log-out">Log out</a>
     </nav>
 </aside>
