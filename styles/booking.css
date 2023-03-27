@@ -173,6 +173,7 @@
 /* Calender */
 .calendar-container {
     margin: 10px 20px 20px 0;
+    padding-bottom: 3px;
     width: 235px;
     border: 1px solid var(--grey);
     border-radius: 10px;

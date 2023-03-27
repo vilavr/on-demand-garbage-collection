@@ -46,27 +46,27 @@ if (!isset($_SESSION['loggedIn'])) {
                         <p class="booking-form-title">Enter your information</p>
                         <div class="input-lines">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" class="field" placeholder=" Name" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{2,200}$">
+                            <input type="text" id="name" name="name" class="field" placeholder=" Name" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{1,200}$">
                             <label for="surname">Surname</label>
-                            <input type="text" id="surname" name="surname" class="field" placeholder=" Surname" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{2,200}$">
+                            <input type="text" id="surname" name="surname" class="field" placeholder=" Surname" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{1,200}$">
                             <label for="phone">Phone</label>
                             <input type="text" id="phone" name="phone" class="field" placeholder=" +372 58678900" pattern="^[0-9\-\+ ]{7,15}$">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="field" placeholder=" name@example.com" pattern="^[\w\-\.]{1,50}@([\w-]{1,50}\.){1,50}[\w-]{2,4}$">
+                            <input type="email" id="email" name="email" class="field" placeholder=" name@example.com" required pattern="^[\w\-\.]{1,50}@([\w-]{1,50}\.){1,50}[\w-]{2,4}$">
 
                             <span class="Tallinn">Address: &nbsp;Tallinn, Estonia</span>
                             <div class="line">
                                 <div class="address-group street">
                                     <label for="street">Street name</label>
-                                    <input type="text" id="street" name="street" class="field" placeholder=" Akadeemia tee" pattern="[A-Za-z0-9\s-]+">
+                                    <input type="text" id="street" name="street" class="field" placeholder=" Akadeemia tee" required pattern="[\w\s\.,'\-\#\;\^\:\=\(\)\~\&\>\+=\*\/\<\?!{}\[\]]+">
                                 </div>
                                 <div class="address-group house">
                                     <label for="house">House</label>
-                                    <input type="text" id="house" name="house" class="field" placeholder=" 8" pattern="\d{1,5}">
+                                    <input type="text" id="house" name="house" class="field" placeholder=" 8" required pattern="[\w\s\.,'\-\#\;\^\:\=\(\)\~\&\>\+=\*\/\<\?!{}\[\]]{1,5}">
                                 </div>
                                 <div class="address-group index">
                                     <label for="index">Postcode</label>
-                                    <input type="text" id="index" name="index" class="field" placeholder=" 21800" pattern="\d{5}">
+                                    <input type="text" id="index" name="index" class="field" placeholder=" 21800" required pattern="\d{5}">
                                 </div>
                             </div>
                         </div>
@@ -83,6 +83,7 @@ if (!isset($_SESSION['loggedIn'])) {
                                     </div>
                                     <div class="calendar-days"></div>
                                 </div>
+                                <input type="hidden" id="datepicker" name="datepicker" required>
                             </div>
                             <!-- Available time slots -->
                             <div class="date-row">
@@ -101,18 +102,17 @@ if (!isset($_SESSION['loggedIn'])) {
                                 </div>
                             </div>
                         </div>
-                        <input type="hidden" id="datepicker" name="datepicker">
                     </div>
                     <!-- Second row of booking form -->
                     <div class="order-details">
                         <!-- Selecting service to order -->
                         <p class="booking-form-title">Select the service you want</p>
                         <div class="service-selector">
-                            <input type="radio" id="regular" name="time" value="regular" checked>
+                            <input type="radio" id="regular" name="service_type" value="regular" checked>
                             <label for="regular">Regular pickup</label><br>
-                            <input type="radio" id="recycling" name="time" value="recycling">
+                            <input type="radio" id="recycling" name="service_type" value="recycling">
                             <label for="recycling">Recycling</label><br>
-                            <input type="radio" id="bulk" name="time" value="bulk">
+                            <input type="radio" id="bulk" name="service_type" value="bulk">
                             <label for="bulk">Bulk waste removal</label>
                         </div>
                         <!-- Bulk waste removal items item-weight form -->
@@ -148,7 +148,7 @@ if (!isset($_SESSION['loggedIn'])) {
                             <label for="saveData" disabled>Save my information for futher orders</label><br>
                         </div>
                         <!-- Submit form button -->
-                        <button type="submit" name="submitBooking" class="book-btn">Book!</button>
+                        <button type="submit" id="submit-btn" name="submitBooking" class="book-btn">Book!</button>
                     </div>
                 </div>
             </form>
@@ -161,6 +161,7 @@ if (!isset($_SESSION['loggedIn'])) {
     <script src="js/dashboard-calendar.js"></script>
     <script src="js/current-date.js"></script>
     <script src="js/booking-totalprice.js"></script>
+    <script src="js/booking-validation.js"></script>
 
 </body>
 
