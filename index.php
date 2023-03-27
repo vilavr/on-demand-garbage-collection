@@ -220,7 +220,7 @@
               </ul>
             </div>
             <div class="pricing-btn">
-              <a href="bulk_waste_removal.php">Learn more</a>
+              <a href="bulk_waste.php">Learn more</a>
             </div>
           </div>
         </div>

@@ -59,7 +59,7 @@
                         </ul>
                     </div>
                     <div class="pricing-btn">
-                        <a href="regular_pickup.php">Book!</a>
+                        <a href="booking.php">Book!</a>
                     </div>
                 </div>
             </div>
