@@ -1,14 +1,8 @@
-const showPasswordBtn = document.getElementById("show-password");
-const passwordInput = document.getElementById("password");
+const passwordInp = document.querySelector('#password');
+  const showPasswordButton = document.querySelector('#show-password');
 
-showPasswordBtn.addEventListener("click", () => {
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        showPasswordBtn.textContent = "Hide";
-        showPasswordBtn.classList.add("password-visible");
-    } else {
-        passwordInput.type = "password";
-        showPasswordBtn.textContent = "Show";
-        showPasswordBtn.classList.remove("password-visible");
-    }
-});
+  showPasswordButton.addEventListener('click', () => {
+    const type = passwordInp.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInp.setAttribute('type', type);
+    showPasswordButton.textContent = type === 'password' ? 'Show' : 'Hide';
+  }); 

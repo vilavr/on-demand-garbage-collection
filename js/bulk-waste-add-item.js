@@ -14,15 +14,20 @@ addButton.addEventListener('click', () => {
   // Determine the number of existing form lines
   const numFormLines = formContainer.querySelectorAll('.form-line').length;
 
+  if (numFormLines >= 10) {
+    addButton.style.display = 'none';
+    return;
+  }
+
   // Add the HTML for the new form line
   newFormLine.innerHTML = `
     <label for="selector${numFormLines + 1}" class="item">Item ${numFormLines + 1}</label>
     <select name="selector[]" id="selector${numFormLines + 1}">
-      <option value="option1">less than 5kg</option>
-      <option value="option2">5 - 10 kg</option>
-      <option value="option3">10 - 50 kg</option>
+      <option value="option1">10 - 20 kg</option>
+      <option value="option2">20 - 50 kg</option>
       <option value="option3">50 - 100 kg</option>
-      <option value="option3">100 - 500 kg</option>
+      <option value="option3">100 - 200 kg</option>
+      <option value="option3">200 - 500 kg</option>
     </select>
     <button class="remove-btn">&minus;</button>
   `;
@@ -31,6 +36,8 @@ addButton.addEventListener('click', () => {
   const removeButton = newFormLine.querySelector('.remove-btn');
   removeButton.addEventListener('click', () => {
     newFormLine.remove();
+    addButton.style.display = 'inline-block';
+    updateFormLineLabels();
   });
 
   // Add the new form line to the form container
@@ -45,10 +52,12 @@ function updateFormLineLabels() {
   const formLines = formContainer.querySelectorAll('.form-line');
   formLines.forEach((formLine, index) => {
     const label = formLine.querySelector('label');
-    label.textContent = `Item ${index + 1}`;
-    const select = formLine.querySelector('select');
-    select.id = `selector${index + 1}`;
-    label.setAttribute('for', `selector${index + 1}`);
+    if (label) {
+      label.textContent = `Item ${index + 1}`;
+      const select = formLine.querySelector('select');
+      select.id = `selector${index + 1}`;
+      label.setAttribute('for', `selector${index + 1}`);
+    }
   });
 }
 

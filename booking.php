@@ -1,7 +1,15 @@
+<?php
+// Start the session
+session_start();
+
+// If the session variable is not set, redirect to the login page
+if (!isset($_SESSION['loggedIn'])) {
+    header("Location: login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>Booking Form</title>
@@ -16,9 +24,7 @@
     <link rel="stylesheet" href="styles/booking.css">
 
 </head>
-
 <body>
-
     <!-- Content section of the document -->
     <?php require_once('sidenav.php'); ?>
     <div id="booking-main" class="booking">
@@ -115,11 +121,11 @@
                             <div class="form-line">
                                 <label for="selector1" class="item">Item 1</label>
                                 <select name="selector[]">
-                                    <option value="option1">less than 5kg</option>
-                                    <option value="option2">5 - 10 kg</option>
-                                    <option value="option3">10 - 50 kg</option>
+                                    <option value="option1">10 - 20 kg</option>
+                                    <option value="option2">20 - 50 kg</option>
                                     <option value="option3">50 - 100 kg</option>
-                                    <option value="option3">100 - 500 kg</option>
+                                    <option value="option4">100 - 200 kg</option>
+                                    <option value="option5">200 - 500 kg</option>
                                 </select>
                                 <button type="button" class="remove-btn">&minus;</button>
                             </div>
@@ -131,7 +137,7 @@
                         <!-- Calculated total price -->
                         <div class="total-price">
                             <p>Total:</p>
-                            <p>10 EUR</p>
+                            <p>10.00 EUR</p>
                         </div>
                         <!-- Comments field -->
                         <p>Anything else you want to add?</p>
@@ -151,10 +157,11 @@
     </div>
 
     <script src="js/dashboard-navigation.js"></script>
-    <script src="js/bulk-waste-item.js"></script>
+    <script src="js/bulk-waste-add-item.js"></script>
     <script src="js/dashboard-calendar.js"></script>
     <script src="js/current-date.js"></script>
-    <noscript>Your browser does not support JavaScript!</noscript>
+    <script src="js/booking-totalprice.js"></script>
+
 </body>
 
 </html>
