@@ -88,8 +88,8 @@
 
                             <!-- Checkbox for saving user data -->
                             <div class="save-settings-checkbox">
-                                <input type="checkbox" id="saveData" name="saveData" value="saveData" disabled>
-                                <label for="saveData" disabled>&nbsp;&nbsp;I confirm saving this info</label>
+                                <input type="checkbox" id="saveData" name="saveData" value="saveData">
+                                <label for="saveData">&nbsp;&nbsp;I confirm saving this info</label>
                             </div>
                             <!-- Submit form button -->
                             <button type="submit" name="submit-form" class="settings-save-btn">Submit and save</button>
