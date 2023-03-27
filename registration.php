@@ -61,6 +61,7 @@
 	</div>
 
 	<script src="js/show-password.js"></script>
+	<noscript>Your browser does not support JavaScript!</noscript>
 </body>
 
 </html>

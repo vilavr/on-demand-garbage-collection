@@ -154,6 +154,7 @@
     <script src="js/bulk-waste-item.js"></script>
     <script src="js/dashboard-calendar.js"></script>
     <script src="js/current-date.js"></script>
+    <noscript>Your browser does not support JavaScript!</noscript>
 </body>
 
 </html>
