@@ -26,20 +26,19 @@
     <div id="booking-main" class="confirmation">
         <!-- Open button -->
         <?php require_once('open-btn.php'); ?>
-        
-        <div class="confirmation-header">
-            <p class="confirmation-headline">Please, check all the data and confirm the booking</p>
+
+        <div id="confirmation" class="confirmation-header">
+            <p class="confirmation-headline">Please check all the data and confirm booking</p>
         </div>
         <div class="personal-data-header">
             <div class="pdata-header">
                 <p>Personal info</p>
             </div>
             <div class="pdata">
-                <!-- Display form data on page -->
-                <p><?php echo $name; ?>, <?php echo $surname; ?></p>
-                <p><?php echo $phone; ?></p>
-                <p><?php echo $email; ?></p>
-                <p><?php echo $address; ?></p>
+                <p><br><?= $name .', '. $surname; ?><br>
+                <br><?= $phone; ?><br>
+                <br><?= $email; ?><br>
+                <br><?= $street. ', ' . $house . ', ' . $index; ?>, Tallinn, Estonia</p><br>
             </div>
         </div>
         <div class="order-data-header">
@@ -47,10 +46,11 @@
                 <p>Order info</p>
             </div>
             <div class="odata">
-                <p>Name of service</p>
-                <p>Number of items</p>
-                <p>Weights of items</p>
-                <p>The driver will arrive on Wednesday, 01.03.2023 at 14:58</p>
+            <p><br><?= ucfirst((string)$service); ?><br>
+                    <?= $price; ?><br>
+                    The driver will arrive on 
+                    <?= date('l', strtotime($date)) . ', ' . $day . '.' . $month . '.' . $year .
+                    ' at ' . $time ; ?></p><br>
             </div>
         </div>
         <div class="buttons">

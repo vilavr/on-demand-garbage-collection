@@ -12,11 +12,68 @@
         background-size: cover;
     }
 }
-@media screen and (max-width: 768px) {
-    .buttons {flex-direction: column !important; width: 70px;}
+@media screen and (max-width: 368px) {
+    /* .buttons {flex-direction: column !important; width: 70px;} */
     .confirm-btn {margin-bottom: 20px !important;}
     .buttons a {font-size: 25px;}
     .pdata, .odata {margin-right: 10px !important;}
+    .confirmation-headline {margin-top: 20px;}
+}
+@media screen and (min-width: 755px) {
+    .confirmation {
+        width: 745px; 
+        /* margin-left: 20vw; */
+    }
+}
+
+/* Sidenavigation */
+.sidenav {
+    width: 180px;
+    background: url("../img/background.jpg") scroll no-repeat left bottom;
+    opacity: 0.9;
+}
+
+.sidenav a {
+    padding-left: 40px;
+}
+
+.openbtn {
+    margin-top: 20px;
+    left: 10px;
+    position: fixed;
+    background-color: #0000;
+    border: none;
+    outline: none;
+    height: 20px;
+    width: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.openbtn img {
+    width: 30px;
+    height: auto;
+}
+
+.openbtn:focus {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+/* 
+.line input {
+    width: 250px;
+} */
+
+.log-out {
+    margin-top: 40px;
+}
+
+.navbar-box {
+    width: 301px;
+    height: 232px;
+    position: absolute;
+    left: 107px;
+    top: 620px;
 }
 
 .confirmation {
@@ -44,7 +101,6 @@
     margin-top: 20px;
     left:10px;
     position:fixed;
-    background-color: var(--truewhite);
     border: none;
     outline: none;
     height:20px;
@@ -56,7 +112,7 @@
     color: var(--shadowedblack);
 }
 .openbtn:focus {
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
 }
 
 .line input{
@@ -165,51 +221,48 @@
     background-color: var(--truewhite);
     border: 1px var(--shadowedblack) solid;
     border-radius: 5px; 
-    margin-right: 20vw;
+    margin-right: 20px;
 }
 .buttons{
-    margin-top: 150px;
+    margin: 40px 20px 20px 20px;
     font-size: 30px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 .confirm-btn{
-    position: relative;
-    width: inherit;
-    max-width: 300px;
-    min-width: 50px;
-    bottom: 30px;
+    width: 250px;
     background-color: var(--shadowedblack);
     color: var(--truewhite);
     padding: 10px 20px;
     border-radius: 10px;
-    align-items: center;
     text-align: center;
-    align-content: center;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
-    margin-right: 5vw;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .confirm-btn:hover{
     cursor: pointer;
     background-color: var(--transblack);
 }
 .back-btn{
-    position: relative;
-    width: inherit;
-    max-width: 300px;
-    min-width: 50px;
-    bottom: 30px;
+    width: 250px;
     background-color: var(--truewhite);
     color: var(--shadowedblack);
     padding: 10px 20px;
     border: 1px var(--shadowedblack) solid;
     border-radius: 10px;
-    align-items: center;
     text-align: center;
-    align-content: center;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+    margin-right: 7px;
+    margin-bottom: 20px;
 }
 .back-btn:hover{
     cursor: pointer;

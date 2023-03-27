@@ -89,15 +89,15 @@ if (!isset($_SESSION['loggedIn'])) {
                             <div class="date-row">
                                 <label for="datepicker" class="calendar-label time-slots">Free slots:</label>
                                 <div class="calendar-container time-slots time-selector">
-                                    <input type="radio" id="time1" name="time" value="time1" checked>
+                                    <input type="radio" id="time1" name="time" value="10:00" checked>
                                     <label for="time1">10:00</label><br>
-                                    <input type="radio" id="time2" name="time" value="time2" disabled>
+                                    <input type="radio" id="time2" name="time" value="11:00" disabled>
                                     <label for="time2" disabled>11:00</label><br>
-                                    <input type="radio" id="time3" name="time" value="time3">
+                                    <input type="radio" id="time3" name="time" value="12:00">
                                     <label for="time3">12:00</label><br>
-                                    <input type="radio" id="time4" name="time" value="time4" disabled>
+                                    <input type="radio" id="time4" name="time" value="13:00" disabled>
                                     <label for="time4" disabled>13:00</label><br>
-                                    <input type="radio" id="time5" name="time" value="time5">
+                                    <input type="radio" id="time5" name="time" value="14:00">
                                     <label for="time5">14:00</label>
                                 </div>
                             </div>
@@ -108,11 +108,11 @@ if (!isset($_SESSION['loggedIn'])) {
                         <!-- Selecting service to order -->
                         <p class="booking-form-title">Select the service you want</p>
                         <div class="service-selector">
-                            <input type="radio" id="regular" name="service_type" value="regular" checked>
+                            <input type="radio" id="regular" name="service_type" value="Regular Pickup" checked>
                             <label for="regular">Regular pickup</label><br>
-                            <input type="radio" id="recycling" name="service_type" value="recycling">
+                            <input type="radio" id="recycling" name="service_type" value="Recycling">
                             <label for="recycling">Recycling</label><br>
-                            <input type="radio" id="bulk" name="service_type" value="bulk">
+                            <input type="radio" id="bulk" name="service_type" value="Bulk Waste Removal">
                             <label for="bulk">Bulk waste removal</label>
                         </div>
                         <!-- Bulk waste removal items item-weight form -->
@@ -144,8 +144,8 @@ if (!isset($_SESSION['loggedIn'])) {
                         <input maxlength="200" class="comment" type="text" name="comment" id="comment" pattern="^[\w\s\.,'\-\#\@\;\:\$\%\^\=\(\)\~\&\€\>\+=\*\/\<\?!{}\[\]]{1,200}$" placeholder="Leave a comment"><br>
                         <!-- Checkbox for saving user data -->
                         <div class="save-data-checkbox">
-                            <input type="checkbox" id="saveData" name="saveData" value="saveData" disabled>
-                            <label for="saveData" disabled>Save my information for futher orders</label><br>
+                            <input type="checkbox" id="saveData" name="saveData" value="saveData">
+                            <label for="saveData">Save my information for futher orders</label><br>
                         </div>
                         <!-- Submit form button -->
                         <button type="submit" id="submit-btn" name="submitBooking" class="book-btn">Book!</button>

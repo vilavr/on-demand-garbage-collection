@@ -57,13 +57,8 @@
 }
 
 .openbtn:focus {
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
 }
-
-/* 
-.line input {
-    width: 250px;
-} */
 
 .log-out {
     margin-top: 40px;

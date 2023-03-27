@@ -8,7 +8,8 @@ function closeNav() {
     document.getElementById("side-panel").style.width = "0";
     if (window.innerWidth < 420) {
         document.getElementById("booking-main").style.marginLeft = "10px";
-    } else {
+        document.getElementById("openbutton").style.paddingBottom = "20px";
+    }else {
         document.getElementById("booking-main").style.marginLeft = "50px";
     }
 }

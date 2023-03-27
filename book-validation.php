@@ -70,12 +70,12 @@ $_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && 
 	}
 
 	// Time check
-	if (!in_array($time, array('time1', 'time2', 'time3', 'time4', 'time5'))) {
+	if (!in_array($time, array('10:00', '11:00', '12:00', '13:00', '14:00'))) {
 		$error_messages[] = "Invalid time. Not existing time.";
 	}
 
 	// Service check
-	if (!in_array($_POST['service_type'], array('regular', 'recycling', 'bulk'))) {
+	if (!in_array($_POST['service_type'], array('Regular Pickup', 'Recycling', 'Bulk Waste Removal'))) {
 		$error_messages[] = "Incorrect service provided.";
 	}
 	if (!isset($_POST['selector']) || empty($_POST['selector'])) {
