@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.settings-form {
+    position: relative;
+}
+
+.settings-save-btn {
+    position: absolute;
+}
+
+.personal-settings-save-btn {
+    bottom: -72px;
+}
+
+.user-settings-save-btn {
+    bottom: 0;
+}
+
+.line {
+    margin-bottom: 0;
+}

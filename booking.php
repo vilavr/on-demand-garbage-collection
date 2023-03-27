@@ -60,7 +60,7 @@ ob_end_flush();
                             <input type="text" id="name" name="name" class="field" placeholder=" Name" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{1,200}$">
                             <label for="surname">Surname</label>
                             <input type="text" id="surname" name="surname" class="field" placeholder=" Surname" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{1,200}$">
-                            <label for="phone">Phone</label>
+                            <label for="phone">Phone (optional) </label>
                             <input type="text" id="phone" name="phone" class="field" placeholder=" +372 58678900" pattern="^[0-9\-\+ ]{7,15}$">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" class="field" placeholder=" name@example.com" required pattern="^[\w\-\.]{1,50}@([\w-]{1,50}\.){1,50}[\w-]{2,4}$">
@@ -151,7 +151,7 @@ ob_end_flush();
                             <p>10.00 EUR</p>
                         </div>
                         <!-- Comments field -->
-                        <p>Anything else you want to add?</p>
+                        <p>Anything else you want to add? (optional)</p>
                         <input maxlength="200" class="comment" type="text" name="comment" id="comment" pattern="^[\w\s\.,'\-\#\@\;\:\$\%\^\=\(\)\~\&\€\>\+=\*\/\<\?!{}\[\]]{1,200}$" placeholder="Leave a comment"><br>
                         <!-- Checkbox for saving user data -->
                         <div class="save-data-checkbox">
