@@ -3,6 +3,7 @@
     html, body { 
         background: url("../img/background.jpg") scroll no-repeat;
         background-position: center center !important;
+        width: 100vw !important;
     }
 }
 @media screen and (max-width: 768px){
@@ -13,7 +14,7 @@
         width: 200px !important;
         height: 170px !important;
     }
-    .text1, .text3{
+     .text1, .text3{
         margin-left: 20px !important;
     }
     .text1 h2, .text3 h2{
@@ -36,14 +37,13 @@
     .text2, .text4{
         margin-right: 20px !important;
         margin-left: 5px !important;
-        width: 150px !important;
     }
     .text2 h2, .text4 h2{
         font-size: 22px !important;
     }
     .btn2, .btn4{
         margin-left: 3px !important;
-    }
+    } 
     .section3 img{
         width: 190px !important;
         height: 150px !important;
@@ -86,6 +86,8 @@
     margin-left: 1vw;
 }
 .text1, .text3{
+    display: flex;
+    flex-wrap: wrap;
     margin-right: 20px; /* Add some spacing between the text and image */
     margin-left: 70px;
     padding-bottom: 20px; /* Add some spacing at the bottom */
@@ -97,7 +99,6 @@
     font-size: 28px;
     color: white;
     margin-top: 0vw;
-    margin-left: 60vw;
     margin-bottom: 2vw;
 }
 .text3 h2{
@@ -107,7 +108,6 @@
     font-size: 28px;
     color: white;
     margin-top: 0vw;
-    margin-left: 60vw;
     margin-bottom: 2vw;
 }
 .text1 p, .text3 p{
@@ -117,15 +117,12 @@
     font-size: 20px;
     color: white;
     margin-top: 0vw;
-    margin-left: 2vw;
     margin-right: 2vw;
     margin-bottom: 5vw;
 }
 .btn1, .btn3{
-    margin-top: 4vw;
-    margin-left: 2vw;
+    margin-top: 30px;
 /*    margin:auto;*/
-    margin-top: 200px;
 /*    margin-bottom: 80px;*/
     max-width: 200px;
     min-width: 50px;
@@ -148,6 +145,8 @@
     margin-right: 4vw;
 }
 .text2, .text4{
+    display: flex;
+    flex-wrap: wrap;
     margin-left: 20px; /* Add some spacing between the text and image */
     margin-right: 70px;
     padding-bottom: 20px; /* Add some spacing at the bottom */
@@ -159,8 +158,6 @@
     font-size: 28px;
     color: white;
     margin-top: 0vw;
-    margin-right: 55vw;
-    margin-bottom: 2vw;
 }
 .text2 p, .text4 p{
     font-family: 'NanumMyeongjo';
@@ -170,14 +167,12 @@
     color: white;
     margin-top: 0vw;
     margin-left: 0vw;
-    margin-right: 5vw;
     margin-bottom: 5vw;
 }
 .btn2, .btn4{
     margin-top: 4vw;
-    margin-left: 51vw;
 /*    margin:auto;*/
-    margin-top: 200px;
+    margin-top: 30px;
 /*    margin-bottom: 80px;*/
     max-width: 200px;
     min-width: 50px;

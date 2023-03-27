@@ -80,16 +80,16 @@
 .cofounders, .manager, .driver, .custservice, .recycling{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
 }
 .cofounders-description{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    min-width: 100px;
-    max-width: 700px;
-    margin-left: 21%;
+    min-width: 60vw;
+    max-width: 90vw;
+    margin-left: 1%;
     font-size: 18px;
     background-color: var(--transblack);
     border-radius: 5px;
@@ -98,9 +98,9 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    min-width: 100px;
-    max-width: 700px;
-    margin-left: 32%;
+    min-width: 60vw;
+    max-width: 90vw;
+    margin-left: 10%;
     font-size: 18px;
     background-color: var(--transblack);
     border-radius: 5px;
