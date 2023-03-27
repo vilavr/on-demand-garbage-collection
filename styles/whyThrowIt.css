@@ -3,6 +3,7 @@
     html, body { 
         background: url("../img/background.jpg") scroll no-repeat;
         background-position: center center !important;
+        width: 100vw !important;
     }
 }
 @media screen and (max-width: 768px){
