@@ -1,3 +1,4 @@
+<?php require_once('session.php');?>
 <?php require_once('settings-validation.php'); ?>
 <!DOCTYPE html>
 
@@ -47,9 +48,9 @@
                         <p class="booking-form-title">Personal information</p>
                         <div class="input-lines">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" class="field" placeholder=" Name" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{2,200}$">
+                            <input type="text" id="name" name="name" class="field" placeholder=" Name" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{1,30}$">
                             <label for="surname">Surname</label>
-                            <input type="text" id="surname" name="surname" class="field" placeholder=" Surname" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{2,200}$">
+                            <input type="text" id="surname" name="surname" class="field" placeholder=" Surname" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{1,30}$">
                             <label for="phone">Phone (optional)</label>
                             <input type="text" id="phone" name="phone" class="field" placeholder=" +372 58678900" pattern="^[0-9\-\+ ]{7,15}$">
                             <label for="email">Email</label>
@@ -59,11 +60,11 @@
                             <div class="line">
                                 <div class="address-group street">
                                     <label for="street">Street name</label>
-                                    <input type="text" id="street" name="street" class="field" placeholder=" Akadeemia tee" pattern="[A-Za-z0-9\s-]+">
+                                    <input type="text" id="street" name="street" class="field" placeholder=" Akadeemia tee" pattern="^[\w\s\.,'\-\#\;\^\:\=\(\)\~\&\>\+=\*\/\<\?!{}\[\]]+$">
                                 </div>
                                 <div class="address-group house">
                                     <label for="house">House</label>
-                                    <input type="text" id="house" name="house" class="field" placeholder=" 8" pattern="\d{1,5}">
+                                    <input type="text" id="house" name="house" class="field" placeholder=" 8" pattern="^[\w\s\.,'\-\#\;\^\:\=\(\)\~\&\>\+=\*\/\<\?!{}\[\]]+$">
                                 </div>
                                 <div class="address-group index">
                                     <label for="index">Postcode</label>

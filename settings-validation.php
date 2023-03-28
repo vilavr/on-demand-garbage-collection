@@ -19,11 +19,10 @@ if (
 		$_POST['email'],
 		$_POST['street'],
 		$_POST['house'],
-		$_POST['index'],
-		$_POST['service_type']
+		$_POST['index']
 	) &&
 	!empty($_POST['name'] && $_POST['surname'] && $_POST['email'] && $_POST['street'] &&
-		$_POST['house'] && $_POST['index'] && $_POST['service_type'])
+		$_POST['house'] && $_POST['index'])
 ) {
 	// array for errors
 	$error_messages = array();
@@ -35,9 +34,6 @@ if (
 	$street = sanitize($_POST['street']);
 	$house = sanitize($_POST['house']);
 	$index = sanitize($_POST['index']);
-	$date = sanitize($_POST['datepicker']);
-	$time = sanitize($_POST['time']);
-	$service = sanitize($_POST['service_type']);
 	// Validation
 	// First name check: contains only letters
 	if (!preg_match("/^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{1,30}$/", $name)) {
@@ -72,50 +68,52 @@ if (
 		}
 	}
 
-	// If validation don't fail
-	if (empty($error_messages)) {
-		$personal_data = array();
-		$personal_data[0] = $name;
-		$personal_data[1] = $surname;
-		$personal_data[2] = $email;
-		$personal_data[3] = $street;
-		$personal_data[4] = $house;
-		$personal_data[5] = $index;
-		if (!empty($_POST['phone'])) {
-			$personal_data[10] = $phone;
-		} else {
-			$personal_data[10] = ' ';
-		}
+	// // If validation don't fail
+	// if (empty($error_messages)) {
+	// 	// Saving to database
+	// 	// ... 
+	// 	$personal_data = array();
+	// 	$personal_data[0] = $name;
+	// 	$personal_data[1] = $surname;
+	// 	$personal_data[2] = $email;
+	// 	$personal_data[3] = $street;
+	// 	$personal_data[4] = $house;
+	// 	$personal_data[5] = $index;
+	// 	if (!empty($_POST['phone'])) {
+	// 		$personal_data[10] = $phone;
+	// 	} else {
+	// 		$personal_data[10] = ' ';
+	// 	}
 
-		// Initializing file
-		$fileName = dirname(__FILE__) . "/personal-settings-data.csv";
-		if (!file_exists($fileName)) {
-			// create file if it does not exist
-			$file = fopen($fileName, "w");
-			if (!$file) {
-				$error_messages[] = "Error creating or opening CSV file!";
-			}
-			fclose($file);
-		}
+	// 	// Initializing file
+	// 	$fileName = dirname(__FILE__) . "/personal-settings-data.csv";
+	// 	if (!file_exists($fileName)) {
+	// 		// create file if it does not exist
+	// 		$file = fopen($fileName, "w");
+	// 		if (!$file) {
+	// 			$error_messages[] = "Error creating or opening CSV file!";
+	// 		}
+	// 		fclose($file);
+	// 	}
 
 
-		// Open the file, mode a+ 
-		//						creates a file if it does't exist
-		//						existing data in file preserves
-		$file = fopen($fileName, "a+") or $error_messages[] = "Error opening the file";
+	// 	// Open the file, mode a+ 
+	// 	//						creates a file if it does't exist
+	// 	//						existing data in file preserves
+	// 	$file = fopen($fileName, "a+") or $error_messages[] = "Error opening the file";
 
-		// Change file permissions
-		chmod($fileName, 0666);
+	// 	// Change file permissions
+	// 	chmod($fileName, 0666);
 
-		// Put data into the csv file, separator ';'
-		fputcsv($file, $personal_data, ";", '"');
+	// 	// Put data into the csv file, separator ';'
+	// 	fputcsv($file, $personal_data, ";", '"');
 
-		// Revert pointer to the beginning of the file for further reading
-		fseek($file, 0);
+	// 	// Revert pointer to the beginning of the file for further reading
+	// 	fseek($file, 0);
 
-		// Close the file
-		fclose($file);
-	}
+	// 	// Close the file
+	// 	fclose($file);
+	// }
 }
 
 // For submitted user settings form: if all mandatory inputs are filled - validate them and write to csv
@@ -174,41 +172,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submitUserSettings'])
 		}
 	}
 
-	// If validation don't fail
-	if (empty($error_messages)) {
-		$user_data = array();
-		$user_data[0] = $username;
-		$user_data[1] = $old_password;
-		$user_data[2] = $new_password;
-		$user_data[3] = $repeat_password;
+	// // If validation don't fail
+	// if (empty($error_messages)) {
+	// 	// Saving data to database
+	// 	// ...
+	// 	$user_data = array();
+	// 	$user_data[0] = $username;
+	// 	$user_data[1] = $old_password;
+	// 	$user_data[2] = $new_password;
+	// 	$user_data[3] = $repeat_password;
 
-		// Initializing file
-		$fileName = dirname(__FILE__) . "/user-settings-data.csv";
-		if (!file_exists($fileName)) {
-			// create file if it does not exist
-			$file = fopen($fileName, "w");
-			if (!$file) {
-				$error_messages[] = "Error creating or opening CSV file!";
-			}
-			fclose($file);
-		}
+	// 	// Initializing file
+	// 	$fileName = dirname(__FILE__) . "/user-settings-data.csv";
+	// 	if (!file_exists($fileName)) {
+	// 		// create file if it does not exist
+	// 		$file = fopen($fileName, "w");
+	// 		if (!$file) {
+	// 			$error_messages[] = "Error creating or opening CSV file!";
+	// 		}
+	// 		fclose($file);
+	// 	}
 
 
-		// Open the file, mode a+ 
-		//						creates a file if it does't exist
-		//						existing data in file preserves
-		$file = fopen($fileName, "a+") or $error_messages[] = "Error opening the file";
+	// 	// Open the file, mode a+ 
+	// 	//						creates a file if it does't exist
+	// 	//						existing data in file preserves
+	// 	$file = fopen($fileName, "a+") or $error_messages[] = "Error opening the file";
 
-		// Change file permissions
-		chmod($fileName, 0666);
+	// 	// Change file permissions
+	// 	chmod($fileName, 0666);
 
-		// Put data into the csv file, separator ';'
-		fputcsv($file, $user_data, ";", '"');
+	// 	// Put data into the csv file, separator ';'
+	// 	fputcsv($file, $user_data, ";", '"');
 
-		// Revert pointer to the beginning of the file for further reading
-		fseek($file, 0);
+	// 	// Revert pointer to the beginning of the file for further reading
+	// 	fseek($file, 0);
 
-		// Close the file
-		fclose($file);
-	}
+	// 	// Close the file
+	// 	fclose($file);
+	// }
 }
