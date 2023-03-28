@@ -226,6 +226,9 @@
 .pdata p, .odata p {
     padding-bottom: 15px;
 }
+.odata p:nth-child(2) {
+    padding-bottom: 5px;
+}
 
 .buttons{
     margin: 40px 20px 20px 20px;
