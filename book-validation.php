@@ -13,15 +13,11 @@ function sanitize($input)
 	$input = htmlspecialchars($input);
 	return $input;
 }
-if (
-	$_SERVER['REQUEST_METHOD'] === 'POST' &&
-	isset($_POST['submitBooking'], $_POST['name'], $_POST['surname'], $_POST['email'], $_POST['street'], $_POST['house'], $_POST['index'], $_POST['datepicker'], $_POST['time'], $_POST['service_type'], $_POST['price']) &&
-	!empty($_POST['name'] && $_POST['surname'] && $_POST['email'] && $_POST['street'] && $_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && $_POST['service_type'])
-) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submitBooking'], $_POST['name'], $_POST['surname'], $_POST['email'], $_POST['street'], $_POST['house'], $_POST['index'], $_POST['datepicker'], $_POST['time'], $_POST['service_type'], $_POST['price']) && !empty($_POST['name'] && $_POST['surname'] && $_POST['email'] && $_POST['street'] && $_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && $_POST['service_type'])) {
 
 	// array for errors
 	$error_messages = array();
-
+  
 	// form data written to variables
 	$name = sanitize($_POST['name']);
 	$surname = sanitize($_POST['surname']);
@@ -32,8 +28,20 @@ if (
 	$date = sanitize($_POST['datepicker']);
 	$time = sanitize($_POST['time']);
 	$service = sanitize($_POST['service_type']);
+	$price = $_POST['price'];
+
+	if (isset($_POST['price'])) {
+		$price = sanitize($_POST['price']);
+	}
+	// // Debugging output
+	// var_dump($_POST);
 
 	$_SESSION['name'] = $name;
+	$_SESSION['email'] = $email;
+	$_SESSION['surname'] = $surname;
+	$_SESSION['street'] = $street;
+	$_SESSION['house'] = $house;
+	$_SESSION['index'] = $index;
 	$_SESSION['email'] = $email;
 	$_SESSION['surname'] = $surname;
 	$_SESSION['street'] = $street;
@@ -112,7 +120,7 @@ if (
 			$error_messages[] = "Something strange in comments.";
 		}
 	}
-
+	
 	if (isset($_POST['selector']) && !empty($_POST['phone'])) {
 		$phone = sanitize($_POST['phone']);
 		$_SESSION['phone'] = $phone;
@@ -130,7 +138,7 @@ if (
 		}
 		echo '</ul>';
 		echo '</div>';
-	}
+	  }
 	// If validation don't fail
 	if (empty($error_messages)) {
 		// Move the $data array initialization up here
@@ -186,7 +194,7 @@ if (
 		} else {
 			$data[12] = ' ';
 		}
-	
+
 		// Initializing file
 		$fileName = dirname(__FILE__) . "/booking-data.csv";
 		if (!file_exists($fileName)) {
@@ -197,21 +205,21 @@ if (
 			}
 			fclose($file);
 		}
-	
+
 		// Open the file, mode a+ 
 		// creates a file if it does not exist
 		// existing data in file is preserved
 		$file = fopen($fileName, "a+") or $error_messages[] = "Error opening the file";
-	
+
 		// Change file permissions
 		chmod($fileName, 0666);
-	
+
 		// Put data into the csv file, separator ';'
 		fputcsv($file, $data, ";", '"');
-	
+
 		// Revert pointer to the beginning of the file for further reading
 		fseek($file, 0);
-	
+
 		// Close the file
 		fclose($file);
 	}

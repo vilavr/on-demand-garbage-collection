@@ -49,3 +49,26 @@ formContainerElem.addEventListener('click', (event) => {
 
 // Initial calculation of the total price based on the default values
 calculateTotalPrice();
+
+
+// Sending price to the server
+const priceInput = document.getElementById('price');
+
+function sendPriceToPHP(price) {
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', 'process.php');
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      console.log('Price sent successfully');
+    } else {
+      console.error('Error sending price');
+    }
+  };
+  const data = 'price=' + encodeURIComponent(price);
+  xhr.send(data);
+}
+
+// Call this function whenever you want to send the price to PHP
+sendPriceToPHP(totalPrice.textContent);
+priceInput.value = totalPrice.textContent;
