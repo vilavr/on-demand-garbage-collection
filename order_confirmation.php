@@ -1,5 +1,4 @@
 <?php require_once('session.php');?>
-<?php require_once('form-data.php'); ?>
 <?php require_once('book-validation.php'); ?>
 
 <!DOCTYPE html>
@@ -47,11 +46,10 @@
                 <p>Order info</p>
             </div>
             <div class="odata">
-            <p><br><?= ucfirst((string)$service); ?><br>
+                <p><br><?= ucfirst((string)$service); ?><br>
                     <?= $price; ?><br>
                     The driver will arrive on 
-                    <?= date('l', strtotime($date)) . ', ' . $day . '.' . $month . '.' . $year .
-                    ' at ' . $time ; ?></p><br>
+                    <?= date('l, d.m.Y', $timestamp) . ' at ' . $time ; ?></p><br>
             </div>
         </div>
         <div class="buttons">

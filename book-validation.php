@@ -3,10 +3,15 @@
 // Function to sanitize user inputs
 function sanitize($input)
 {
-	$input = trim($input);
-	$input = stripslashes($input);
-	$input = htmlspecialchars($input);
-	return $input;
+    if (is_array($input)) {
+        // if input is an array, recursively call sanitize() on each element
+        return array_map('sanitize', $input);
+    }
+    // else, sanitize the string value
+    $input = trim($input);
+    $input = stripslashes($input);
+    $input = htmlspecialchars($input);
+    return $input;
 }
 
 // For submitted form: if all mandatory inputs are filled - validate them and write to csv
@@ -55,17 +60,17 @@ $_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && 
 		$error_messages[] = "Invalid index.";
 	}
 	// Date check:
-	$dateComponents = explode('/', $date);
-	$current_date = date('m/d/Y');
-	$year = $dateComponents[2];
-	$month = $dateComponents[0];
-	$day = $dateComponents[1];
+	$dateComponents = preg_split('/[\/\.-]/', $date);
+	$timestamp = mktime(0, 0, 0, intval($dateComponents[1]), intval($dateComponents[0]), intval($dateComponents[2]));
+	$current_timestamp = time();
+
 	// Should not be in the past
-	if ($date < $current_date) {
+	if ($timestamp < $current_timestamp) {
 		$error_messages[] = "Invalid date. Date provided is in the past.";
 	}
+
 	// Should exist
-	if (!checkdate($month, $day, $year)) {
+	if (!checkdate(intval($dateComponents[1]), intval($dateComponents[0]), intval($dateComponents[2]))) {
 		$error_messages[] = "Invalid date. Not existing date.";
 	}
 
