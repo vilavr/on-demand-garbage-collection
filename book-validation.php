@@ -3,42 +3,46 @@
 // Function to sanitize user inputs
 function sanitize($input)
 {
-    if (is_array($input)) {
-        // if input is an array, recursively call sanitize() on each element
-        return array_map('sanitize', $input);
-    }
-    // else, sanitize the string value
-    $input = trim($input);
-    $input = stripslashes($input);
-    $input = htmlspecialchars($input);
-    return $input;
+	if (is_array($input)) {
+		// if input is an array, recursively call sanitize() on each element
+		return array_map('sanitize', $input);
+	}
+	// else, sanitize the string value
+	$input = trim($input);
+	$input = stripslashes($input);
+	$input = htmlspecialchars($input);
+	return $input;
 }
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submitBooking'], $_POST['name'], $_POST['surname'], $_POST['email'], $_POST['street'], $_POST['house'], $_POST['index'], $_POST['datepicker'], $_POST['time'], $_POST['service_type'], $_POST['price']) && !empty($_POST['name'] && $_POST['surname'] && $_POST['email'] && $_POST['street'] && $_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && $_POST['service_type'])) {
+if (
+	$_SERVER['REQUEST_METHOD'] === 'POST' &&
+	isset($_POST['submitBooking'], $_POST['name'], $_POST['surname'], $_POST['email'], $_POST['street'], $_POST['house'], $_POST['index'], $_POST['datepicker'], $_POST['time'], $_POST['service_type'], $_POST['price']) &&
+	!empty($_POST['name'] && $_POST['surname'] && $_POST['email'] && $_POST['street'] && $_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && $_POST['service_type'])
+) {
 
 	// array for errors
 	$error_messages = array();
-  
+
 	// form data written to variables
 	$name = sanitize($_POST['name']);
 	$surname = sanitize($_POST['surname']);
 	$email = sanitize($_POST['email']);
 	$street = sanitize($_POST['street']);
 	$house = sanitize($_POST['house']);
-	$index = sanitize($_POST['index']); 
+	$index = sanitize($_POST['index']);
 	$date = sanitize($_POST['datepicker']);
 	$time = sanitize($_POST['time']);
 	$service = sanitize($_POST['service_type']);
 	$price = $_POST['price'];
-  
+
 	// Debugging output
 	var_dump($_POST);
 
 	$_SESSION['name'] = $name;
-    $_SESSION['email'] = $email;
-    $_SESSION['surname'] = $surname;
-    $_SESSION['street'] = $street;
-    $_SESSION['house'] = $house;
-    $_SESSION['index'] = $index;
+	$_SESSION['email'] = $email;
+	$_SESSION['surname'] = $surname;
+	$_SESSION['street'] = $street;
+	$_SESSION['house'] = $house;
+	$_SESSION['index'] = $index;
 
 	// Validation
 	// First name check: contains only letters
@@ -112,7 +116,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submitBooking'], $_PO
 			$error_messages[] = "Something strange in comments.";
 		}
 	}
-	
+
 	if (isset($_POST['selector']) && !empty($_POST['phone'])) {
 		$phone = sanitize($_POST['phone']);
 		$_SESSION['phone'] = $phone;
@@ -126,11 +130,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submitBooking'], $_PO
 		echo '<p>The following errors occurred:</p>';
 		echo '<ul>';
 		foreach ($error_messages as $error) {
-		  echo '<li>' . $error . '</li>';
+			echo '<li>' . $error . '</li>';
 		}
 		echo '</ul>';
 		echo '</div>';
-	  }
+	}
 	// If validation don't fail
 	if (empty($error_messages)) {
 		// Move the $data array initialization up here
@@ -144,7 +148,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submitBooking'], $_PO
 		$data[6] = $date;
 		$data[7] = $time;
 		$data[8] = $service;
-	
+
 		// Update the line that generates the error to use implode()
 		if (!empty($_POST['selector'])) {
 			$data[9] = implode('|', sanitize($_POST['selector']));
@@ -161,7 +165,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submitBooking'], $_PO
 		} else {
 			$data[11] = ' ';
 		}
-	
+
 		// Initializing file
 		$fileName = dirname(__FILE__) . "/booking-data.csv";
 		if (!file_exists($fileName)) {
@@ -172,21 +176,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submitBooking'], $_PO
 			}
 			fclose($file);
 		}
-	
+
 		// Open the file, mode a+ 
 		// creates a file if it does not exist
 		// existing data in file is preserved
 		$file = fopen($fileName, "a+") or $error_messages[] = "Error opening the file";
-	
+
 		// Change file permissions
 		chmod($fileName, 0666);
-	
+
 		// Put data into the csv file, separator ';'
 		fputcsv($file, $data, ";", '"');
-	
+
 		// Revert pointer to the beginning of the file for further reading
 		fseek($file, 0);
-	
+
 		// Close the file
 		fclose($file);
 	}
