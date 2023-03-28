@@ -475,6 +475,7 @@ input {
 }
 .book-btn:hover {
     background-color: var(--blue);
+    cursor: pointer;
 }
 
 .settings-save-btn {
