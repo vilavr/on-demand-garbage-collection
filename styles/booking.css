@@ -200,12 +200,14 @@
 .calendar-day:hover {
     background-color: var(--white);
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .calendar-day.selected {
     /* background-color: var(--transblack); */
     background-color: var(--blue);
     color: var(--snowwhite);
+    border-radius: 10px;
 }
 
 .calendar-prev-month,
@@ -451,7 +453,8 @@ input {
     padding: 6px 20px;
 }
 
-.remove-btn, .add-btn {
+.remove-btn,
+.add-btn {
     border-radius: 20px;
 }
 
@@ -463,14 +466,15 @@ input {
     height: 60px;
     border-radius: 10px;
     border: 1px solid var(--lightblue);
-    ;
     background-color: var(--lightblue);
-    ;
     opacity: 0.8;
     color: var(--snowwhite);
     font-size: 20px;
     font-weight: 600;
     font-family: "Nanum Myeongjo";
+}
+.book-btn:hover {
+    background-color: var(--blue);
 }
 
 .settings-save-btn {
