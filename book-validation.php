@@ -34,6 +34,9 @@ if (
 	$service = sanitize($_POST['service_type']);
 	$price = $_POST['price'];
 
+	if (isset($_POST['price'])) {
+		echo $price;
+	}
 	// Debugging output
 	var_dump($_POST);
 
