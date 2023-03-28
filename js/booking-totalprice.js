@@ -30,9 +30,6 @@ function calculateTotalPrice() {
     });
   }
 
-  const priceInput = document.querySelector('input[name="price"]');
-  priceInput.value = total.toFixed(2);
-
   totalPrice.textContent = `${total.toFixed(2)} EUR`;
 }
 
