@@ -1,3 +1,4 @@
+<?php require_once('settings-validation.php'); ?>
 <!DOCTYPE html>
 
 <html lang="en">

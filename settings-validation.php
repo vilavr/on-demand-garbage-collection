@@ -10,11 +10,21 @@ function sanitize($input)
 }
 
 // For submitted personal settings form: if all mandatory inputs are filled - validate them and write to csv
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && 
-isset($_POST['submitSettings'], $_POST['name'], $_POST['surname'], $_POST['email'], $_POST['street'], 
-$_POST['house'], $_POST['index'], $_POST['service_type']) &&
-!empty($_POST['name'] && $_POST['surname'] && $_POST['email'] && $_POST['street'] && 
-$_POST['house'] && $_POST['index'] && $_POST['service_type'])) {
+if (
+	$_SERVER['REQUEST_METHOD'] === 'POST' &&
+	isset(
+		$_POST['submitSettings'],
+		$_POST['name'],
+		$_POST['surname'],
+		$_POST['email'],
+		$_POST['street'],
+		$_POST['house'],
+		$_POST['index'],
+		$_POST['service_type']
+	) &&
+	!empty($_POST['name'] && $_POST['surname'] && $_POST['email'] && $_POST['street'] &&
+		$_POST['house'] && $_POST['index'] && $_POST['service_type'])
+) {
 	// array for errors
 	$error_messages = array();
 
@@ -24,7 +34,7 @@ $_POST['house'] && $_POST['index'] && $_POST['service_type'])) {
 	$email = sanitize($_POST['email']);
 	$street = sanitize($_POST['street']);
 	$house = sanitize($_POST['house']);
-	$index = sanitize($_POST['index']); 
+	$index = sanitize($_POST['index']);
 	$date = sanitize($_POST['datepicker']);
 	$time = sanitize($_POST['time']);
 	$service = sanitize($_POST['service_type']);
@@ -54,27 +64,27 @@ $_POST['house'] && $_POST['index'] && $_POST['service_type'])) {
 	if (!preg_match("/^\d{5}$/", $index)) {
 		$error_messages[] = "Invalid index.";
 	}
-	
+
 	if (isset($_POST['selector']) && !empty($_POST['phone'])) {
 		$phone = sanitize($_POST['phone']);
 		if (!preg_match("/^[0-9\-\+ ]{7,15}$/", $phone)) {
 			$error_messages[] = "Invalid phone number. There can only be +, - or numbers.";
 		}
 	}
-	
+
 	// If validation don't fail
 	if (empty($error_messages)) {
-		$data = array();
-		$data[0] = $name;
-		$data[1] = $surname;
-		$data[2] = $email;
-		$data[3] = $street;
-		$data[4] = $house;
-		$data[5] = $index;
+		$personal_data = array();
+		$personal_data[0] = $name;
+		$personal_data[1] = $surname;
+		$personal_data[2] = $email;
+		$personal_data[3] = $street;
+		$personal_data[4] = $house;
+		$personal_data[5] = $index;
 		if (!empty($_POST['phone'])) {
-			$data[10] = $phone;
+			$personal_data[10] = $phone;
 		} else {
-			$data[10] = ' ';
+			$personal_data[10] = ' ';
 		}
 
 		// Initializing file
@@ -98,7 +108,7 @@ $_POST['house'] && $_POST['index'] && $_POST['service_type'])) {
 		chmod($fileName, 0666);
 
 		// Put data into the csv file, separator ';'
-		fputcsv($file, $data, ";", '"');
+		fputcsv($file, $personal_data, ";", '"');
 
 		// Revert pointer to the beginning of the file for further reading
 		fseek($file, 0);
@@ -113,116 +123,67 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submitUserSettings'])
 	// array for errors
 	$error_messages = array();
 
-	// form data writed to variables
-	$username = sanitize($_POST['username']);
-	$old_password = sanitize($_POST['old-password']);
-	$new_password = sanitize($_POST['new-password']);
-	$repeat_password = sanitize($_POST['repeat-password']);
 	// Validation
 	// First name check: contains only letters
-	if (!preg_match("/^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{1,30}$/", $username)) {
-		$error_messages[] = "Invalid first name. Please enter only letters.";
-	}
-	// Last name check: contains only letters
-	if (!preg_match("/^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{1,30}$/", $old_password)) {
-		$error_messages[] = "Invalid last name. Please enter only letters.";
-	}
-
-	// Email check: contains @ symbol somewhere in the middle and .smth in the end
-	if (!preg_match("/^[\w\-\.]{1,50}@([\w-]{1,50}\.){1,50}[\w-]{2,4}$/", $new_password)) {
-		$error_messages[] = "Sorry, the email validation you provided is incorrect. Please enter a valid email address in the format of 'example@example.com'.";
-	}
-	// Street check
-	if (!preg_match("/^[\w\s\.,'\-\#\;\^\:\=\(\)\~\&\>\+=\*\/\<\?!{}\[\]]+$/", $repeat_password)) {
-		$error_messages[] = "Invalid street name.";
-	}
-	// House check
-	if (!preg_match("/^[\w\s\.,'\-\#\;\^\:\=\(\)\~\&\>\+=\*\/\<\?!{}\[\]]+$/", $house)) {
-		$error_messages[] = "Invalid street number.";
-	}
-	// Index check
-	if (!preg_match("/^\d{5}$/", $index)) {
-		$error_messages[] = "Invalid index.";
-	}
-	// Date check:
-	$dateComponents = explode('/', $date);
-	$current_date = date('m/d/Y');
-	$year = $dateComponents[2];
-	$month = $dateComponents[0];
-	$day = $dateComponents[1];
-	// Should not be in the past
-	if ($date < $current_date) {
-		$error_messages[] = "Invalid date. Date provided is in the past.";
-	}
-	// Should exist
-	if (!checkdate($month, $day, $year)) {
-		$error_messages[] = "Invalid date. Not existing date.";
+	if (!empty($_POST['username'])) {
+		$username = sanitize($_POST['username']);
+		if (!preg_match("/^[A-Za-z][A-Za-z0-9_.]{4,14}$/", $username)) {
+			$error_messages[] = "Invalid first name. Please enter only letters.";
+		}
 	}
 
-	// Time check
-	if (!in_array($time, array('10:00', '11:00', '12:00', '13:00', '14:00'))) {
-		$error_messages[] = "Invalid time. Not existing time.";
-	}
+	if (
+		!empty($_POST['old-password']) || !empty($_POST['new-password']) ||
+		!empty($_POST['repeat-password'])
+	) {
+		if (
+			empty($_POST['old-password']) || empty($_POST['new-password']) ||
+			empty($_POST['repeat-password'])
+		) {
+			$error_messages[] = "Should be provided all the three, old, new and new repeated, passwords.";
+		} else {
+			$old_password = sanitize($_POST['old-password']);
+			$new_password = sanitize($_POST['new-password']);
+			$repeat_password = sanitize($_POST['repeat-password']);
 
-	// Service check
-	if (!in_array($_POST['service_type'], array('Regular Pickup', 'Recycling', 'Bulk Waste Removal'))) {
-		$error_messages[] = "Incorrect service provided.";
-	}
-	if (!isset($_POST['selector']) || empty($_POST['selector'])) {
-		$error_messages[] = "Please select at least one item weight";
-	} else {
-		foreach ($_POST['selector'] as $selected) {
-			if (!in_array($selected, array('option1', 'option2', 'option3', 'option4', 'option5'))) {
-				$error_messages[] = "Invalid item weight selected";
-				break;
+			$password_regex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@_!%*?&])[A-Za-z\d@_!%*?&]{8,15}$/";
+
+			// Old password check
+			if (!preg_match($password_regex, $old_password)) {
+				// Here should be check with database username - password matching
+				// Gives message invalid password
+
+				$error_messages[] = "Password is incorrect.";
+			}
+
+			//  New password validation
+			if (!preg_match($password_regex, $new_password)) {
+				$error_messages[] = "Invalid password. Please try again.";
+			}
+			// New password should not be same as old password
+			if ($new_password == $old_password) {
+				$error_messages[] = "You seem to have provided the same old password. New password should not be same as old password.";
+			}
+			// Repeated new password validation
+			if (!preg_match($password_regex, $repeat_password)) {
+				$error_messages[] = "Invalid password. Try again.";
+			}
+			if ($new_password != $repeat_password) {
+				$error_messages[] = "New password and repeated password are not the same.";
 			}
 		}
 	}
 
-	if (isset($_POST['selector']) && !empty($_POST['comment'])) {
-		$comment = sanitize($_POST['comment']);
-		if (!preg_match("/^[\w\s\.,'\-\#\@\;\$\%\^\:\=\(\)\~\&\€\>\+=\*\/\<\?!{}\[\]]+$/", $comment)) {
-			$error_messages[] = "Something strange in comments.";
-		}
-	}
-	
-	if (isset($_POST['selector']) && !empty($_POST['phone'])) {
-		$phone = sanitize($_POST['phone']);
-		if (!preg_match("/^[0-9\-\+ ]{7,15}$/", $phone)) {
-			$error_messages[] = "Invalid phone number. There can only be +, - or numbers.";
-		}
-	}
-	
 	// If validation don't fail
 	if (empty($error_messages)) {
-		$data = array();
-		$data[0] = $username;
-		$data[1] = $old_password;
-		$data[2] = $new_password;
-		$data[3] = $repeat_password;
-		$data[4] = $house;
-		$data[5] = $index;
-		$data[6] = $date;
-		$data[7] = $time;
-		$data[8] = $service;
-		if (!empty($_POST['selector'])) {
-			$data[9] = sanitize($_POST['selector']);
-		} else {
-			$data[9] = ' ';
-		}
-		if (!empty($_POST['phone'])) {
-			$data[10] = $phone;
-		} else {
-			$data[10] = ' ';
-		}
-		if (!empty($_POST['comment'])) {
-			$data[11] = $comment;
-		} else {
-			$data[11] = ' ';
-		}
+		$user_data = array();
+		$user_data[0] = $username;
+		$user_data[1] = $old_password;
+		$user_data[2] = $new_password;
+		$user_data[3] = $repeat_password;
 
 		// Initializing file
-		$fileName = dirname(__FILE__) . "/booking-data.csv";
+		$fileName = dirname(__FILE__) . "/user-settings-data.csv";
 		if (!file_exists($fileName)) {
 			// create file if it does not exist
 			$file = fopen($fileName, "w");
@@ -242,7 +203,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submitUserSettings'])
 		chmod($fileName, 0666);
 
 		// Put data into the csv file, separator ';'
-		fputcsv($file, $data, ";", '"');
+		fputcsv($file, $user_data, ";", '"');
 
 		// Revert pointer to the beginning of the file for further reading
 		fseek($file, 0);
@@ -251,5 +212,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submitUserSettings'])
 		fclose($file);
 	}
 }
-
-?>

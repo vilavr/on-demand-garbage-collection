@@ -161,5 +161,3 @@ $_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && 
 		fclose($file);
 	}
 }
-
-?>
