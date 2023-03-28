@@ -10,7 +10,7 @@
         <a href="user_agreement.php" class="menu-item">Terms &amp; Conditions</a>
     </nav>
     <div class="user-menu">
-        <a href="logout.php" class="menu-item">Log Out</a>
-        <a href="booking.php" class="register-button">Book!</a>
+        <a href="login.php" class="menu-item">Log In</a>
+        <a href="registration.php" class="register-button">Register</a>
     </div>
 </header>
