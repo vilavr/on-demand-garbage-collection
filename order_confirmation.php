@@ -1,5 +1,4 @@
 <?php require_once('session.php');?>
-<?php require_once('form-data.php'); ?>
 <?php require_once('book-validation.php'); ?>
 
 <!DOCTYPE html>
