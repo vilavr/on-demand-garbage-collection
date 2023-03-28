@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 // Function to sanitize user inputs
 function sanitize($input)
@@ -33,6 +34,14 @@ $_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && 
 	$date = sanitize($_POST['datepicker']);
 	$time = sanitize($_POST['time']);
 	$service = sanitize($_POST['service_type']);
+
+	$_SESSION['name'] = $name;
+    $_SESSION['email'] = $email;
+    $_SESSION['surname'] = $surname;
+    $_SESSION['street'] = $street;
+    $_SESSION['house'] = $house;
+    $_SESSION['index'] = $index;
+
 	// Validation
 	// First name check: contains only letters
 	if (!preg_match("/^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{1,30}$/", $name)) {
@@ -60,17 +69,23 @@ $_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && 
 		$error_messages[] = "Invalid index.";
 	}
 	// Date check:
-	$dateComponents = preg_split('/[\/\.-]/', $date);
-	$timestamp = mktime(0, 0, 0, intval($dateComponents[1]), intval($dateComponents[0]), intval($dateComponents[2]));
-	$current_timestamp = time();
+	$timestamp = strtotime($date);
+	$date = date('Y-m-d', $timestamp);
+	$current_date = date('Y-m-d');
+
+	$dateComponents = explode('-', $date);
+	$year = $dateComponents[0];
+	$month = $dateComponents[1];
+	$day = $dateComponents[2];
+
 
 	// Should not be in the past
-	if ($timestamp < $current_timestamp) {
+	if ($timestamp < $current_date) {
 		$error_messages[] = "Invalid date. Date provided is in the past.";
 	}
 
 	// Should exist
-	if (!checkdate(intval($dateComponents[1]), intval($dateComponents[0]), intval($dateComponents[2]))) {
+	if (!checkdate($month, $day, $year)) {
 		$error_messages[] = "Invalid date. Not existing date.";
 	}
 
@@ -103,6 +118,8 @@ $_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && 
 	
 	if (isset($_POST['selector']) && !empty($_POST['phone'])) {
 		$phone = sanitize($_POST['phone']);
+		$_SESSION['phone'] = $phone;
+
 		if (!preg_match("/^[0-9\-\+ ]{7,15}$/", $phone)) {
 			$error_messages[] = "Invalid phone number. There can only be +, - or numbers.";
 		}
