@@ -35,10 +35,10 @@ if (
 	$price = $_POST['price'];
 
 	if (isset($_POST['price'])) {
-		echo $price;
+		$price = sanitize($_POST['price']);
 	}
-	// Debugging output
-	var_dump($_POST);
+	// // Debugging output
+	// var_dump($_POST);
 
 	$_SESSION['name'] = $name;
 	$_SESSION['email'] = $email;

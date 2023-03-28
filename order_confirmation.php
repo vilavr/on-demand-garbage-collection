@@ -47,7 +47,7 @@
             </div>
             <div class="odata">
                 <p><br><?= ucfirst((string)$service); ?><br>
-                    <?= $price; ?><br>
+                <br><?= $price . ' EUR'; ?><br><br>
                     The driver will arrive on 
                     <?= date('l, d.m.Y', $timestamp) . ' at ' . $time ; ?></p><br>
             </div>
