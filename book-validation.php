@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 // Function to sanitize user inputs
 function sanitize($input)
@@ -70,9 +69,8 @@ $_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && 
 	}
 	// Date check:
 	$timestamp = strtotime($date);
+	$current_date = strtotime(date('Y-m-d'));
 	$date = date('Y-m-d', $timestamp);
-	$current_date = date('Y-m-d');
-
 	$dateComponents = explode('-', $date);
 	$year = $dateComponents[0];
 	$month = $dateComponents[1];
@@ -124,9 +122,19 @@ $_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && 
 			$error_messages[] = "Invalid phone number. There can only be +, - or numbers.";
 		}
 	}
-	
+	if (!empty($error_messages)) {
+		echo '<div class="error-messages">';
+		echo '<p>The following errors occurred:</p>';
+		echo '<ul>';
+		foreach ($error_messages as $error) {
+		  echo '<li>' . $error . '</li>';
+		}
+		echo '</ul>';
+		echo '</div>';
+	  }
 	// If validation don't fail
 	if (empty($error_messages)) {
+		// Move the $data array initialization up here
 		$data = array();
 		$data[0] = $name;
 		$data[1] = $surname;
@@ -137,8 +145,10 @@ $_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && 
 		$data[6] = $date;
 		$data[7] = $time;
 		$data[8] = $service;
+	
+		// Update the line that generates the error to use implode()
 		if (!empty($_POST['selector'])) {
-			$data[9] = sanitize($_POST['selector']);
+			$data[9] = implode('|', sanitize($_POST['selector']));
 		} else {
 			$data[9] = ' ';
 		}
@@ -152,7 +162,7 @@ $_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && 
 		} else {
 			$data[11] = ' ';
 		}
-
+	
 		// Initializing file
 		$fileName = dirname(__FILE__) . "/booking-data.csv";
 		if (!file_exists($fileName)) {
@@ -163,22 +173,21 @@ $_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && 
 			}
 			fclose($file);
 		}
-
-
+	
 		// Open the file, mode a+ 
-		//						creates a file if it does't exist
-		//						existing data in file preserves
+		// creates a file if it does not exist
+		// existing data in file is preserved
 		$file = fopen($fileName, "a+") or $error_messages[] = "Error opening the file";
-
+	
 		// Change file permissions
 		chmod($fileName, 0666);
-
+	
 		// Put data into the csv file, separator ';'
 		fputcsv($file, $data, ";", '"');
-
+	
 		// Revert pointer to the beginning of the file for further reading
 		fseek($file, 0);
-
+	
 		// Close the file
 		fclose($file);
 	}
