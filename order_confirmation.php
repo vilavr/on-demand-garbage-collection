@@ -46,11 +46,28 @@
                 <p>Order info</p>
             </div>
             <div class="odata">
-                <p><br><?= ucfirst((string)$service); ?><br>
-                    <?= $price; ?><br>
-                    The driver will arrive on 
-                    <?= date('l, d.m.Y', $timestamp) . ' at ' . $time ; ?></p><br>
+                <p><br>The service ordered: <?= ucfirst((string)$service); ?><br>
+                <?php if ($service === 'Bulk Waste Removal'): ?>
+                    Number of items to be removed: <?= count($_POST['selector']) ?><br>
+                    Weights of items to be removed: <?php
+                        $option_weights = [
+                            'option1' => '10-20 kg',
+                            'option2' => '20-50 kg',
+                            'option3' => '50-100 kg',
+                            'option4' => '100-200 kg',
+                            'option5' => '100-500 kg'
+                        ];
+                        $weights = array();
+                        foreach ($_POST['selector'] as $selected) {
+                            $weights[] = $option_weights[$selected];
+                        }
+                        echo implode(', ', $weights);
+                    ?><br>
+                <?php endif; ?>
+                Total price: <?= $price; ?> EUR<br>
+                The driver will arrive on <?= date('l, d.m.Y', $timestamp) . ' at ' . $time ; ?></p><br>
             </div>
+
         </div>
         <div class="buttons">
             <a href="order_accepted.php" class="confirm-btn">Confirm the order</a>
