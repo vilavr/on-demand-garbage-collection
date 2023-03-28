@@ -213,16 +213,20 @@
 }
 .pdata p, .odata p{
     color: var(--black);
-    margin-top: 2px;
-    margin-bottom: 5px;
-    margin-left: 10px;
+    margin: 0 0 0 10px;
 }
 .pdata, .odata{
     background-color: var(--truewhite);
     border: 1px var(--shadowedblack) solid;
     border-radius: 5px; 
     margin-right: 20px;
+    padding-top: 25px;
+    padding-bottom: 10px;
 }
+.pdata p, .odata p {
+    padding-bottom: 15px;
+}
+
 .buttons{
     margin: 40px 20px 20px 20px;
     font-size: 30px;

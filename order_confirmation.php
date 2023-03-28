@@ -1,4 +1,4 @@
-<?php require_once('session.php');?>
+<?php require_once('session.php'); ?>
 <?php require_once('book-validation.php'); ?>
 
 <!DOCTYPE html>
@@ -35,10 +35,13 @@
                 <p>Personal info</p>
             </div>
             <div class="pdata">
-                <p><br><?= $name .', '. $surname; ?><br>
-                <br><?= $phone; ?><br>
-                <br><?= $email; ?><br>
-                <br><?= $street. ', ' . $house . ', ' . $index; ?>, Tallinn, Estonia</p><br>
+                <p><?= $name . ', ' . $surname; ?></p>
+                <p><?= $phone; ?></p>
+                <p><?= $email; ?></p>
+                <p>
+                    <?= $street . ', ' . $house . ', ' . $index; ?>
+                    , Tallinn, Estonia
+                </p>
             </div>
         </div>
         <div class="order-data-header">
@@ -46,10 +49,21 @@
                 <p>Order info</p>
             </div>
             <div class="odata">
-                <p><br>The service ordered: <?= ucfirst((string)$service); ?><br>
-                <?php if ($service === 'Bulk Waste Removal'): ?>
-                    Number of items to be removed: <?= count($_POST['selector']) ?><br>
-                    Weights of items to be removed: <?php
+                <p>
+                    The service ordered:
+                    &nbsp;
+                    <?= ucfirst((string)$service); ?>
+                </p>
+                <p>
+                    <?php if ($service === 'Bulk Waste Removal') : ?>
+                        Number of items to be removed:
+                        &nbsp;
+                        <?= count($_POST['selector']) ?><br>
+                </p>
+                <p>
+                    Weights of items to be removed:
+                    &nbsp;
+                    <?php
                         $option_weights = [
                             'option1' => '10-20 kg',
                             'option2' => '20-50 kg',
@@ -64,8 +78,16 @@
                         echo implode(', ', $weights);
                     ?><br>
                 <?php endif; ?>
-                Total price: <?= $price; ?> EUR<br>
-                The driver will arrive on <?= date('l, d.m.Y', $timestamp) . ' at ' . $time ; ?></p><br>
+                </p>
+                <p>
+                    Total price:
+                    &nbsp;
+                    <?= $price; ?> EUR<br>
+                </p>
+                <p>
+                    The driver will arrive on
+                    <?= date('l, d.m.Y', $timestamp) . ' at ' . $time; ?>
+                </p>
             </div>
 
         </div>
