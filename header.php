@@ -1,6 +1,5 @@
 <?php 
 // Start the session
-session_start();
 
 if (isset($_SESSION['loggedIn'])) {
     // Show header for logged in users
