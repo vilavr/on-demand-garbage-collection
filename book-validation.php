@@ -32,13 +32,6 @@ if (
 	$date = sanitize($_POST['datepicker']);
 	$time = sanitize($_POST['time']);
 	$service = sanitize($_POST['service_type']);
-	$price = $_POST['price'];
-
-	if (isset($_POST['price'])) {
-		echo $price;
-	}
-	// Debugging output
-	var_dump($_POST);
 
 	$_SESSION['name'] = $name;
 	$_SESSION['email'] = $email;
@@ -151,24 +144,49 @@ if (
 		$data[6] = $date;
 		$data[7] = $time;
 		$data[8] = $service;
-
-		// Update the line that generates the error to use implode()
+	
+		// Calculate total price based on service type and selected items
+		$price = 0;
+		if ($service === 'Regular Pickup') {
+			$price = 10;
+		} else if ($service === 'Recycling') {
+			$price = 15;
+		} else if ($service === 'Bulk Waste Removal') {
+			if (!empty($_POST['selector'])) {
+				foreach ($_POST['selector'] as $selected) {
+					switch ($selected) {
+						case 'option1':
+							$price += 45;
+							break;
+						case 'option2':
+							$price += 90;
+							break;
+						case 'option3':
+							$price += 200;
+							break;
+						case 'option4':
+							$price += 420;
+							break;
+						case 'option5':
+							$price += 750;
+							break;
+					}
+				}
+			}
+		}
+	
+		// Add total price to $data array
+		$data[9] = $price;
+	
+		// Add phone and comment fields to $data array
+		$data[10] = !empty($_POST['phone']) ? sanitize($_POST['phone']) : '';
+		$data[11] = !empty($_POST['comment']) ? sanitize($_POST['comment']) : '';
 		if (!empty($_POST['selector'])) {
-			$data[9] = implode('|', sanitize($_POST['selector']));
+			$data[12] = implode('|', sanitize($_POST['selector']));
 		} else {
-			$data[9] = ' ';
+			$data[12] = ' ';
 		}
-		if (!empty($_POST['phone'])) {
-			$data[10] = $phone;
-		} else {
-			$data[10] = ' ';
-		}
-		if (!empty($_POST['comment'])) {
-			$data[11] = $comment;
-		} else {
-			$data[11] = ' ';
-		}
-
+	
 		// Initializing file
 		$fileName = dirname(__FILE__) . "/booking-data.csv";
 		if (!file_exists($fileName)) {
@@ -179,21 +197,21 @@ if (
 			}
 			fclose($file);
 		}
-
+	
 		// Open the file, mode a+ 
 		// creates a file if it does not exist
 		// existing data in file is preserved
 		$file = fopen($fileName, "a+") or $error_messages[] = "Error opening the file";
-
+	
 		// Change file permissions
 		chmod($fileName, 0666);
-
+	
 		// Put data into the csv file, separator ';'
 		fputcsv($file, $data, ";", '"');
-
+	
 		// Revert pointer to the beginning of the file for further reading
 		fseek($file, 0);
-
+	
 		// Close the file
 		fclose($file);
 	}

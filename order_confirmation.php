@@ -1,4 +1,4 @@
-<?php require_once('session.php');?>
+<?php require_once('session.php'); ?>
 <?php require_once('book-validation.php'); ?>
 
 <!DOCTYPE html>
@@ -35,10 +35,13 @@
                 <p>Personal info</p>
             </div>
             <div class="pdata">
-                <p><br><?= $name .', '. $surname; ?><br>
-                <br><?= $phone; ?><br>
-                <br><?= $email; ?><br>
-                <br><?= $street. ', ' . $house . ', ' . $index; ?>, Tallinn, Estonia</p><br>
+                <p><?= $name . ', ' . $surname; ?></p>
+                <p><?= $phone; ?></p>
+                <p><?= $email; ?></p>
+                <p>
+                    <?= $street . ', ' . $house . ', ' . $index; ?>
+                    , Tallinn, Estonia
+                </p>
             </div>
         </div>
         <div class="order-data-header">
@@ -46,11 +49,47 @@
                 <p>Order info</p>
             </div>
             <div class="odata">
-                <p><br><?= ucfirst((string)$service); ?><br>
-                    <?= $price; ?><br>
-                    The driver will arrive on 
-                    <?= date('l, d.m.Y', $timestamp) . ' at ' . $time ; ?></p><br>
+                <p>
+                    The service ordered:
+                    &nbsp;
+                    <?= ucfirst((string)$service); ?>
+                </p>
+                <p>
+                    <?php if ($service === 'Bulk Waste Removal') : ?>
+                        Number of items to be removed:
+                        &nbsp;
+                        <?= count($_POST['selector']) ?><br>
+                </p>
+                <p>
+                    Weights of items to be removed:
+                    &nbsp;
+                    <?php
+                        $option_weights = [
+                            'option1' => '10-20 kg',
+                            'option2' => '20-50 kg',
+                            'option3' => '50-100 kg',
+                            'option4' => '100-200 kg',
+                            'option5' => '100-500 kg'
+                        ];
+                        $weights = array();
+                        foreach ($_POST['selector'] as $selected) {
+                            $weights[] = $option_weights[$selected];
+                        }
+                        echo implode(', ', $weights);
+                    ?><br>
+                <?php endif; ?>
+                </p>
+                <p>
+                    Total price:
+                    &nbsp;
+                    <?= $price; ?> EUR<br>
+                </p>
+                <p>
+                    The driver will arrive on
+                    <?= date('l, d.m.Y', $timestamp) . ' at ' . $time; ?>
+                </p>
             </div>
+
         </div>
         <div class="buttons">
             <a href="order_accepted.php" class="confirm-btn">Confirm the order</a>

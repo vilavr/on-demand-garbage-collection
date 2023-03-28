@@ -129,7 +129,7 @@
                         <!-- Calculated total price -->
                         <div class="total-price">
                             <p>Total:</p>
-                            <p>10.00 EUR</p>
+                            <p></p>
                             <input type="hidden" name="price" id="price" value="">
                         </div>
                         <!-- Comments field -->
