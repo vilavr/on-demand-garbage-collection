@@ -130,6 +130,7 @@
                         <div class="total-price">
                             <p>Total:</p>
                             <p>10.00 EUR</p>
+                            <input type="hidden" name="price" id="price" value="">
                         </div>
                         <!-- Comments field -->
                         <p>Anything else you want to add? (optional)</p>

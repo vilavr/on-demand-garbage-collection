@@ -13,17 +13,12 @@ function sanitize($input)
     $input = htmlspecialchars($input);
     return $input;
 }
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submitBooking'], $_POST['name'], $_POST['surname'], $_POST['email'], $_POST['street'], $_POST['house'], $_POST['index'], $_POST['datepicker'], $_POST['time'], $_POST['service_type'], $_POST['price']) && !empty($_POST['name'] && $_POST['surname'] && $_POST['email'] && $_POST['street'] && $_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && $_POST['service_type'])) {
 
-// For submitted form: if all mandatory inputs are filled - validate them and write to csv
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && 
-isset($_POST['submitBooking'], $_POST['name'], $_POST['surname'], $_POST['email'], $_POST['street'], 
-$_POST['house'], $_POST['index'], $_POST['datepicker'], $_POST['time'], $_POST['service_type']) &&
-!empty($_POST['name'] && $_POST['surname'] && $_POST['email'] && $_POST['street'] && 
-$_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && $_POST['service_type'])) {
 	// array for errors
 	$error_messages = array();
-
-	// form data writed to variables
+  
+	// form data written to variables
 	$name = sanitize($_POST['name']);
 	$surname = sanitize($_POST['surname']);
 	$email = sanitize($_POST['email']);
@@ -33,6 +28,10 @@ $_POST['house'] && $_POST['index'] && $_POST['datepicker'] && $_POST['time'] && 
 	$date = sanitize($_POST['datepicker']);
 	$time = sanitize($_POST['time']);
 	$service = sanitize($_POST['service_type']);
+	$price = $_POST['price'];
+  
+	// Debugging output
+	var_dump($_POST);
 
 	$_SESSION['name'] = $name;
     $_SESSION['email'] = $email;
