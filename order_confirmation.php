@@ -30,7 +30,7 @@
         <div id="confirmation" class="confirmation-header">
             <p class="confirmation-headline">Please check all the data and confirm booking</p>
         </div>
-        <div class="personal-data-header">
+        <div class="data-block personal-data-header">
             <div class="pdata-header">
                 <p>Personal info</p>
             </div>
@@ -44,7 +44,7 @@
                 </p>
             </div>
         </div>
-        <div class="order-data-header">
+        <div class="data-block order-data-header">
             <div class="odata-header">
                 <p>Order info</p>
             </div>

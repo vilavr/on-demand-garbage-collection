@@ -12,19 +12,6 @@
         background-size: cover;
     }
 }
-@media screen and (max-width: 368px) {
-    /* .buttons {flex-direction: column !important; width: 70px;} */
-    .confirm-btn {margin-bottom: 20px !important;}
-    .buttons a {font-size: 25px;}
-    .pdata, .odata {margin-right: 10px !important;}
-    .confirmation-headline {margin-top: 20px;}
-}
-@media screen and (min-width: 755px) {
-    .confirmation {
-        width: 745px; 
-        /* margin-left: 20vw; */
-    }
-}
 
 /* Sidenavigation */
 .sidenav {
@@ -78,7 +65,7 @@
 
 .confirmation {
     height: 100%;
-    margin-left: 250px;
+    margin-left: 200px;
     transition: all 0.5s ease-out;
 /*    font-family: 'NanumMyeongjo';*/
     font-style: normal;
@@ -192,8 +179,12 @@
 
 .confirmation-header {
     position: relative;
+    margin-left: 50px;
 }
 
+.data-block {
+    margin-left: 50px;
+}
 .confirmation-headline {
     color: var(--black);
     text-align: left;
@@ -276,3 +267,56 @@
     background-color: var(--snowwhite);
 }
 
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 100px;
+    width: 80vw;
+}
+.centered-content p {
+    font-size: 30px;
+    font-weight:400;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.confirmation-message {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.single-btn {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 368px) {
+    /* .buttons {flex-direction: column !important; width: 70px;} */
+    .confirm-btn {margin-bottom: 20px !important;}
+    .buttons a {font-size: 25px;}
+    .pdata, .odata {margin-right: 10px !important;}
+    .confirmation-headline {margin-top: 20px;}
+    .confirmation-header {
+        position: relative;
+        margin-left: 0px;
+        margin-top: 40px;
+    }
+    
+    .data-block {
+        margin-left: 0px;
+    }
+}
+@media screen and (min-width: 755px) {
+    .confirmation {
+        width: 745px; 
+        /* margin-left: 20vw; */
+    }
+}
