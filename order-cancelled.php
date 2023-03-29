@@ -23,12 +23,12 @@
     <!-- Navigation -->
     <?php require('sidenav.php'); ?>
 
-    <div id="booking-main" class="confirmation">
+    <div class="confirmation heart-container">
+        <!-- Open button -->
+        <?php require_once('open-btn.php'); ?>
         <div class="centered-content">
-            <!-- Open button -->
-            <?php require_once('open-btn.php'); ?>
 
-            <img src="img/broken-heart.png">
+            <img src="img/broken-heart.png" class="heart">
             <div class="confirmation-message">
                 <p> Your order has been cancelled. </p>
                 <p> We are always glad to see you again at Throw It!</p>
