@@ -1,7 +1,7 @@
 <?php 
 // Start the session
 
-if (isset($_SESSION['loggedIn'])) {
+if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
     // Show header for logged in users
     include 'header-logged-in.php';
 } else {

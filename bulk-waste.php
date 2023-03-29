@@ -47,7 +47,7 @@
             <div class="card-col right-col single-pricing">
                 <div id="regular-pickup-card-header" class="pricing-header">
                     <h4>Bulk Waste Removal</h4>
-                    <p>15-150 EUR/item</p>
+                    <p>45-750 EUR/item</p>
                 </div>
                 <div>
                     <div class="pricing-content">
