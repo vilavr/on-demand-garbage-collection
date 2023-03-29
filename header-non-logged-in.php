@@ -5,9 +5,9 @@
     </a>
     <nav class="menu">
         <a href="index.php" class="menu-item">Home</a>
-        <a href="why_throw_it.php" class="menu-item">About Us</a>
+        <a href="why-throw-it.php" class="menu-item">About Us</a>
         <a href="index.php#pricing" class="menu-item">Services</a>
-        <a href="user_agreement.php" class="menu-item">Terms &amp; Conditions</a>
+        <a href="user-agreement.php" class="menu-item">Terms &amp; Conditions</a>
     </nav>
     <div class="user-menu">
         <a href="login.php" class="menu-item">Log In</a>

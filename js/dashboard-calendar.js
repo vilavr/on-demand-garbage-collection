@@ -5,6 +5,7 @@ var calendarMonthYear = document.querySelector('.calendar-month-year');
 var calendarDays = document.querySelector('.calendar-days');
 var calendarPrevMonth = document.querySelector('.calendar-prev-month');
 var calendarNextMonth = document.querySelector('.calendar-next-month');
+var timeSlots = document.querySelectorAll('.time-selector input[type="radio"]');
 
 var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 var daysOfWeek = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
@@ -51,6 +52,18 @@ function updateCalendar() {
     }
 
     calendarDays.innerHTML = daysHtml;
+
+    // Disable past time slots
+    timeSlots.forEach(function (slot) {
+        var slotTime = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), selectedDate.getDate(), slot.value.split(':')[0], slot.value.split(':')[1]).getTime();
+        if (slotTime < currentDate.getTime()) {
+            slot.disabled = true;
+            slot.nextElementSibling.setAttribute('disabled', true);
+        } else {
+            slot.disabled = false;
+            slot.nextElementSibling.removeAttribute('disabled');
+        }
+    });
 }
 
 updateCalendar();

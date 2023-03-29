@@ -30,7 +30,7 @@
                 <span id="date-time" class="booking-header-timestamp"></span>
             </div>
             <!-- Booking form -->
-            <form action="order_confirmation.php" name="booking" method="post" class="form-rows">
+            <form action="order-confirmation.php" name="booking" method="post" class="form-rows">
                 <div class="order-form line time">
                     <!-- First row of booking form -->
                     <div class="user-info-disclaimer">
@@ -129,7 +129,7 @@
                         <!-- Calculated total price -->
                         <div class="total-price">
                             <p>Total:</p>
-                            <p>10.00 EUR</p>
+                            <p></p>
                             <input type="hidden" name="price" id="price" value="">
                         </div>
                         <!-- Comments field -->

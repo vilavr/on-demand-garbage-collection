@@ -91,11 +91,9 @@ div {
 .forgot-password{
 	font-family: 'NanumMyeongjo';
 	font-style: normal;
-	/* font-weight: 400; */
 	font-size: 18px;
-	/* line-height: 23px; */
 	color: var(--white);
-	margin-top: 5px;
+	margin-top: 10px;
 	opacity: 0.8;
 	margin-left: 350px;
 }

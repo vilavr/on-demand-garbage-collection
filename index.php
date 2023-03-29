@@ -193,7 +193,7 @@
               </ul>
             </div>
             <div class="pricing-btn">
-              <a href="regular_pickup.php">Learn more</a>
+              <a href="regular-pickup.php">Learn more</a>
             </div>
           </div>
         </div>
@@ -221,7 +221,7 @@
               </ul>
             </div>
             <div class="pricing-btn">
-              <a href="bulk_waste.php">Learn more</a>
+              <a href="bulk-waste.php">Learn more</a>
             </div>
           </div>
         </div>

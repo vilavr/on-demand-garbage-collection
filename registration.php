@@ -94,9 +94,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="terms">
           <p>By clicking Agree &amp; Join, you agree to the <br>
             Throw It
-            <a href="user_agreement.php">User Agreement</a>
+            <a href="user-agreement.php">User Agreement</a>
             , and
-            <a href="privacy_policy.php">Privacy Policy</a>.
+            <a href="privacy-policy.php">Privacy Policy</a>.
           </p>
         </div>
         <br>

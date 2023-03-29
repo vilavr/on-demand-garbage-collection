@@ -91,6 +91,13 @@ if (
 		$error_messages[] = "Invalid time. Not existing time.";
 	}
 
+	if ($timestamp == $current_date) {
+		$current_time = date('H:i');
+		if ($current_time > $time) {
+			$error_messages[] = "Time provided is in the past.";
+		}
+	}
+
 	// Service check
 	if (!in_array($_POST['service_type'], array('Regular Pickup', 'Recycling', 'Bulk Waste Removal'))) {
 		$error_messages[] = "Incorrect service provided.";
