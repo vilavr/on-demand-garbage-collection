@@ -32,14 +32,16 @@ if (
 	$date = sanitize($_POST['datepicker']);
 	$time = sanitize($_POST['time']);
 	$service = sanitize($_POST['service_type']);
-
+    
 	$_SESSION['name'] = $name;
 	$_SESSION['email'] = $email;
 	$_SESSION['surname'] = $surname;
 	$_SESSION['street'] = $street;
 	$_SESSION['house'] = $house;
 	$_SESSION['index'] = $index;
-
+	$_SESSION['date'] = $date;
+	$_SESSION['time'] = $time;
+	$_SESSION['service'] = $service;
 	// Validation
 	// First name check: contains only letters
 	if (!preg_match("/^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{1,30}$/", $name)) {
@@ -184,7 +186,7 @@ if (
 	
 		// Add total price to $data array
 		$data[9] = $price;
-	
+	    $_SESSION['price'] = $price;
 		// Add phone and comment fields to $data array
 		$data[10] = !empty($_POST['phone']) ? sanitize($_POST['phone']) : '';
 		$data[11] = !empty($_POST['comment']) ? sanitize($_POST['comment']) : '';

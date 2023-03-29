@@ -1,4 +1,18 @@
-<?php require_once('session.php');?>
+<?php require_once('session.php');
+
+$name = isset($_SESSION['name']) ? $_SESSION['name'] : '';
+$surname = isset($_SESSION['surname']) ? $_SESSION['surname'] : '';
+$phone = isset($_SESSION['phone']) ? $_SESSION['phone'] : '';
+$email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
+$street = isset($_SESSION['street']) ? $_SESSION['street'] : '';
+$house = isset($_SESSION['house']) ? $_SESSION['house'] : '';
+$index = isset($_SESSION['index']) ? $_SESSION['index'] : '';
+$datepicker = isset($_SESSION['datepicker']) ? $_SESSION['datepicker'] : '';
+$time = isset($_SESSION['time']) ? $_SESSION['time'] : '';
+$service = isset($_SESSION['service']) ? $_SESSION['service'] : '';
+$comment = isset($_SESSION['comment']) ? $_SESSION['comment'] : '';
+$selectedDate = isset($_SESSION['datepicker']) ? $_SESSION['datepicker'] : date('Y-m-d');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,27 +52,27 @@
                         <p class="booking-form-title">Enter your information</p>
                         <div class="input-lines">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" class="field" placeholder=" Name" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{1,200}$">
+                            <input type="text" id="name" name="name" class="field" placeholder=" Name" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{1,200}$" value="<?php echo $name; ?>">
                             <label for="surname">Surname</label>
-                            <input type="text" id="surname" name="surname" class="field" placeholder=" Surname" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{1,200}$">
+                            <input type="text" id="surname" name="surname" class="field" placeholder=" Surname" required pattern="^[A-Za-z '\-šžõäöüŠŽÕÄÖÜ]{1,200}$" value="<?php echo $surname; ?>">
                             <label for="phone">Phone (optional) </label>
-                            <input type="text" id="phone" name="phone" class="field" placeholder=" +372 58678900" pattern="^[0-9\-\+ ]{7,15}$">
+                            <input type="text" id="phone" name="phone" class="field" placeholder=" +372 58678900" pattern="^[0-9\-\+ ]{7,15}$" value="<?php echo $phone; ?>">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="field" placeholder=" name@example.com" required pattern="^[\w\-\.]{1,50}@([\w-]{1,50}\.){1,50}[\w-]{2,4}$">
+                            <input type="email" id="email" name="email" class="field" placeholder=" name@example.com" required pattern="^[\w\-\.]{1,50}@([\w-]{1,50}\.){1,50}[\w-]{2,4}$" value="<?php echo $email; ?>">
 
                             <span class="Tallinn">Address: &nbsp;Tallinn, Estonia</span>
                             <div class="line">
                                 <div class="address-group street">
                                     <label for="street">Street name</label>
-                                    <input type="text" id="street" name="street" class="field" placeholder=" Akadeemia tee" required pattern="[\w\s\.,'\-\#\;\^\:\=\(\)\~\&\>\+=\*\/\<\?!{}\[\]]+">
+                                    <input type="text" id="street" name="street" class="field" placeholder=" Akadeemia tee" required pattern="[\w\s\.,'\-\#\;\^\:\=\(\)\~\&\>\+=\*\/\<\?!{}\[\]]+" value="<?php echo $street; ?>">
                                 </div>
                                 <div class="address-group house">
                                     <label for="house">House</label>
-                                    <input type="text" id="house" name="house" class="field" placeholder=" 8" required pattern="[\w\s\.,'\-\#\;\^\:\=\(\)\~\&\>\+=\*\/\<\?!{}\[\]]{1,5}">
+                                    <input type="text" id="house" name="house" class="field" placeholder=" 8" required pattern="[\w\s\.,'\-\#\;\^\:\=\(\)\~\&\>\+=\*\/\<\?!{}\[\]]{1,5}" value="<?php echo $house; ?>">
                                 </div>
                                 <div class="address-group index">
                                     <label for="index">Postcode</label>
-                                    <input type="text" id="index" name="index" class="field" placeholder=" 21800" required pattern="\d{5}">
+                                    <input type="text" id="index" name="index" class="field" placeholder=" 21800" required pattern="\d{5}" value="<?php echo $index; ?>">
                                 </div>
                             </div>
                         </div>
@@ -75,21 +89,21 @@
                                     </div>
                                     <div class="calendar-days"></div>
                                 </div>
-                                <input type="hidden" id="datepicker" name="datepicker" required>
+                                <input type="hidden" id="datepicker" name="datepicker" required value="<?php echo isset($_SESSION['datepicker']) ? $_SESSION['datepicker'] : ''; ?>">
                             </div>
                             <!-- Available time slots -->
                             <div class="date-row">
                                 <label for="datepicker" class="calendar-label time-slots">Free slots:</label>
                                 <div class="calendar-container time-slots time-selector">
-                                    <input type="radio" id="time1" name="time" value="10:00" checked>
+                                    <input type="radio" id="time1" name="time" value="10:00" <?php echo isset($_SESSION['time']) && $_SESSION['time'] === '10:00' ? 'checked' : ''; ?>>
                                     <label for="time1">10:00</label><br>
-                                    <input type="radio" id="time2" name="time" value="11:00" disabled>
+                                    <input type="radio" id="time2" name="time" value="11:00" <?php echo isset($_SESSION['time']) && $_SESSION['time'] === '11:00' ? 'checked' : ''; ?>>
                                     <label for="time2" disabled>11:00</label><br>
-                                    <input type="radio" id="time3" name="time" value="12:00">
+                                    <input type="radio" id="time3" name="time" value="12:00" <?php echo isset($_SESSION['time']) && $_SESSION['time'] === '12:00' ? 'checked' : ''; ?>>
                                     <label for="time3">12:00</label><br>
-                                    <input type="radio" id="time4" name="time" value="13:00" disabled>
+                                    <input type="radio" id="time4" name="time" value="13:00" <?php echo isset($_SESSION['time']) && $_SESSION['time'] === '13:00' ? 'checked' : ''; ?>>
                                     <label for="time4" disabled>13:00</label><br>
-                                    <input type="radio" id="time5" name="time" value="14:00">
+                                    <input type="radio" id="time5" name="time" value="14:00" <?php echo isset($_SESSION['time']) && $_SESSION['time'] === '14:00' ? 'checked' : ''; ?>>
                                     <label for="time5">14:00</label>
                                 </div>
                             </div>
@@ -100,11 +114,11 @@
                         <!-- Selecting service to order -->
                         <p class="booking-form-title">Select the service you want</p>
                         <div class="service-selector">
-                            <input type="radio" id="regular" name="service_type" value="Regular Pickup" checked>
+                            <input type="radio" id="regular" name="service_type" value="Regular Pickup" <?php echo (isset($_SESSION['service']) && $_SESSION['service'] === 'Regular Pickup') ? 'checked' : ''; ?>>
                             <label for="regular">Regular pickup</label><br>
-                            <input type="radio" id="recycling" name="service_type" value="Recycling">
+                            <input type="radio" id="recycling" name="service_type" value="Recycling" <?php echo (isset($_SESSION['service']) && $_SESSION['service'] === 'Recycling') ? 'checked' : ''; ?>>
                             <label for="recycling">Recycling</label><br>
-                            <input type="radio" id="bulk" name="service_type" value="Bulk Waste Removal">
+                            <input type="radio" id="bulk" name="service_type" value="Bulk Waste Removal" <?php echo (isset($_SESSION['service']) && $_SESSION['service'] === 'Bulk Waste Removal') ? 'checked' : ''; ?>>
                             <label for="bulk">Bulk waste removal</label>
                         </div>
                         <!-- Bulk waste removal items item-weight form -->
@@ -155,7 +169,6 @@
     <script src="js/current-date.js"></script>
     <script src="js/booking-totalprice.js"></script>
     <script src="js/booking-validation.js"></script>
-    <script src="js/booking-timeslots-disabling.js"></script>
 </body>
 
 </html>

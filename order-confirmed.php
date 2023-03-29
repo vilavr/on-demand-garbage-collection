@@ -1,5 +1,39 @@
 <?php require_once('session.php'); ?>
 <?php require_once('book-validation.php'); ?>
+<?php
+// set variables
+$name = isset($_SESSION['name']) ? $_SESSION['name'] : '';
+$surname = isset($_SESSION['surname']) ? $_SESSION['surname'] : '';
+$phone = isset($_SESSION['phone']) ? $_SESSION['phone'] : '';
+$email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
+$street = isset($_SESSION['street']) ? $_SESSION['street'] : '';
+$house = isset($_SESSION['house']) ? $_SESSION['house'] : '';
+$index = isset($_SESSION['index']) ? $_SESSION['index'] : '';
+$datepicker = isset($_SESSION['datepicker']) ? $_SESSION['datepicker'] : '';
+$time = isset($_SESSION['time']) ? $_SESSION['time'] : '';
+$service = isset($_SESSION['service']) ? $_SESSION['service'] : '';
+$comment = isset($_SESSION['comment']) ? $_SESSION['comment'] : '';
+$price = isset($_SESSION['price']) ? $_SESSION['price'] : '';
+
+// destroy the variables
+unset($_SESSION['name']);
+unset($_SESSION['surname']);
+unset($_SESSION['phone']);
+unset($_SESSION['email']);
+unset($_SESSION['street']);
+unset($_SESSION['house']);
+unset($_SESSION['index']);
+unset($_SESSION['datepicker']);
+unset($_SESSION['time']);
+unset($_SESSION['service']);
+unset($_SESSION['comment']);
+unset($_SESSION['price']);
+
+// end the session
+session_destroy();
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
