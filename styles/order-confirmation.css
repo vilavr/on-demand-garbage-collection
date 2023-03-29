@@ -330,6 +330,7 @@
 
 .heart {
     width: 30vw;
+    max-width: 400px;
 }
 
 @media screen and (max-width: 368px) {
