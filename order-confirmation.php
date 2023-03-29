@@ -1,5 +1,20 @@
 <?php require_once('session.php'); ?>
 <?php require_once('book-validation.php'); ?>
+<?php
+
+$name = isset($_SESSION['name']) ? $_SESSION['name'] : '';
+$surname = isset($_SESSION['surname']) ? $_SESSION['surname'] : '';
+$phone = isset($_SESSION['phone']) ? $_SESSION['phone'] : '';
+$email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
+$street = isset($_SESSION['street']) ? $_SESSION['street'] : '';
+$house = isset($_SESSION['house']) ? $_SESSION['house'] : '';
+$index = isset($_SESSION['index']) ? $_SESSION['index'] : '';
+$datepicker = isset($_SESSION['datepicker']) ? $_SESSION['datepicker'] : '';
+$time = isset($_SESSION['time']) ? $_SESSION['time'] : '';
+$service = isset($_SESSION['service']) ? $_SESSION['service'] : '';
+$comment = isset($_SESSION['comment']) ? $_SESSION['comment'] : '';
+$price = isset($_SESSION['price']) ? $_SESSION['price'] : '';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
