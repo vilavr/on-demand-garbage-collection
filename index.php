@@ -200,7 +200,7 @@
         <div id="bulk-waste-card" class="card-col single-pricing">
           <div id="bulk-waste-card-header" class="pricing-header">
             <h4>Bulk Waste Removal</h4>
-            <p>15-150 EUR/item</p>
+            <p>45-750 EUR/item</p>
           </div>
           <div>
             <div class="pricing-content">
