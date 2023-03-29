@@ -30,8 +30,6 @@ unset($_SESSION['service']);
 unset($_SESSION['comment']);
 unset($_SESSION['price']);
 
-// end the session
-session_destroy();
 ?>
 
 <!DOCTYPE html>
