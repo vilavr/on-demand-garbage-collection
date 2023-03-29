@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/footer.css">
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/whyThrowIt.css">
+  <link rel="stylesheet" href="styles/why-throw-it.css">
 
 </head>
 
@@ -57,7 +57,7 @@
         <h2>Professionalism</h2>
         <p>We take pride in our work and always strive to provide the best possible service to our customers. Our team
           is professional, friendly, and respectful of your property.</p>
-        <a class="btn4" href="our_team.php">Check our team</a>
+        <a class="btn4" href="our-team.php">Check our team</a>
       </div>
       <img src="img/whyus_img4.jpg" alt="why_us_image4" width="300px" height="235px">
     </div>

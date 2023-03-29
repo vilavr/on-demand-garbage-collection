@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/footer.css">
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/userAgreement.css">
+  <link rel="stylesheet" href="styles/user-agreement.css">
 
 </head>
 

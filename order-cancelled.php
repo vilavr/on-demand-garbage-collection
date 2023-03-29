@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/navigation.css">
-    <link rel="stylesheet" href="styles/orderConfirmation.css">
+    <link rel="stylesheet" href="styles/order-confirmation.css">
 </head>
 
 <body>

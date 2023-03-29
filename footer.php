@@ -14,20 +14,20 @@
               <li class="menu-footer-subitem"><a href="index.php#testimonials">Testimonials</a></li>
           </ul>
           <ul>
-              <li class="menu-footer-item"><a href="why_throw_it.php">Abous us</a></li>
-              <li class="menu-footer-subitem"><a href="why_throw_it.php">Why Throw it?</a></li>
-              <li class="menu-footer-subitem exception-subitem"><a href="our_team.php">Our team</a></li>
+              <li class="menu-footer-item"><a href="why-throw-it.php">Abous us</a></li>
+              <li class="menu-footer-subitem"><a href="why-throw-it.php">Why Throw it?</a></li>
+              <li class="menu-footer-subitem exception-subitem"><a href="our-team.php">Our team</a></li>
           </ul>
           <ul>
               <li class="menu-footer-item"><a>Services</a></li>
-              <li class="menu-footer-subitem"><a href="regular_pickup.php">Regular pickup</a></li>
-              <li class="menu-footer-subitem"><a href="bulk_waste.php">Bulk waste</a></li>
+              <li class="menu-footer-subitem"><a href="regular-pickup.php">Regular pickup</a></li>
+              <li class="menu-footer-subitem"><a href="bulk-waste.php">Bulk waste</a></li>
               <li class="menu-footer-subitem"><a href="recycling.php">Recycling</a></li>
           </ul>
           <ul class="footer-last-column">
               <li class="menu-footer-item"><a>Terms &amp; Conditions</a></li>
-              <li class="menu-footer-subitem"><a href="user_agreement.php">User agreement</a></li>
-              <li class="menu-footer-subitem exception-subitem"><a href="privacy_policy.php">Privacy Policy</a>
+              <li class="menu-footer-subitem"><a href="user-agreement.php">User agreement</a></li>
+              <li class="menu-footer-subitem exception-subitem"><a href="privacy-policy.php">Privacy Policy</a>
               </li>
           </ul>
       </div>
@@ -54,21 +54,21 @@
                   <li class="menu-footer-item"><a>Services &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       </a></li>
-                  <li class="menu-footer-subitem"><a href="regular_pickup.php">Regular pickup</a></li>
-                  <li class="menu-footer-subitem"><a href="bulk_waste.php">Bulk waste removal</a></li>
+                  <li class="menu-footer-subitem"><a href="regular-pickup.php">Regular pickup</a></li>
+                  <li class="menu-footer-subitem"><a href="bulk-waste.php">Bulk waste removal</a></li>
                   <li class="menu-footer-subitem"><a href="recycling.php">Recycling</a></li>
               </ul>
           </div>
           <div class="footer-row">
               <ul>
-                  <li class="menu-footer-item"><a href="why_throw_it.php">Abous us</a></li>
-                  <li class="menu-footer-subitem"><a href="why_throw_it.php">Why Throw it?</a></li>
-                  <li class="menu-footer-subitem exception-subitem"><a href="our_team.php">Our team</a></li>
+                  <li class="menu-footer-item"><a href="why-throw-it.php">Abous us</a></li>
+                  <li class="menu-footer-subitem"><a href="why-throw-it.php">Why Throw it?</a></li>
+                  <li class="menu-footer-subitem exception-subitem"><a href="our-team.php">Our team</a></li>
               </ul>
               <ul class="footer-last-column">
                   <li class="menu-footer-item"><a>Terms &amp; Conditions</a></li>
-                  <li class="menu-footer-subitem"><a href="user_agreement.php">User agreement</a></li>
-                  <li class="menu-footer-subitem exception-subitem"><a href="privacy_policy.php">Privacy Policy</a>
+                  <li class="menu-footer-subitem"><a href="user-agreement.php">User agreement</a></li>
+                  <li class="menu-footer-subitem exception-subitem"><a href="privacy-policy.php">Privacy Policy</a>
                   </li>
               </ul>
           </div>

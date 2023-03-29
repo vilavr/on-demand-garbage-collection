@@ -32,7 +32,7 @@
         <h2 class="links-back">
             <a href="/index.php#pricing">Services</a>
             <span>&#8594;</span>
-            <a href="/bulk_waste_removal.php">Bulk Waste Removal</a>
+            <a href="/bulk-waste.php">Bulk Waste Removal</a>
         </h2>
         <div class="row justify-content-center">
             <div class="card-col left-col single-pricing">
