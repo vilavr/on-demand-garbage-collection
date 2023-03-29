@@ -155,7 +155,7 @@
     <script src="js/current-date.js"></script>
     <script src="js/booking-totalprice.js"></script>
     <script src="js/booking-validation.js"></script>
-
+    <script src="js/booking-timeslots-disabling.js"></script>
 </body>
 
 </html>
