@@ -92,7 +92,7 @@
 
         </div>
         <div class="buttons">
-            <a href="order_accepted.php" class="confirm-btn">Confirm the order</a>
+            <a href="order-confirmed.php" class="confirm-btn">Confirm the order</a>
             <a href="booking.php" class="back-btn">Back to booking</a>
         </div>
     </div>
