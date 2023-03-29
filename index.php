@@ -48,9 +48,9 @@
 
     <!-- Book a collection subpage -->
     <div id="book_a_collection" class="book-a-collection">
-      <p class="first-subpage-heading">Say goodbye to overflowing trash cans with our on-demand
+      <p class="first-subpage-heading">Say goodbye to overflowing trash with our on-demand
         garbage collection service!</p>
-      <p class="first-subheading">Get your garbage picked up on your schedule, without any hassle</p>
+      <p class="first-subheading">Get your garbage picked up on schedule, without any hassle</p>
 
       <a href="login.php" class="book-btn">Book a collection</a>
     </div>
@@ -79,8 +79,7 @@
             <div class="blocks-content">
               <p>
                 During the sign-up process on our website,
-                you'll need to provide some basic information
-                such as your name, address, and payment details.
+                you'll need to create username and password to get access to Throw It services.
               </p>
             </div>
           </div>
@@ -97,9 +96,9 @@
             </div>
             <div class="blocks-content">
               <p>
-                Just select a date and time that works for you,
-                and we'll send a collection team to your address
-                at the scheduled time.
+                Just provide some basic information
+                such as your name, email, and address. 
+                Then a date and time that works for you.
               </p>
             </div>
 
@@ -117,9 +116,9 @@
             </div>
             <div class="blocks-content">
               <p>
-                On the day of your scheduled pickup,
-                our collection team will arrive at your address
-                and collect your garbage in an eco friendly way.
+                On the day of your scheduled pickup, 
+                we'll send a collection team to your address
+                at the scheduled time.
               </p>
             </div>
 
@@ -138,8 +137,8 @@
             <div class="blocks-content">
               <p>
                 After your garbage has been collected,
-                we'll charge your payment method on file for the service.
-                You'll receive a receipt via email.
+                you'll send the money via teleport.
+                We trust our customers!
               </p>
             </div>
           </div>
